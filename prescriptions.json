@@ -360,6 +360,54 @@
       "followUp": "4 weeks (assess bleeding control), 3 months (repeat hemoglobin)",
       "notes": "CLUES: Irregular heavy/prolonged bleeding + no structural cause + anovulatory pattern + normal pelvic exam + negative pregnancy test.\n\nBEST SINGLE PRESCRIPTION (Highest Cure Rate): Tranexamic Acid 500mg - 1-2 tablets (500-1000mg) TID for 3-5 days during menses + Combined Oral Contraceptive Pill (ethinyl estradiol 30-35mcg + progestin) - 1 tablet daily for 3-6 months.\n\nSUPPORTIVE THERAPY: Ferrous Sulfate 200mg BID for 3 months (treats iron deficiency anemia) + Folic Acid 5mg OD for 3 months + Paracetamol 500mg as needed for dysmenorrhea.\n\nDIFFERENTIAL DIAGNOSIS: Structural causes (fibroids, polyps, adenomyosis), coagulopathies, thyroid dysfunction, endometrial hyperplasia/malignancy, pregnancy complications, infection.\n\nADDITIONAL CONSIDERATIONS:\n- Rule out pregnancy with serum/urine hCG\n- Evaluate for iron deficiency anemia with complete blood count and ferritin\n- Consider pelvic ultrasound to exclude structural pathology\n- Endometrial biopsy indicated in women >45 years or with risk factors for endometrial cancer (obesity, PCOS, chronic anovulation, tamoxifen use)\n- Lifestyle modifications: weight management if obese, regular exercise\n- NSAIDs (mefenamic acid, ibuprofen) can also reduce menstrual blood loss by 20-30%\n- Levonorgestrel-releasing IUD (Mirena) is an excellent long-term option for heavy menstrual bleeding\n- If bleeding persists despite medical therapy, consider endometrial ablation or hysterectomy\n- Screen for thyroid disorders and coagulopathies (von Willebrand disease) in appropriate patients",
       "id": "rx_1788440280_dac1beed"
+    },
+    {
+      "name": "H. pylori Infection in Pregnancy",
+      "category": "Obstetrics",
+      "icon": "\ud83e\udda0",
+      "image": "https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/BigBead/h_pylori_bigbead/1800x1200_h_pylori_bacteria_bigbead.jpg?resize=750px:*&output-quality=75",
+      "patient": {
+        "age": "Adult",
+        "gender": "Female (Pregnant)"
+      },
+      "summary": "Helicobacter pylori (H. pylori) infection in pregnancy requires careful management when treatment is indicated, such as in cases of severe hyperemesis gravidarum, active peptic ulcer disease, or documented infection with significant symptoms. Treatment decisions must balance maternal benefits against potential fetal risks, with antibiotic selection guided by trimester. Dual therapy with amoxicillin and a proton pump inhibitor (PPI) is the preferred first-line regimen across all trimesters due to its safety profile. Triple therapy with metronidazole is reserved for second/third trimester if dual therapy fails. Eradication of H. pylori may improve pregnancy outcomes, including resolution of hyperemesis and reduction of anemia.",
+      "prescriptions": [
+        {
+          "name": "Amoxicillin 1000mg",
+          "brand": "",
+          "sig": "1 tablet three times daily for 14 days",
+          "icon": "\ud83d\udc8a",
+          "regimen": "First Trimester (or preferred for all trimesters)",
+          "combination_with": "Omeprazole 40mg (or Esomeprazole 40mg) BID \u00d7 14 days"
+        },
+        {
+          "name": "Omeprazole 40mg",
+          "brand": "",
+          "sig": "1 capsule twice daily for 14 days",
+          "icon": "\ud83d\udc8a",
+          "regimen": "First Trimester (or preferred for all trimesters)",
+          "combination_with": "Amoxicillin 1000mg TID \u00d7 14 days"
+        },
+        {
+          "name": "Esomeprazole 40mg",
+          "brand": "",
+          "sig": "1 capsule twice daily for 14 days",
+          "icon": "\ud83d\udc8a",
+          "regimen": "First Trimester (or preferred for all trimesters)",
+          "combination_with": "Amoxicillin 1000mg TID \u00d7 14 days"
+        },
+        {
+          "name": "Metronidazole 500mg",
+          "brand": "",
+          "sig": "1 tablet twice daily for 14 days (use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past first trimester)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Second/Third Trimester (Alternative if dual therapy fails)",
+          "combination_with": "Amoxicillin 1000mg TID \u00d7 14 days"
+        }
+      ],
+      "followUp": "4-6 weeks post-treatment (test of cure with stool antigen or urea breath test)",
+      "notes": "INDICATIONS: Pregnant patient with confirmed H. pylori + severe hyperemesis OR active peptic ulcer bleeding where benefit of treatment outweighs risk.\n\nFIRST TRIMESTER (or preferred for all trimesters): Amoxicillin 1000mg TID \u00d7 14 days + Omeprazole 40mg (or Esomeprazole 40mg) BID \u00d7 14 days.\n\nSECOND/THIRD TRIMESTER (Alternative if dual therapy fails): Amoxicillin 1000mg TID \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days. Use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past the first trimester.\n\nSAFETY CONSIDERATIONS:\n- Amoxicillin: Pregnancy Category B - safe and preferred\n- Omeprazole/Esomeprazole: Pregnancy Category C - use when benefits outweigh risks; limited data but generally considered safe\n- Metronidazole: Pregnancy Category B - safe after first trimester; avoid in first trimester\n- Clarithromycin: Avoid in pregnancy (Category C, associated with miscarriage risk)\n- Tetracycline: Contraindicated in pregnancy (Category D)\n\nOBSTETRIC CONSIDERATIONS:\n- H. pylori infection is associated with hyperemesis gravidarum, iron deficiency anemia, and preeclampsia\n- Eradication may improve nausea/vomiting in hyperemesis patients\n- Screen for iron deficiency anemia as H. pylori can cause occult blood loss\n- Consider testing for H. pylori in patients with refractory hyperemesis or unexplained anemia\n- Counsel on dietary modifications: avoid spicy foods, caffeine, alcohol, and smoking\n- Consider testing and treating household members if recurrent infection\n- Retreatment options if eradication fails: consider clarithromycin-based triple therapy (postpartum) or bismuth-based quadruple therapy\n- Symptom improvement expected within 1-2 weeks; complete resolution after 14-day course\n- If no improvement after 72 hours, reassess for treatment failure or alternative diagnosis\n\nREFER IF: Severe hyperemesis requiring hospitalization, active gastrointestinal bleeding, weight loss, failure to respond to therapy, or need for endoscopic evaluation",
+      "id": "rx_1788441019_811eae44"
     }
   ],
   "categories": [
