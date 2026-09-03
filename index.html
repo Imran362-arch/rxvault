@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>RxVault — Dr. Imran Khan Muhammadi</title>
+
+<meta name="theme-color" content="#061419">
+<meta name="description" content="Prescription collection by Dr. Imran Khan Muhammadi - Medical Faculty 2026">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RxVault">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icon-512.png">
+<link rel="icon" type="image/png" href="./icon-512.png">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/jetbrains-mono@latest/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/playfair-display@latest/index.css">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #061419;
+  --bg-secondary: #0c1f27;
+  --bg-tertiary: #122a34;
+  --bg-card: #15323e;
+  --bg-card-hover: #1a3d4c;
+  --bg-elevated: #1f4859;
+  --text-primary: #f1f5f9;
+  --text-secondary: #a8c5d1;
+  --text-muted: #6b8a99;
+  --text-dim: #4a6775;
+  --accent: #06b6d4;
+  --accent-hover: #22d3ee;
+  --accent-dim: rgba(6, 182, 212, 0.15);
+  --accent-glow: rgba(6, 182, 212, 0.3);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --gold: #d4a574;
+  --border: #1e3a47;
+  --border-hover: #2a5163;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(6,182,212,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 85%, rgba(16,185,129,0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--accent), var(--success));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.logo-text h1 {
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text p {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.search-bar {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-input-wrap {
+  position: relative;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 9px 12px 9px 34px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 12px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.search-input-wrap input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dim);
+}
+
+.search-input-wrap input::placeholder { color: var(--text-dim); }
+
+.search-input-wrap .search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.category-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.category-list::-webkit-scrollbar { width: 6px; }
+.category-list::-webkit-scrollbar-track { background: transparent; }
+.category-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.cat-section-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  padding: 10px 10px 6px;
+}
+
+.cat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  user-select: none;
+  margin-bottom: 2px;
+}
+
+.cat-item:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.cat-item.active {
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  font-weight: 500;
+}
+
+.cat-item .cat-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+}
+
+.cat-item .cat-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cat-item .cat-count {
+  font-size: 10px;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.cat-item.active .cat-count {
+  background: var(--accent);
+  color: white;
+}
+
+/* About card in sidebar */
+.about-card {
+  margin: 8px;
+  padding: 14px;
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(6, 182, 212, 0.05));
+  border: 1px solid rgba(212, 165, 116, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.about-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.about-card .doctor-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #b8956a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+}
+
+.about-card .doctor-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 2px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-card .doctor-title {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.sidebar-footer {
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sync-status {
+  flex: 1;
+  font-size: 10px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sync-status .sync-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.sync-status .sync-dot.offline { background: var(--warning); }
+.sync-status .sync-dot.error { background: var(--danger); }
+.sync-status .sync-dot.loading {
+  background: var(--accent);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ============ MAIN ============ */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.topbar {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-secondary);
+}
+
+.toggle-sidebar-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: 7px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.toggle-sidebar-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.topbar-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar-title h2 {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-title p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.topbar-btn {
+  padding: 7px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.topbar-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.topbar-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.topbar-btn .spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.menu-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 220px;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  display: none;
+}
+
+.dropdown-menu.show { display: block; }
+
+.dropdown-item {
+  padding: 9px 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s;
+}
+
+.dropdown-item:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.dropdown-item .di-icon {
+  width: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.dropdown-item .di-label { flex: 1; }
+
+.dropdown-item .di-badge {
+  font-size: 10px;
+  background: var(--accent);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 32px;
+}
+
+.content::-webkit-scrollbar { width: 8px; }
+.content::-webkit-scrollbar-track { background: transparent; }
+.content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* ============ WELCOME ============ */
+.welcome {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.welcome-hero {
+  text-align: center;
+  padding: 30px 20px 40px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, rgba(6,182,212,0.05), rgba(212,165,116,0.03));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212,165,116,0.05) 0%, transparent 60%);
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+.welcome-hero > * { position: relative; z-index: 1; }
+
+.doctor-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #b8956a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
+  border: 3px solid rgba(212, 165, 116, 0.3);
+}
+
+.welcome h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+}
+
+.welcome .doctor-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.welcome .doctor-graduation {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.stat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.stat-card .stat-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.stat-card .stat-value {
+  font-size: 26px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-card .stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* ============ PRESCRIPTION GRID ============ */
+.rx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.rx-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.rx-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.rx-card-image {
+  height: 140px;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-elevated));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rx-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rx-card-image .rx-icon-fallback {
+  font-size: 60px;
+  opacity: 0.8;
+}
+
+.rx-card-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rx-card-body {
+  padding: 16px;
+}
+
+.rx-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.rx-card-patient {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rx-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.rx-card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============ DETAIL VIEW ============ */
+.detail-view {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detail-hero {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.detail-hero-image {
+  height: 280px;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-elevated));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  position: relative;
+}
+
+.detail-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-hero-body {
+  padding: 24px;
+}
+
+.detail-category-badge {
+  display: inline-block;
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.detail-patient {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.detail-patient .patient-tag {
+  background: var(--bg-tertiary);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.detail-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.detail-section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-hover);
+}
+
+.detail-section .section-content {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.rx-list {
+  display: grid;
+  gap: 10px;
+}
+
+.rx-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 14px;
+  transition: all 0.2s;
+}
+
+.rx-item:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+}
+
+.rx-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--accent-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.rx-item-content { flex: 1; min-width: 0; }
+
+.rx-item-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.rx-item-brand {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.rx-item-sig {
+  font-size: 12px;
+  color: var(--success);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  padding: 6px 10px;
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 2px solid var(--success);
+  border-radius: 4px;
+}
+
+.rx-item-sig::before {
+  content: '℞ ';
+  color: var(--warning);
+  font-weight: 700;
+}
+
+.follow-up-box {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.follow-up-box .fu-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.follow-up-box .fu-content { flex: 1; }
+
+.follow-up-box .fu-label {
+  font-size: 11px;
+  color: var(--warning);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.follow-up-box .fu-text {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* ============ ABOUT VIEW ============ */
+.about-view {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, rgba(212,165,116,0.08), rgba(6,182,212,0.03));
+  border: 1px solid rgba(212,165,116,0.2);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(212,165,116,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-hero > * { position: relative; z-index: 1; }
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #b8956a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  margin: 0 auto 20px;
+  box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+  border: 4px solid rgba(212, 165, 116, 0.3);
+}
+
+.about-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-title {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.about-graduation {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.about-graduation .grad-icon {
+  font-size: 16px;
+}
+
+.about-bio {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.about-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.about-info-card .aic-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.about-info-card .aic-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.about-info-card .aic-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.about-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+}
+
+.about-section .section-content {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-section ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.signature {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: right;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.signature small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* ============ EMPTY STATE ============ */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+
+.empty-state .es-icon {
+  font-size: 56px;
+  margin-bottom: 14px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.empty-state p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ============ MODAL ============ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-overlay.show {
+  display: flex;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: 22px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.modal-footer {
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--success));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 16px;
+  min-width: 260px;
+  max-width: 400px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease;
+  font-size: 13px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.toast.success { border-left-color: var(--success); }
+.toast.error { border-left-color: var(--danger); }
+.toast.warning { border-left-color: var(--warning); }
+
+.toast-icon { font-size: 16px; flex-shrink: 0; }
+.toast-message { flex: 1; color: var(--text-primary); }
+
+/* List view */
+.rx-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rx-list-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rx-list-item:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+}
+
+.rx-list-item .li-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.rx-list-item .li-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rx-list-item .li-content { flex: 1; min-width: 0; }
+
+.rx-list-item .li-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.rx-list-item .li-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rx-list-item .li-badge {
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Install banner */
+.install-banner {
+  background: linear-gradient(135deg, var(--accent-dim), rgba(16,185,129,0.1));
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.install-banner .ib-icon { font-size: 32px; }
+.install-banner .ib-content { flex: 1; }
+.install-banner .ib-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.install-banner .ib-desc { font-size: 12px; color: var(--text-muted); }
+
+.install-banner .ib-btn {
+  padding: 8px 14px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.install-banner .ib-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+}
+
+.view-toggle {
+  display: flex;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.view-btn {
+  padding: 7px 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.view-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+.view-btn:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 150;
+    transform: translateX(-100%);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .toggle-sidebar-btn { display: flex; }
+  .content { padding: 20px 16px; }
+  .rx-grid { grid-template-columns: 1fr; }
+  .detail-title { font-size: 22px; }
+  .welcome h1 { font-size: 26px; }
+  .about-name { font-size: 26px; }
+  .about-avatar { width: 100px; height: 100px; font-size: 44px; }
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 140;
+}
+
+.sidebar-overlay.show { display: block; }
+
+@media print {
+  .sidebar, .topbar { display: none !important; }
+  .main { margin-left: 0; }
+  body { background: white; color: black; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">💊</div>
+      <div class="logo-text">
+        <h1>RxVault</h1>
+        <p>Prescription Collection</p>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search prescriptions..." oninput="handleSearch(this.value)">
+      </div>
+    </div>
+
+    <div class="category-list" id="categoryList"></div>
+
+    <!-- About card at bottom of sidebar -->
+    <div class="about-card" onclick="setView('about')">
+      <div class="doctor-avatar">👨‍⚕️</div>
+      <div class="doctor-name">Dr. Imran Khan Muhammadi</div>
+      <div class="doctor-title">Medical Faculty Graduate, 2026</div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="sync-status" id="syncStatus">
+        <span class="sync-dot"></span>
+        <span id="syncText">Loading...</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
+      <div class="topbar-title">
+        <h2 id="topbarTitle">📋 All Prescriptions</h2>
+        <p id="topbarSubtitle">Browse the collection</p>
+      </div>
+      <div class="topbar-actions">
+        <button class="topbar-btn" id="refreshBtn" onclick="refreshFromServer()" title="Refresh">
+          <span>🔄</span> <span id="refreshLabel">Refresh</span>
+        </button>
+        <div class="view-toggle">
+          <button class="view-btn active" id="gridViewBtn" onclick="setViewMode('grid')">▦</button>
+          <button class="view-btn" id="listViewBtn" onclick="setViewMode('list')">☰</button>
+        </div>
+        <div class="menu-container">
+          <button class="menu-btn" onclick="toggleMenu(event)" title="More options">⋮</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-item" id="installMenuItem" onclick="installApp()" style="display:none">
+              <span class="di-icon">📱</span>
+              <span class="di-label">Install to Home Screen</span>
+              <span class="di-badge">NEW</span>
+            </div>
+            <div class="dropdown-item" onclick="setView('about')">
+              <span class="di-icon">👨‍⚕️</span>
+              <span class="di-label">About the Doctor</span>
+            </div>
+            <div class="dropdown-item" onclick="refreshFromServer()">
+              <span class="di-icon">🔄</span>
+              <span class="di-label">Refresh Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="content"></div>
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<!-- TOASTS -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+// ==================== CONFIG ====================
+const REMOTE_URL = './prescriptions.json';
+const STORAGE_KEY = 'rxvault_data';
+const SETTINGS_KEY = 'rxvault_settings';
+
+// ==================== DOCTOR INFO ====================
+const DOCTOR = {
+  name: 'Dr. Imran Khan Muhammadi',
+  title: 'Medical Doctor',
+  graduation: 'Medical Faculty, Class of 2026',
+  graduationYear: '2026',
+  avatar: '👨‍⚕️',
+  bio: 'A dedicated medical professional committed to evidence-based practice and patient care. This collection represents curated prescriptions and clinical knowledge gathered throughout medical training and practice.',
+  mission: 'To provide accessible, organized medical knowledge for educational purposes and clinical reference.',
+  values: [
+    'Evidence-based medicine',
+    'Patient-centered care',
+    'Continuous medical education',
+    'Ethical medical practice',
+    'Accessible healthcare knowledge'
+  ]
+};
+
+// ==================== STATE ====================
+let state = {
+  prescriptions: [],
+  categories: [
+    { id: 'cat_dermatology', name: 'Dermatology', icon: '🔴' },
+    { id: 'cat_cardiology', name: 'Cardiology', icon: '❤️' },
+    { id: 'cat_general', name: 'General Medicine', icon: '💊' },
+    { id: 'cat_pediatrics', name: 'Pediatrics', icon: '👶' },
+    { id: 'cat_other', name: 'Other', icon: '📋' }
+  ],
+  currentView: 'all',
+  searchQuery: '',
+  viewMode: 'grid',
+  lastSync: null,
+  lastSyncStatus: 'idle'
+};
+
+let deferredInstallPrompt = null;
+let isInstalled = false;
+
+// ==================== PWA INSTALL ====================
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const menu = document.getElementById('installMenuItem');
+  if (menu) menu.style.display = 'flex';
+});
+
+window.addEventListener('appinstalled', () => {
+  isInstalled = true;
+  deferredInstallPrompt = null;
+  const menu = document.getElementById('installMenuItem');
+  if (menu) menu.style.display = 'none';
+  toast('App installed successfully!', 'success');
+});
+
+if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
+  isInstalled = true;
+}
+
+async function installApp() {
+  closeAllMenus();
+  if (!deferredInstallPrompt) {
+    toast('Install not available. Use your browser menu.', 'info');
+    return;
+  }
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  const menu = document.getElementById('installMenuItem');
+  if (menu) menu.style.display = 'none';
+}
+
+// ==================== PERSISTENCE ====================
+function saveState() {
+  try {
+    const data = {
+      prescriptions: state.prescriptions,
+      categories: state.categories,
+      viewMode: state.viewMode,
+      lastSync: state.lastSync,
+      lastSyncStatus: state.lastSyncStatus
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    return true;
+  } catch (e) {
+    console.error('Save error:', e);
+    return false;
+  }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const data = JSON.parse(raw);
+      state.prescriptions = data.prescriptions || [];
+      state.categories = data.categories || state.categories;
+      state.viewMode = data.viewMode || 'grid';
+      state.lastSync = data.lastSync || null;
+      state.lastSyncStatus = data.lastSyncStatus || 'idle';
+    }
+  } catch (e) {
+    console.error('Load error:', e);
+  }
+}
+
+function updateSyncStatus() {
+  const dot = document.querySelector('#syncStatus .sync-dot');
+  const text = document.getElementById('syncText');
+  if (!dot || !text) return;
+  
+  if (state.lastSyncStatus === 'success') {
+    dot.className = 'sync-dot';
+    text.textContent = `Updated ${formatTimeAgo(state.lastSync)}`;
+  } else if (state.lastSyncStatus === 'offline') {
+    dot.className = 'sync-dot offline';
+    text.textContent = 'Offline mode';
+  } else if (state.lastSyncStatus === 'error') {
+    dot.className = 'sync-dot error';
+    text.textContent = 'Using cached data';
+  } else if (state.lastSyncStatus === 'loading') {
+    dot.className = 'sync-dot loading';
+    text.textContent = 'Syncing...';
+  } else {
+    dot.className = 'sync-dot';
+    text.textContent = 'Not synced';
+  }
+}
+
+// ==================== UTILITIES ====================
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function formatDate(ts) {
+  if (!ts) return '';
+  const d = new Date(ts);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
+function formatTimeAgo(ts) {
+  if (!ts) return 'never';
+  const seconds = Math.floor((Date.now() - ts) / 1000);
+  if (seconds < 60) return 'just now';
+  if (seconds < 3600) return Math.floor(seconds / 60) + 'm ago';
+  if (seconds < 86400) return Math.floor(seconds / 3600) + 'h ago';
+  return Math.floor(seconds / 86400) + 'd ago';
+}
+
+function getCategoryById(id) {
+  return state.categories.find(c => c.id === id) || { id: 'cat_other', name: 'Other', icon: '📋' };
+}
+
+function getCategoryCount(catId) {
+  return state.prescriptions.filter(r => r.categoryId === catId).length;
+}
+
+// ==================== REMOTE SYNC ====================
+async function refreshFromServer() {
+  const btn = document.getElementById('refreshBtn');
+  if (btn) btn.disabled = true;
+  
+  state.lastSyncStatus = 'loading';
+  updateSyncStatus();
+  
+  try {
+    const response = await fetch(REMOTE_URL + '?t=' + Date.now());
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    let remotePrescriptions = [];
+    let remoteCategories = [];
+    
+    if (data.prescriptions && Array.isArray(data.prescriptions)) {
+      remotePrescriptions = data.prescriptions;
+      remoteCategories = data.categories || [];
+    } else if (Array.isArray(data)) {
+      remotePrescriptions = data;
+    } else if (data.name) {
+      remotePrescriptions = [normalizeRxData(data)];
+    }
+    
+    // Merge categories
+    remoteCategories.forEach(cat => {
+      const existing = state.categories.find(c => c.id === cat.id);
+      if (existing) {
+        Object.assign(existing, cat);
+      } else {
+        state.categories.push(cat);
+      }
+    });
+    
+    // Replace remote prescriptions, keep local structure
+    const remoteIds = new Set(remotePrescriptions.map(p => p.id));
+    
+    // Remove old remote items
+    state.prescriptions = state.prescriptions.filter(p => !p.isRemote);
+    
+    // Add new remote items
+    remotePrescriptions.forEach(rp => {
+      const normalized = normalizeRxData(rp);
+      normalized.isRemote = true;
+      state.prescriptions.push(normalized);
+    });
+    
+    state.lastSync = Date.now();
+    state.lastSyncStatus = 'success';
+    saveState();
+    renderCategoryList();
+    renderContent();
+    updateSyncStatus();
+    
+    toast(`Synced ${remotePrescriptions.length} prescription${remotePrescriptions.length !== 1 ? 's' : ''}`, 'success');
+  } catch (err) {
+    console.error('Sync error:', err);
+    state.lastSyncStatus = state.prescriptions.length > 0 ? 'offline' : 'error';
+    updateSyncStatus();
+    toast('Sync failed: ' + err.message, 'error');
+  } finally {
+    const btn = document.getElementById('refreshBtn');
+    if (btn) btn.disabled = false;
+  }
+}
+
+function normalizeRxData(data) {
+  const name = data.name || data.title || data.disease || 'Untitled';
+  
+  let categoryId = data.categoryId;
+  if (!categoryId && data.category) {
+    const existing = state.categories.find(c => c.name.toLowerCase() === data.category.toLowerCase());
+    if (existing) {
+      categoryId = existing.id;
+    } else {
+      categoryId = 'cat_other';
+    }
+  }
+  if (!categoryId) categoryId = 'cat_other';
+  
+  let prescriptions = [];
+  if (Array.isArray(data.prescriptions)) {
+    prescriptions = data.prescriptions.map(p => ({
+      name: p.name || p.medication || p.drug || '',
+      brand: p.brand || p.brands || '',
+      sig: p.sig || p.dosage || p.instructions || '',
+      icon: p.icon || '💊'
+    })).filter(p => p.name);
+  }
+  
+  return {
+    id: data.id || ('rx_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8)),
+    name,
+    categoryId,
+    icon: data.icon || data.emoji || '💊',
+    image: data.image || data.imageData || null,
+    patient: {
+      age: data.patient?.age || data.age || '',
+      gender: data.patient?.gender || data.gender || '',
+      notes: data.patient?.notes || ''
+    },
+    summary: data.summary || data.description || data.info || '',
+    prescriptions,
+    followUp: data.followUp || data.followup || '',
+    notes: data.notes || '',
+    createdAt: data.createdAt || Date.now(),
+    updatedAt: data.updatedAt || Date.now()
+  };
+}
+
+// ==================== RENDERING ====================
+function renderCategoryList() {
+  const container = document.getElementById('categoryList');
+  const allCount = state.prescriptions.length;
+  
+  let html = `
+    <div class="cat-section-title">Library</div>
+    <div class="cat-item ${state.currentView === 'all' ? 'active' : ''}" onclick="setView('all')">
+      <span class="cat-icon">📋</span>
+      <span class="cat-name">All Prescriptions</span>
+      <span class="cat-count">${allCount}</span>
+    </div>
+    <div class="cat-section-title">Categories</div>
+  `;
+  
+  state.categories.forEach(cat => {
+    const count = getCategoryCount(cat.id);
+    if (count === 0) return; // Hide empty categories
+    html += `
+      <div class="cat-item ${state.currentView === 'category:' + cat.id ? 'active' : ''}" onclick="setView('category:${cat.id}')">
+        <span class="cat-icon">${cat.icon}</span>
+        <span class="cat-name">${escapeHtml(cat.name)}</span>
+        <span class="cat-count">${count}</span>
+      </div>
+    `;
+  });
+  
+  container.innerHTML = html;
+}
+
+function renderContent() {
+  const content = document.getElementById('content');
+  const topbarTitle = document.getElementById('topbarTitle');
+  const topbarSubtitle = document.getElementById('topbarSubtitle');
+  
+  // About view
+  if (state.currentView === 'about') {
+    renderAboutView();
+    topbarTitle.innerHTML = '<span style="cursor:pointer" onclick="setView(\'all\')">← Back</span>';
+    topbarSubtitle.textContent = 'About the Doctor';
+    return;
+  }
+  
+  // Detail view
+  if (state.currentView.startsWith('detail:')) {
+    const id = state.currentView.split(':')[1];
+    const rx = state.prescriptions.find(r => r.id === id);
+    if (rx) {
+      renderDetailView(rx);
+      topbarTitle.innerHTML = `<span style="cursor:pointer" onclick="setView('all')">← Back</span>`;
+      topbarSubtitle.textContent = rx.name;
+    } else {
+      state.currentView = 'all';
+      renderContent();
+    }
+    return;
+  }
+  
+  // List view
+  const list = getFilteredPrescriptions();
+  
+  if (state.currentView === 'all') {
+    topbarTitle.innerHTML = '📋 All Prescriptions';
+    topbarSubtitle.textContent = `${list.length} prescription${list.length !== 1 ? 's' : ''}${state.searchQuery ? ` matching "${state.searchQuery}"` : ''}`;
+  } else if (state.currentView.startsWith('category:')) {
+    const catId = state.currentView.split(':')[1];
+    const cat = getCategoryById(catId);
+    topbarTitle.innerHTML = `${cat.icon} ${escapeHtml(cat.name)}`;
+    topbarSubtitle.textContent = `${list.length} prescription${list.length !== 1 ? 's' : ''}`;
+  }
+  
+  if (list.length === 0) {
+    if (state.searchQuery) {
+      content.innerHTML = `
+        <div class="empty-state">
+          <div class="es-icon">🔍</div>
+          <h3>No results found</h3>
+          <p>Try a different search term</p>
+        </div>
+      `;
+    } else {
+      content.innerHTML = renderWelcome();
+    }
+    return;
+  }
+  
+  if (state.viewMode === 'grid') {
+    content.innerHTML = `<div class="rx-grid">${list.map(renderRxCard).join('')}</div>`;
+  } else {
+    content.innerHTML = `<div class="rx-list-view">${list.map(renderRxListItem).join('')}</div>`;
+  }
+}
+
+function renderWelcome() {
+  const totalRx = state.prescriptions.length;
+  const totalMeds = state.prescriptions.reduce((sum, r) => sum + (r.prescriptions?.length || 0), 0);
+  const totalCats = state.categories.filter(c => getCategoryCount(c.id) > 0).length;
+  
+  return `
+    <div class="welcome">
+      ${!isInstalled && deferredInstallPrompt ? `
+        <div class="install-banner">
+          <div class="ib-icon">📱</div>
+          <div class="ib-content">
+            <div class="ib-title">Install RxVault to your Home Screen</div>
+            <div class="ib-desc">Get quick access and use offline</div>
+          </div>
+          <button class="ib-btn" onclick="installApp()">Install</button>
+          <button class="ib-close" onclick="this.parentElement.remove()">✕</button>
+        </div>
+      ` : ''}
+      
+      <div class="welcome-hero">
+        <div class="doctor-avatar-large">${DOCTOR.avatar}</div>
+        <h1>${escapeHtml(DOCTOR.name)}</h1>
+        <div class="doctor-subtitle">${escapeHtml(DOCTOR.title)}</div>
+        <div class="doctor-graduation">
+          <span class="grad-icon">🎓</span>
+          <span>Graduated from Medical Faculty, ${DOCTOR.graduationYear}</span>
+        </div>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+          ${escapeHtml(DOCTOR.bio)}
+        </p>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📋</div>
+          <div class="stat-value">${totalRx}</div>
+          <div class="stat-label">Prescriptions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💊</div>
+          <div class="stat-value">${totalMeds}</div>
+          <div class="stat-label">Medications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📁</div>
+          <div class="stat-value">${totalCats}</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎓</div>
+          <div class="stat-value">${DOCTOR.graduationYear}</div>
+          <div class="stat-label">Graduated</div>
+        </div>
+      </div>
+      
+      ${totalRx === 0 ? `
+        <div class="empty-state" style="padding: 40px 20px;">
+          <div class="es-icon">📭</div>
+          <h3>No prescriptions yet</h3>
+          <p>Prescriptions will appear here once the server data is loaded.<br>Tap the refresh button to sync.</p>
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function renderAboutView() {
+  const content = document.getElementById('content');
+  const totalRx = state.prescriptions.length;
+  const totalMeds = state.prescriptions.reduce((sum, r) => sum + (r.prescriptions?.length || 0), 0);
+  
+  content.innerHTML = `
+    <div class="about-view">
+      <div class="about-hero">
+        <div class="about-avatar">${DOCTOR.avatar}</div>
+        <h1 class="about-name">${escapeHtml(DOCTOR.name)}</h1>
+        <div class="about-title">${escapeHtml(DOCTOR.title)}</div>
+        <div class="about-graduation">
+          <span class="grad-icon">🎓</span>
+          <span>Graduated from Medical Faculty, ${DOCTOR.graduationYear}</span>
+        </div>
+        <p class="about-bio">${escapeHtml(DOCTOR.bio)}</p>
+      </div>
+      
+      <div class="about-info-grid">
+        <div class="about-info-card">
+          <div class="aic-icon">🎓</div>
+          <div class="aic-label">Graduation</div>
+          <div class="aic-value">Medical Faculty ${DOCTOR.graduationYear}</div>
+        </div>
+        <div class="about-info-card">
+          <div class="aic-icon">📋</div>
+          <div class="aic-label">Prescriptions</div>
+          <div class="aic-value">${totalRx} in collection</div>
+        </div>
+        <div class="about-info-card">
+          <div class="aic-icon">💊</div>
+          <div class="aic-label">Medications</div>
+          <div class="aic-value">${totalMeds} documented</div>
+        </div>
+      </div>
+      
+      <div class="about-section">
+        <h3>🎯 Mission</h3>
+        <div class="section-content">${escapeHtml(DOCTOR.mission)}</div>
+      </div>
+      
+      <div class="about-section">
+        <h3>⭐ Core Values</h3>
+        <ul>
+          ${DOCTOR.values.map(v => `<li>${escapeHtml(v)}</li>`).join('')}
+        </ul>
+      </div>
+      
+      <div class="about-section">
+        <h3>💊 About RxVault</h3>
+        <div class="section-content">
+          RxVault is a curated collection of medical prescriptions organized by category for educational and clinical reference purposes. 
+          Each prescription includes detailed information about medications, dosages, and follow-up schedules.
+          <br><br>
+          The collection is continuously updated and synced from a remote repository, ensuring access to the most current medical knowledge.
+        </div>
+      </div>
+      
+      <div class="signature">
+        ${escapeHtml(DOCTOR.name)}
+        <small>Medical Faculty, ${DOCTOR.graduationYear}</small>
+      </div>
+    </div>
+  `;
+}
+
+function renderRxCard(rx) {
+  const cat = getCategoryById(rx.categoryId);
+  const rxCount = (rx.prescriptions || []).length;
+  const imageHtml = rx.image
+    ? `<img src="${rx.image}" alt="${escapeHtml(rx.name)}">`
+    : `<div class="rx-icon-fallback">${rx.icon || '💊'}</div>`;
+  
+  return `
+    <div class="rx-card" onclick="openDetail('${rx.id}')">
+      <div class="rx-card-image">
+        ${imageHtml}
+        <div class="rx-card-category">${cat.icon} ${escapeHtml(cat.name)}</div>
+      </div>
+      <div class="rx-card-body">
+        <div class="rx-card-title">${escapeHtml(rx.name)}</div>
+        <div class="rx-card-patient">
+          ${rx.patient?.age ? `<span>👤 ${escapeHtml(rx.patient.age)}</span>` : ''}
+          ${rx.patient?.gender ? `<span>• ${escapeHtml(rx.patient.gender)}</span>` : ''}
+        </div>
+        <div class="rx-card-meta">
+          <span>💊 ${rxCount} med${rxCount !== 1 ? 's' : ''}</span>
+          <span>📅 ${formatDate(rx.updatedAt)}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderRxListItem(rx) {
+  const cat = getCategoryById(rx.categoryId);
+  const rxCount = (rx.prescriptions || []).length;
+  const imageHtml = rx.image
+    ? `<img src="${rx.image}" alt="${escapeHtml(rx.name)}">`
+    : `<span>${rx.icon || '💊'}</span>`;
+  
+  return `
+    <div class="rx-list-item" onclick="openDetail('${rx.id}')">
+      <div class="li-image">${imageHtml}</div>
+      <div class="li-content">
+        <div class="li-title">${escapeHtml(rx.name)}</div>
+        <div class="li-meta">
+          <span class="li-badge">${cat.icon} ${escapeHtml(cat.name)}</span>
+          ${rx.patient?.age ? `<span>👤 ${escapeHtml(rx.patient.age)}</span>` : ''}
+          <span>💊 ${rxCount}</span>
+          <span>📅 ${formatDate(rx.updatedAt)}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderDetailView(rx) {
+  const cat = getCategoryById(rx.categoryId);
+  const content = document.getElementById('content');
+  
+  const heroImage = rx.image
+    ? `<img src="${rx.image}" alt="${escapeHtml(rx.name)}">`
+    : `<span>${rx.icon || '💊'}</span>`;
+  
+  let html = `
+    <div class="detail-view">
+      <div class="detail-hero">
+        <div class="detail-hero-image">${heroImage}</div>
+        <div class="detail-hero-body">
+          <div class="detail-category-badge">${cat.icon} ${escapeHtml(cat.name)}</div>
+          <h1 class="detail-title">${escapeHtml(rx.name)}</h1>
+          <div class="detail-patient">
+            ${rx.patient?.age ? `<span class="patient-tag">👤 ${escapeHtml(rx.patient.age)}</span>` : ''}
+            ${rx.patient?.gender ? `<span class="patient-tag">⚧ ${escapeHtml(rx.patient.gender)}</span>` : ''}
+            <span class="patient-tag">📅 ${formatDate(rx.updatedAt)}</span>
+          </div>
+        </div>
+      </div>
+  `;
+  
+  if (rx.summary) {
+    html += `
+      <div class="detail-section">
+        <h3>📖 Disease Information</h3>
+        <div class="section-content">${escapeHtml(rx.summary)}</div>
+      </div>
+    `;
+  }
+  
+  if (rx.prescriptions && rx.prescriptions.length > 0) {
+    html += `
+      <div class="detail-section">
+        <h3>💊 Prescriptions <span style="font-size:12px;color:var(--text-muted);font-weight:400;margin-left:6px;">(${rx.prescriptions.length})</span></h3>
+        <div class="rx-list">
+    `;
+    rx.prescriptions.forEach((p, i) => {
+      html += `
+        <div class="rx-item">
+          <div class="rx-item-icon">${p.icon || '💊'}</div>
+          <div class="rx-item-content">
+            <div class="rx-item-name">Rx ${i + 1} – ${escapeHtml(p.name || '')}</div>
+            ${p.brand ? `<div class="rx-item-brand">Brand: ${escapeHtml(p.brand)}</div>` : ''}
+            ${p.sig ? `<div class="rx-item-sig">${escapeHtml(p.sig)}</div>` : ''}
+          </div>
+        </div>
+      `;
+    });
+    html += `</div></div>`;
+  }
+  
+  if (rx.followUp) {
+    html += `
+      <div class="follow-up-box">
+        <div class="fu-icon">📅</div>
+        <div class="fu-content">
+          <div class="fu-label">Follow-Up Schedule</div>
+          <div class="fu-text">${escapeHtml(rx.followUp)}</div>
+        </div>
+      </div>
+    `;
+  }
+  
+  if (rx.notes) {
+    html += `
+      <div class="detail-section">
+        <h3>📝 Notes</h3>
+        <div class="section-content">${escapeHtml(rx.notes)}</div>
+      </div>
+    `;
+  }
+  
+  // Doctor signature
+  html += `
+    <div style="text-align: right; padding: 20px 0; border-top: 1px solid var(--border); margin-top: 20px;">
+      <div style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 16px;">
+        ${escapeHtml(DOCTOR.name)}
+      </div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">
+        Medical Faculty, ${DOCTOR.graduationYear}
+      </div>
+    </div>
+  `;
+  
+  html += `</div>`;
+  content.innerHTML = html;
+}
+
+// ==================== FILTERING ====================
+function getFilteredPrescriptions() {
+  let list = [...state.prescriptions];
+  
+  if (state.currentView.startsWith('category:')) {
+    const catId = state.currentView.split(':')[1];
+    list = list.filter(r => r.categoryId === catId);
+  }
+  
+  if (state.searchQuery) {
+    const q = state.searchQuery.toLowerCase();
+    list = list.filter(r =>
+      (r.name || '').toLowerCase().includes(q) ||
+      (r.summary || '').toLowerCase().includes(q) ||
+      (r.patient?.age || '').toLowerCase().includes(q) ||
+      (r.patient?.gender || '').toLowerCase().includes(q) ||
+      (r.prescriptions || []).some(p =>
+        (p.name || '').toLowerCase().includes(q) ||
+        (p.brand || '').toLowerCase().includes(q) ||
+        (p.sig || '').toLowerCase().includes(q)
+      )
+    );
+  }
+  
+  list.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+  return list;
+}
+
+// ==================== VIEW MANAGEMENT ====================
+function setView(view) {
+  state.currentView = view;
+  closeAllMenus();
+  renderCategoryList();
+  renderContent();
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('show');
+  window.scrollTo(0, 0);
+}
+
+function setViewMode(mode) {
+  state.viewMode = mode;
+  saveState();
+  document.getElementById('gridViewBtn').classList.toggle('active', mode === 'grid');
+  document.getElementById('listViewBtn').classList.toggle('active', mode === 'list');
+  renderContent();
+}
+
+function openDetail(id) {
+  state.currentView = 'detail:' + id;
+  renderContent();
+  window.scrollTo(0, 0);
+}
+
+function handleSearch(query) {
+  state.searchQuery = query;
+  if (state.currentView.startsWith('detail:') || state.currentView === 'about') {
+    state.currentView = 'all';
+  }
+  renderCategoryList();
+  renderContent();
+}
+
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('show');
+}
+
+// ==================== MENU ====================
+function toggleMenu(e) {
+  e.stopPropagation();
+  const menu = e.currentTarget.nextElementSibling;
+  document.querySelectorAll('.dropdown-menu.show').forEach(m => {
+    if (m !== menu) m.classList.remove('show');
+  });
+  menu.classList.toggle('show');
+}
+
+function closeAllMenus() {
+  document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+}
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.menu-container')) {
+    closeAllMenus();
+  }
+});
+
+// ==================== MODAL ====================
+function openModal(html) {
+  document.getElementById('modal').innerHTML = html;
+  document.getElementById('modalOverlay').classList.add('show');
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('show');
+}
+
+document.getElementById('modalOverlay').addEventListener('click', (e) => {
+  if (e.target.id === 'modalOverlay') closeModal();
+});
+
+// ==================== TOAST ====================
+function toast(message, type = 'info') {
+  const container = document.getElementById('toastContainer');
+  const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.innerHTML = `
+    <span class="toast-icon">${icons[type] || icons.info}</span>
+    <span class="toast-message">${escapeHtml(message)}</span>
+  `;
+  container.appendChild(el);
+  setTimeout(() => {
+    el.style.animation = 'slideIn 0.3s ease reverse';
+    setTimeout(() => el.remove(), 300);
+  }, 3000);
+}
+
+// ==================== SERVICE WORKER ====================
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('SW registered'))
+      .catch(err => console.log('SW failed:', err));
+  });
+}
+
+// ==================== KEYBOARD ====================
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+    closeAllMenus();
+  }
+  if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+    const active = document.activeElement;
+    if (active.tagName !== 'INPUT' && active.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      document.getElementById('searchInput').focus();
+    }
+  }
+});
+
+// ==================== INIT ====================
+async function init() {
+  loadState();
+  renderCategoryList();
+  renderContent();
+  updateSyncStatus();
+  
+  // Auto-sync on load
+  await refreshFromServer();
+}
+
+init();
+</script>
+</body>
+</html>
