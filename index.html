@@ -1474,7 +1474,7 @@ body::before {
 
     <!-- About card at bottom of sidebar -->
     <div class="about-card" onclick="setView('about')">
-      <div class="doctor-avatar">👨‍⚕️</div>
+      <img src="doctor-avatar.png" class="doctor-avatar" alt="Dr. Imran Khan Muhammadi">
       <div class="doctor-name">Dr. Imran Khan Muhammadi</div>
       <div class="doctor-title">Medical Faculty Graduate, 2026</div>
     </div>
@@ -1514,7 +1514,7 @@ body::before {
               <span class="di-badge">NEW</span>
             </div>
             <div class="dropdown-item" onclick="setView('about')">
-              <span class="di-icon">👨‍⚕️</span>
+              <span class="di-icon">🖼️</span>
               <span class="di-label">About the Doctor</span>
             </div>
             <div class="dropdown-item" onclick="refreshFromServer()">
@@ -1550,7 +1550,7 @@ const DOCTOR = {
   title: 'Medical Doctor',
   graduation: 'Medical Faculty, Class of 2026',
   graduationYear: '2026',
-  avatar: '👨‍⚕️',
+  avatar: '🖼️',
   bio: 'A dedicated medical professional committed to evidence-based practice and patient care. This collection represents curated prescriptions and clinical knowledge gathered throughout medical training and practice.',
   mission: 'To provide accessible, organized medical knowledge for educational purposes and clinical reference.',
   values: [
@@ -1934,7 +1934,7 @@ function renderWelcome() {
       ` : ''}
       
       <div class="welcome-hero">
-        <div class="doctor-avatar-large">${DOCTOR.avatar}</div>
+        <img src="doctor-avatar.png" class="doctor-avatar-large" alt="${DOCTOR.name}">
         <h1>${escapeHtml(DOCTOR.name)}</h1>
         <div class="doctor-subtitle">${escapeHtml(DOCTOR.title)}</div>
         <div class="doctor-graduation">
@@ -1988,7 +1988,7 @@ function renderAboutView() {
   content.innerHTML = `
     <div class="about-view">
       <div class="about-hero">
-        <div class="about-avatar">${DOCTOR.avatar}</div>
+        <img src="doctor-avatar.png" class="about-avatar" alt="${DOCTOR.name}">
         <h1 class="about-name">${escapeHtml(DOCTOR.name)}</h1>
         <div class="about-title">${escapeHtml(DOCTOR.title)}</div>
         <div class="about-graduation">
