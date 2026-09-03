@@ -320,32 +320,37 @@
     {
       "id": "cat_dermatology",
       "name": "Dermatology",
-      "icon": "\ud83d\udd34"
+      "icon": "🔴"
     },
     {
       "id": "cat_cardiology",
       "name": "Cardiology",
-      "icon": "\u2764\ufe0f"
+      "icon": "❤️"
     },
     {
       "id": "cat_general",
       "name": "General Medicine",
-      "icon": "\ud83d\udc8a"
+      "icon": "💊"
     },
     {
       "id": "cat_pediatrics",
       "name": "Pediatrics",
-      "icon": "\ud83d\udc76"
+      "icon": "👶"
     },
     {
       "id": "cat_other",
       "name": "Other",
-      "icon": "\ud83d\udccb"
+      "icon": "📋"
     },
     {
       "id": "cat_1788427213613_1hrm",
       "name": "Obstetrics",
-      "icon": "\ud83e\ude7a"
+      "icon": "🩺"
+    },
+    {
+      "id": "cat_gynecology",
+      "name": "Gynecology",
+      "icon": "🩺"
     }
   ]
 }
