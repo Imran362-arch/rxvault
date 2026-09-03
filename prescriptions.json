@@ -314,43 +314,89 @@
       "notes": "REGIMEN A (First-line - Cephalosporin-Based): Ceftriaxone 1g IM single dose + Doxycycline 100mg BID \u00d7 14 days + Metronidazole 400mg BID \u00d7 14 days.\n\nREGIMEN B (Second-line - Fluoroquinolone-Based): \n- Option 1: Levofloxacin 500mg OD \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days\n- Option 2: Moxifloxacin 400mg OD \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days (if M. genitalium suspected)\n\nREGIMEN C (Third-line - Alternative): Cefoxitin 2g IM single dose + Probenecid 1g oral single dose + Doxycycline 100mg BID \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days.\n\nREGIMEN D (Fourth-line - Parenteral/Hospital): \n- Option 1: Cefotetan 2g IV q12h OR Cefoxitin 2g IV q6h + Doxycycline 100mg BID (switch to oral after 24-48 hrs), total 14 days\n- Option 2: Clindamycin 900mg IV q8h + Gentamicin 2mg/kg IV/IM loading then 1.5mg/kg IV/IM q8h (switch to oral doxycycline 100mg BID to complete 14 days)\n\nPARTNERS: Treat all partners within 60 days.\n\nREFER IF: No improvement after 72 hours, pregnancy, severe illness, tubo-ovarian abscess, or inability to tolerate oral medications.\n\nADDITIONAL CONSIDERATIONS: \n- Screen for HIV, syphilis, and other STIs\n- Counsel on safe sex practices and contraception\n- Avoid sexual intercourse until treatment completed and symptoms resolved\n- Consider pregnancy test in all reproductive-age women\n- Hospitalization criteria: pregnant, severe illness, suspected surgical emergency, tubo-ovarian abscess, inability to tolerate oral medications, or lack of response to outpatient therapy\n- Test of cure not routinely recommended for chlamydia/gonorrhea unless symptoms persist or pregnancy\n- Repeat testing for chlamydia/gonorrhea recommended in 3-6 months due to high reinfection rates\n- Consider IUD removal if symptoms persist after 72 hours",
       "createdAt": 1788435416876,
       "updatedAt": 1788435416876
+    },
+    {
+      "name": "Abnormal Uterine Bleeding (AUB-O - Ovulatory Dysfunction)",
+      "category": "Gynecology",
+      "icon": "\ud83e\ude78",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbi-5w6lgttuWnnd-1IpUL1TG4GSU3Z68aIh0Koc3i6NWqQFXYQNUNhdU&s=10",
+      "patient": {
+        "age": "Reproductive age",
+        "gender": "Female"
+      },
+      "summary": "Abnormal Uterine Bleeding (AUB) is a common gynecological condition characterized by irregular, heavy, or prolonged menstrual bleeding in the absence of structural pathology. In ovulatory dysfunction (AUB-O), bleeding results from anovulation or oligo-ovulation, leading to unopposed estrogen stimulation and endometrial instability. Diagnosis is clinical with normal pelvic exam and negative pregnancy test. Medical management focuses on controlling acute bleeding, regulating menstrual cycles, and preventing recurrence. The combination of tranexamic acid and combined oral contraceptives is highly effective, with tranexamic acid reducing blood loss by 40-60%.",
+      "prescriptions": [
+        {
+          "name": "Tranexamic Acid 500mg",
+          "brand": "",
+          "sig": "1-2 tablets (500-1000mg) three times daily for 3-5 days during menses (reduces blood loss by 40-60%)",
+          "icon": "\ud83d\udc8a"
+        },
+        {
+          "name": "Combined Oral Contraceptive Pill (ethinyl estradiol 30-35mcg + progestin)",
+          "brand": "",
+          "sig": "1 tablet daily for 3-6 months (regulates cycle, prevents recurrence)",
+          "icon": "\ud83d\udc8a"
+        },
+        {
+          "name": "Ferrous Sulfate 200mg",
+          "brand": "Fespans",
+          "sig": "1 tablet twice daily for 3 months (treats iron deficiency anemia)",
+          "icon": "\ud83d\udc8a"
+        },
+        {
+          "name": "Folic Acid 5mg",
+          "brand": "",
+          "sig": "1 tablet once daily for 3 months",
+          "icon": "\ud83d\udc8a"
+        },
+        {
+          "name": "Paracetamol 500mg",
+          "brand": "",
+          "sig": "As needed for dysmenorrhea (painful periods)",
+          "icon": "\ud83d\udc8a"
+        }
+      ],
+      "followUp": "4 weeks (assess bleeding control), 3 months (repeat hemoglobin)",
+      "notes": "CLUES: Irregular heavy/prolonged bleeding + no structural cause + anovulatory pattern + normal pelvic exam + negative pregnancy test.\n\nBEST SINGLE PRESCRIPTION (Highest Cure Rate): Tranexamic Acid 500mg - 1-2 tablets (500-1000mg) TID for 3-5 days during menses + Combined Oral Contraceptive Pill (ethinyl estradiol 30-35mcg + progestin) - 1 tablet daily for 3-6 months.\n\nSUPPORTIVE THERAPY: Ferrous Sulfate 200mg BID for 3 months (treats iron deficiency anemia) + Folic Acid 5mg OD for 3 months + Paracetamol 500mg as needed for dysmenorrhea.\n\nDIFFERENTIAL DIAGNOSIS: Structural causes (fibroids, polyps, adenomyosis), coagulopathies, thyroid dysfunction, endometrial hyperplasia/malignancy, pregnancy complications, infection.\n\nADDITIONAL CONSIDERATIONS:\n- Rule out pregnancy with serum/urine hCG\n- Evaluate for iron deficiency anemia with complete blood count and ferritin\n- Consider pelvic ultrasound to exclude structural pathology\n- Endometrial biopsy indicated in women >45 years or with risk factors for endometrial cancer (obesity, PCOS, chronic anovulation, tamoxifen use)\n- Lifestyle modifications: weight management if obese, regular exercise\n- NSAIDs (mefenamic acid, ibuprofen) can also reduce menstrual blood loss by 20-30%\n- Levonorgestrel-releasing IUD (Mirena) is an excellent long-term option for heavy menstrual bleeding\n- If bleeding persists despite medical therapy, consider endometrial ablation or hysterectomy\n- Screen for thyroid disorders and coagulopathies (von Willebrand disease) in appropriate patients",
+      "id": "rx_1788440280_dac1beed"
     }
   ],
   "categories": [
     {
       "id": "cat_dermatology",
       "name": "Dermatology",
-      "icon": "🔴"
+      "icon": "\ud83d\udd34"
     },
     {
       "id": "cat_cardiology",
       "name": "Cardiology",
-      "icon": "❤️"
+      "icon": "\u2764\ufe0f"
     },
     {
       "id": "cat_general",
       "name": "General Medicine",
-      "icon": "💊"
+      "icon": "\ud83d\udc8a"
     },
     {
       "id": "cat_pediatrics",
       "name": "Pediatrics",
-      "icon": "👶"
+      "icon": "\ud83d\udc76"
     },
     {
       "id": "cat_other",
       "name": "Other",
-      "icon": "📋"
+      "icon": "\ud83d\udccb"
     },
     {
       "id": "cat_1788427213613_1hrm",
       "name": "Obstetrics",
-      "icon": "🩺"
+      "icon": "\ud83e\ude7a"
     },
     {
       "id": "cat_gynecology",
       "name": "Gynecology",
-      "icon": "🩺"
+      "icon": "\ud83e\ude7a"
     }
   ]
 }
