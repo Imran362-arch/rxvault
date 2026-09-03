@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "app": "RxVault",
-  "exportedAt": "2026-09-03T09:38:44.755Z",
+  "exportedAt": "2026-09-03T11:38:03.992Z",
   "prescriptions": [
     {
       "id": "rx_1788426064988_l5gkqr",
@@ -186,6 +186,43 @@
       "notes": "EXPECTED OUTCOME: 24-48 hours: Significant symptom improvement; 7-10 days: Complete resolution. REFER IF: Difficulty breathing or stridor, inability to swallow saliva (drooling), muffled voice (hot potato voice), unilateral tonsillar swelling pushing uvula, fever >39°C for >48 hours, dehydration. Cephalexin is first-line for non-anaphylactic penicillin allergy (safe, Category B). Erythromycin is the preferred macrolide in pregnancy with most documented experience. Azithromycin is not first-line for Strep pyogenes but can be used if other options unavailable. Emphasize rest and hydration. Consider throat swab for culture if no improvement at 5-7 days.",
       "createdAt": 1788427794649,
       "updatedAt": 1788427794649
+    },
+    {
+      "id": "rx_1788435416875_fx55w4",
+      "name": "Scabies",
+      "categoryId": "cat_dermatology",
+      "icon": "🔴",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU5bYLdVP5RgYB-cK0GHW8If4ZLYTHVkPySG6GIJSBzA&s",
+      "patient": {
+        "age": "All ages",
+        "gender": "All genders",
+        "notes": ""
+      },
+      "summary": "Scabies is a highly contagious parasitic infestation caused by Sarcoptes scabiei var. hominis, characterized by intense nocturnal pruritus and burrows in interdigital spaces, wrists, and flexural areas. Diagnosis is clinical, with burrow identification and family history being key. Treatment involves topical permethrin 5% cream as first-line, with ivermectin for refractory or crusted cases. All household contacts must be treated simultaneously to prevent reinfestation. Environmental decontamination is essential for cure.",
+      "prescriptions": [
+        {
+          "name": "Permethrin 5% cream",
+          "brand": "Nixcal, Scaboma, Permite",
+          "sig": "Apply to entire body from neck to toes (including under nails, between fingers/toes, groin, buttocks, soles). Leave 8-12 hours. Wash off. Repeat after 7 days.",
+          "icon": "🧴"
+        },
+        {
+          "name": "Ivermectin 200 mcg/kg",
+          "brand": "Scabo, Ivecop",
+          "sig": "Single dose (weight-based). Repeat after 7-14 days if needed (for refractory/crusted scabies).",
+          "icon": "💊"
+        },
+        {
+          "name": "Cetirizine 10 mg",
+          "brand": "Alzene, Zyrtec",
+          "sig": "1 tablet daily for 2-4 weeks (for itching)",
+          "icon": "💊"
+        }
+      ],
+      "followUp": "2 weeks (assess response), 4 weeks (if no improvement, reassess)",
+      "notes": "DIFFERENTIAL DIAGNOSIS: Atopic dermatitis (no burrows, flexural distribution, less nocturnal itch); Papular urticaria (insect bites, no burrows); Contact dermatitis (exposure history, sharp borders); Pediculosis (lice visible); Prurigo nodularis (chronic, excoriated nodules).\n\nENVIRONMENTAL: Hot water wash (≥50°C/122°F) for bedding, clothes, towels; Seal non-washable items in plastic bag for 1 week; Vacuum carpets and furniture; Treat all household contacts simultaneously.\n\nREFER IF: Crusted scabies, immunocompromised patient, no improvement after 2 cycles, secondary bacterial infection.\n\nEXPECTED OUTCOME: Mites killed after 1st application; Pruritus resolves in 2-4 weeks; Complete cure after 2 applications (days 1 and 7-14).\n\nKEY POINTS: All household contacts must be treated simultaneously regardless of symptoms. Permethrin is safe in pregnancy and children >2 months. Ivermectin is pregnancy category C. Pruritus may persist for 2-4 weeks due to hypersensitivity reaction even after successful treatment.",
+      "createdAt": 1788435416875,
+      "updatedAt": 1788435416875
     }
   ],
   "categories": [
