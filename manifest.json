@@ -1,0 +1,28 @@
+{
+  "name": "RxVault - Dr. Imran Khan Muhammadi",
+  "short_name": "RxVault",
+  "description": "Prescription collection by Dr. Imran Khan Muhammadi - Medical Faculty 2026",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#061419",
+  "theme_color": "#061419",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "lang": "en",
+  "dir": "ltr"
+}
