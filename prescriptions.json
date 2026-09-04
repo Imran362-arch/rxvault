@@ -617,6 +617,85 @@
       "followUp": "2-4 weeks (assess response to treatment)",
       "notes": "STEPWISE APPROACH:\n\nFIRST LINE (Lifestyle + Fiber):\n\u25a1 Increase fiber intake to 25-30g daily (fruits, vegetables, whole grains, legumes)\n\u25a1 Drink 8-12 cups (2-3 liters) of water daily\n\u25a1 Daily walking or exercise (20-30 minutes)\n\u25a1 Regular toileting routine (especially after meals)\n\u25a1 Psyllium husk 6g daily (if dietary fiber insufficient)\n\nSECOND LINE (If first-line fails):\n\u25a1 ADD Polyethylene Glycol 3350 17g daily (preferred)\n\u25a1 OR Lactulose 15-30ml daily (alternative)\n\nTHIRD LINE (If second-line fails after 1-2 weeks):\n\u25a1 ADD Docusate Sodium 100mg twice daily (stool softener)\n\nSTRICTLY AVOID:\n\u2717 Castor oil \u2013 uterine stimulation risk\n\u2717 Mineral oil \u2013 reduced vitamin absorption, risk of neonatal bleeding\n\u2717 Senna \u2013 contraindicated due to genotoxicity concerns\n\u2717 Magnesium citrate/sodium phosphate \u2013 risk of electrolyte imbalance\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 No bowel movement for 1 week despite treatment\n\u25a1 Severe abdominal pain\n\u25a1 Rectal bleeding\n\u25a1 Fever\n\u25a1 Signs of obstruction (vomiting, distension, no flatus)\n\nPATIENT EDUCATION:\n\"Constipation is very common in pregnancy due to hormonal changes and the growing baby pressing on your bowel. The safest approach is to increase your fiber intake and drink plenty of water. If that doesn't work, the powder laxative (PEG) is the preferred treatment during pregnancy \u2013 it works by drawing water into your bowel and is not absorbed into your body. Do NOT use castor oil or mineral oil \u2013 these are unsafe in pregnancy. If you have severe pain, bleeding, or no bowel movement for a week, come back immediately.\"\n\nEXPECTED OUTCOME:\n\u2192 Lifestyle changes + fiber: Improvement in 2-7 days\n\u2192 PEG or Lactulose: Bowel movement in 24-72 hours\n\u2192 Full response: 1-2 weeks with consistent treatment\n\nADDITIONAL NOTES:\n- Constipation is most common in the first and third trimesters\n- Iron supplements can worsen constipation \u2013 consider switching to a different formulation or reducing dose\n- Probiotics may have a modest benefit\n- Women with a history of constipation or pelvic floor dysfunction are at higher risk",
       "id": "rx_1788507912_ad9b36d0"
+    },
+    {
+      "name": "Neuropathic Pain (Peripheral Neuropathy)",
+      "category": "Neurology",
+      "icon": "\ud83e\udde0",
+      "image": "https://i0.wp.com/ova.galencentre.org/wp-content/uploads/2023/09/Neuropathic.jpg?resize=1024%2C576&ssl=1",
+      "patient": {
+        "age": "Adult",
+        "gender": "All genders"
+      },
+      "summary": "Peripheral neuropathy is a length-dependent, stocking-glove distribution of nerve damage characterized by burning pain, tingling, numbness, and night worsening. Common causes include diabetes mellitus, vitamin B12 deficiency, alcohol, hypothyroidism, uremia, and drug toxicity. First-line treatment according to NICE guidelines includes pregabalin, gabapentin, or duloxetine, chosen based on patient profile and comorbidities. Treatment requires gradual titration and 4-6 weeks to assess response. Secondary causes must be investigated and treated simultaneously. Specialist referral is needed for refractory cases, rapidly progressive weakness, or autonomic involvement.",
+      "prescriptions": [
+        {
+          "name": "Pregabalin 75mg",
+          "brand": "Pregabid, Nervigesic",
+          "sig": "Start 75mg at bedtime for 7 days, then 75mg twice daily for 7 days, then 150mg twice daily. Max 600mg/day. Duration: 4-6 weeks, then reassess.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "First-line (Option A)"
+        },
+        {
+          "name": "Gabapentin 100mg",
+          "brand": "Gabator, Neurotin",
+          "sig": "Start 100mg three times daily. Increase weekly: 300mg TID, 600mg TID, 900mg TID. Max 3600mg/day. Duration: 4-6 weeks, then reassess.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "First-line (Option B)"
+        },
+        {
+          "name": "Duloxetine 30mg",
+          "brand": "Cymbalta, Duzela",
+          "sig": "30mg once daily for 7 days, then increase to 60mg once daily. Max 120mg/day. Duration: 4-6 weeks, then reassess. Indicated for neuropathic pain with depression, diabetic neuropathy.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "First-line (Option C)"
+        },
+        {
+          "name": "Amitriptyline 10-25mg",
+          "brand": "Trytanol, Amitrip",
+          "sig": "Start 10-25mg at bedtime. Increase by 10-25mg weekly. Max 75mg/day. Duration: 4-6 weeks, then reassess.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Second-line"
+        },
+        {
+          "name": "Tramadol 50mg",
+          "brand": "",
+          "sig": "50mg 3-4 times daily. Max 400mg/day. Short-term use only (<4 weeks).",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Second-line (Short-term)"
+        },
+        {
+          "name": "Vitamin B Complex",
+          "brand": "Neurobion, Becadexamin",
+          "sig": "1 tablet once daily for 3 months",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Supportive Therapy"
+        },
+        {
+          "name": "Alpha-lipoic acid 600mg",
+          "brand": "",
+          "sig": "1 capsule once daily for 3 months (modest benefit in diabetic neuropathy)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Supportive Therapy"
+        },
+        {
+          "name": "Methylcobalamin 1500mcg",
+          "brand": "Nurokind OD",
+          "sig": "1 tablet once daily for 1 month, then 1500mcg once weekly for 2 months (for Vitamin B12 deficiency)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Cause-Specific (B12 Deficiency)"
+        },
+        {
+          "name": "Topical Capsaicin 0.075% cream",
+          "brand": "",
+          "sig": "Apply to painful areas 3-4 times daily",
+          "icon": "\ud83e\uddf4",
+          "regimen": "Supportive Therapy"
+        }
+      ],
+      "followUp": "2 weeks (assess pain reduction, side effects, dose titration); 4-6 weeks (reassess pain levels, switch or combine if inadequate); 3 months (repeat NCS if initially abnormal, review cause treatment)",
+      "notes": "DIAGNOSTIC WORKUP (Must Rule Out Causes):\n\u2022 Diabetes mellitus: HbA1c, Fasting Blood Sugar (FBS)\n\u2022 Vitamin B12 deficiency: Vitamin B12 level\n\u2022 Alcohol: LFTs, history\n\u2022 Hypothyroidism: TSH, T4\n\u2022 Uremia: Creatinine, BUN\n\u2022 Drugs: Medication history (isoniazid, metronidazole, vincristine, amiodarone)\n\u2022 Inflammatory: Nerve conduction study (NCS) if uncertain\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 Rapidly progressive weakness (Guillain-Barr\u00e9, CIDP)\n\u25a1 Asymmetric neuropathy (mononeuritis multiplex)\n\u25a1 Autonomic symptoms (orthostatic hypotension, urinary retention, erectile dysfunction)\n\u25a1 Unexplained weight loss or fever\n\u25a1 History of cancer or neurotoxic drug exposure\n\u25a1 Bowel/bladder dysfunction\n\u25a1 No improvement after 6 weeks of first-line therapy\n\nCAUSE-SPECIFIC TREATMENT:\n\u2022 Diabetic Neuropathy: Tight glycemic control (HbA1c <7%) + Gabapentin or Duloxetine\n\u2022 Vitamin B12 Deficiency: Methylcobalamin 1500mcg daily for 1 month, then weekly for 2 months\n\u2022 Alcohol-Related Neuropathy: Stop alcohol + Thiamine 100mg daily + Folic acid 5mg daily for 1 month\n\nEXPECTED OUTCOME:\n\u2192 2 weeks: Initial response\n\u2192 4-6 weeks: Full effect\n\u2192 3 months: Reassess and adjust\n\nPATIENT EDUCATION:\n\"You have nerve pain (neuropathy). This is caused by damaged nerves sending false pain signals to your brain. The burning and tingling you feel is NOT in your imagination \u2013 it is real nerve pain. The medicine I am prescribing works by calming down the overactive nerves. It takes 2-4 weeks to work fully. Start with a low dose and increase gradually as I have instructed. Do NOT stop suddenly \u2013 this can cause withdrawal symptoms. If you feel dizzy or sleepy, increase the dose more slowly and take it at bedtime. We must find the cause of your neuropathy. I am ordering blood tests to check for diabetes, B12 deficiency, and thyroid problems. Treating the cause is as important as treating the pain.\"\n\nDO NOT GIVE:\n\u2717 NSAIDs \u2013 ineffective for neuropathic pain\n\u2717 Opioids as first-line \u2013 limited efficacy, risk of dependence\n\u2717 Corticosteroids \u2013 unless inflammatory cause confirmed",
+      "id": "rx_1788509199_b1233f29"
     }
   ],
   "categories": [
