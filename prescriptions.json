@@ -408,6 +408,99 @@
       "followUp": "4-6 weeks post-treatment (test of cure with stool antigen or urea breath test)",
       "notes": "INDICATIONS: Pregnant patient with confirmed H. pylori + severe hyperemesis OR active peptic ulcer bleeding where benefit of treatment outweighs risk.\n\nFIRST TRIMESTER (or preferred for all trimesters): Amoxicillin 1000mg TID \u00d7 14 days + Omeprazole 40mg (or Esomeprazole 40mg) BID \u00d7 14 days.\n\nSECOND/THIRD TRIMESTER (Alternative if dual therapy fails): Amoxicillin 1000mg TID \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days. Use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past the first trimester.\n\nSAFETY CONSIDERATIONS:\n- Amoxicillin: Pregnancy Category B - safe and preferred\n- Omeprazole/Esomeprazole: Pregnancy Category C - use when benefits outweigh risks; limited data but generally considered safe\n- Metronidazole: Pregnancy Category B - safe after first trimester; avoid in first trimester\n- Clarithromycin: Avoid in pregnancy (Category C, associated with miscarriage risk)\n- Tetracycline: Contraindicated in pregnancy (Category D)\n\nOBSTETRIC CONSIDERATIONS:\n- H. pylori infection is associated with hyperemesis gravidarum, iron deficiency anemia, and preeclampsia\n- Eradication may improve nausea/vomiting in hyperemesis patients\n- Screen for iron deficiency anemia as H. pylori can cause occult blood loss\n- Consider testing for H. pylori in patients with refractory hyperemesis or unexplained anemia\n- Counsel on dietary modifications: avoid spicy foods, caffeine, alcohol, and smoking\n- Consider testing and treating household members if recurrent infection\n- Retreatment options if eradication fails: consider clarithromycin-based triple therapy (postpartum) or bismuth-based quadruple therapy\n- Symptom improvement expected within 1-2 weeks; complete resolution after 14-day course\n- If no improvement after 72 hours, reassess for treatment failure or alternative diagnosis\n\nREFER IF: Severe hyperemesis requiring hospitalization, active gastrointestinal bleeding, weight loss, failure to respond to therapy, or need for endoscopic evaluation",
       "id": "rx_1788441019_811eae44"
+    },
+    {
+      "name": "Acute Diarrhea in Children (<5 years)",
+      "category": "Pediatrics",
+      "icon": "\ud83d\udca7",
+      "image": "",
+      "patient": {
+        "age": "1 year (example - range: 0-5 years)",
+        "gender": "All genders"
+      },
+      "summary": "Acute diarrhea in children under 5 years is defined as \u22653 loose or watery stools in 24 hours, lasting <14 days. The leading cause is viral (rotavirus, norovirus, adenovirus), though bacterial (Shigella, Salmonella, Campylobacter) and parasitic (Giardia) causes should be considered in severe cases or those with dysentery. Management is stepwise based on dehydration severity: Plan A (no dehydration - home care with ORS, zinc, and continued feeding), Plan B (some dehydration - 75 ml/kg ORS over 4 hours in OPD), and Plan C (severe dehydration - IV Ringer's Lactate with hospital referral). Zinc supplementation for 14 days reduces duration and recurrence. Antibiotics are reserved for dysentery or severe bacterial infection. Loperamide is contraindicated in children.",
+      "prescriptions": [
+        {
+          "name": "ORS (Low-osmolarity) sachets",
+          "brand": "",
+          "sig": "1 sachet in 1 liter boiled cooled water. Give 50-100 ml after each loose stool (Plan A - No Dehydration)",
+          "icon": "\ud83e\uddc2",
+          "regimen": "Plan A - No Dehydration"
+        },
+        {
+          "name": "Zinc sulfate 20mg/5ml syrup",
+          "brand": "Zincofer",
+          "sig": "2.5 ml (10mg) once daily for 14 days (for 1 year old; 20mg daily for children >6 months)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "All Plans (A, B, C)"
+        },
+        {
+          "name": "Racecadotril 10mg sachet",
+          "brand": "Resgyl, Redotil",
+          "sig": "1 sachet three times daily for 3 days (if available - reduces stool output)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Plan A - Adjunct"
+        },
+        {
+          "name": "ORS - Plan B (Some Dehydration)",
+          "brand": "",
+          "sig": "75 ml/kg over 4 hours (e.g., 750 ml for 10 kg child) - sips every 5-10 minutes",
+          "icon": "\ud83e\uddc2",
+          "regimen": "Plan B - Some Dehydration"
+        },
+        {
+          "name": "IV Ringer's Lactate",
+          "brand": "",
+          "sig": "100 ml/kg total: <12 months: 30 ml/kg over 1 hr, then 70 ml/kg over 5 hrs; >12 months: 30 ml/kg over 30 min, then 70 ml/kg over 2.5 hrs",
+          "icon": "\ud83d\udc89",
+          "regimen": "Plan C - Severe Dehydration (Hospital Referral)"
+        },
+        {
+          "name": "Azithromycin 200mg/5ml suspension",
+          "brand": "",
+          "sig": "10-20 mg/kg once daily for 3-5 days (for dysentery or bacterial infection)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Dysentery Protocol"
+        },
+        {
+          "name": "Ciprofloxacin 250mg/5ml suspension",
+          "brand": "",
+          "sig": "15 mg/kg/dose twice daily for 3 days (alternative for dysentery)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Dysentery Protocol"
+        },
+        {
+          "name": "Ceftriaxone IV",
+          "brand": "",
+          "sig": "50-80 mg/kg IV once daily (for severe bacterial suspected)",
+          "icon": "\ud83d\udc89",
+          "regimen": "Severe Bacterial Infection"
+        },
+        {
+          "name": "Ondansetron",
+          "brand": "",
+          "sig": "0.15 mg/kg IV/IM/oral - single dose (for vomiting)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Supportive Therapy"
+        },
+        {
+          "name": "Paracetamol",
+          "brand": "",
+          "sig": "15 mg/kg every 6 hours PRN fever (avoid ibuprofen with dehydration)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Supportive Therapy"
+        },
+        {
+          "name": "Metronidazole",
+          "brand": "",
+          "sig": "35-50 mg/kg/day divided TID for 7-10 days (for amebiasis)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Amebiasis Protocol"
+        }
+      ],
+      "followUp": "48 hours (reassess for Plans A & B); immediate for Plan C",
+      "notes": "DIFFERENTIAL DIAGNOSIS & CLUES:\n\u2022 Viral gastroenteritis (rotavirus, norovirus): Watery diarrhea, vomiting, fever, no blood, self-limiting\n\u2022 Bacterial gastroenteritis (Shigella, Salmonella, Campylobacter): Bloody diarrhea (dysentery), high fever, abdominal pain, tenesmus\n\u2022 Amebiasis (Entamoeba histolytica): Bloody diarrhea with mucus ('currant jelly'), no fever or low-grade, chronic\n\u2022 Giardiasis: Foul-smelling, greasy diarrhea, bloating, flatulence, prolonged course\n\u2022 Antibiotic-associated diarrhea: History of recent antibiotic use, watery stools, may have C. difficile toxin\n\u2022 Lactose intolerance: Diarrhea after milk consumption, acidic stools, diaper rash, often post-infectious\n\nKEY MEDICATIONS:\n\u2192 ORS - GOLD STANDARD for prevention of dehydration\n\u2192 Zinc - ALWAYS (reduces duration and recurrence)\n\u2192 Racecadotril - adjunct (reduces stool output)\n\u2192 Ondansetron - single dose for vomiting\n\nDO NOT GIVE:\n\u2717 Loperamide (Imodium) - contraindicated in children (dangerous)\n\u2717 Ibuprofen - risk of kidney injury with dehydration\n\u2717 Aspirin - Reye's syndrome\n\u2717 Routine antibiotics - only for dysentery or severe bacterial infection\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 Blood in stool (dysentery)\n\u25a1 Severe dehydration (sunken eyes, no urine >6 hours, lethargy, sunken fontanelle)\n\u25a1 Unable to drink ORS (vomiting everything)\n\u25a1 Fever >39\u00b0C for >48 hours\n\u25a1 Abdominal distension or severe pain\n\u25a1 Lethargy or altered consciousness\n\u25a1 Seizure\n\u25a1 Malnourished child (SAM) with diarrhea\n\u25a1 No improvement after 48 hours of treatment\n\nPARENT EDUCATION:\n\"Your child has diarrhea. The most important treatment is preventing dehydration. Give ORS after every loose stool. Continue feeding your child \u2013 do NOT stop milk or food. Give zinc daily for 14 days \u2013 this reduces the severity and duration of diarrhea and prevents recurrence. If you see blood in the stool, your child is unable to drink, passes no urine for 6 hours, or becomes very sleepy, bring back immediately. Do NOT give any medicine to stop diarrhea (like Imodium) \u2013 these are dangerous for children.\"\n\nEXPECTED OUTCOME:\n\u2192 ORS + Zinc: 3-5 days recovery\n\u2192 Add Racecadotril: 24-48 hours faster\n\u2192 IV fluids: 1-2 hours improvement\n\u2192 Full recovery: 5-7 days\n\nFEEDING GUIDELINES:\n\u2705 Continue breastfeeding or formula\n\u2705 Rice porridge (kanji), mashed banana, khichdi, toast, yogurt (if >6 months)\n\u2705 Small frequent meals\n\u274c No milk (if >6 months and lactose intolerance suspected \u2013 switch to lactose-free)\n\u274c No juice, soft drinks, sugary water\n\u274c No solid food for 4-6 hours if vomiting",
+      "id": "rx_1788505903_eddfc35d"
     }
   ],
   "categories": [
