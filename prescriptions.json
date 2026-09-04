@@ -105,7 +105,7 @@
       "id": "rx_1788427262432_v0mm1x",
       "name": "Acute Cystitis (Pregnant Patient)",
       "categoryId": "cat_1788427213613_1hrm",
-      "icon": "\ud83e\ude7a",
+      "icon": "🤰",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHxTqe1d5hAWEk4xinGgsstDKgCaAvWDOnABWbdZ4vTWt7FkqyxagAkGU&s=10",
       "patient": {
         "age": "Adult",
@@ -142,7 +142,7 @@
       "id": "rx_1788427794649_oygrci",
       "name": "Acute Tonsillitis (Pregnant - Penicillin Allergy)",
       "categoryId": "cat_1788427213613_1hrm",
-      "icon": "\ud83e\ude7a",
+      "icon": "🤰",
       "image": "https://drsanu.com/wp-content/uploads/2023/12/acute-tonsillitis.png.webp",
       "patient": {
         "age": "Adult",
@@ -228,7 +228,7 @@
       "id": "rx_pid_001",
       "name": "Pelvic Inflammatory Disease (PID)",
       "categoryId": "cat_gynecology",
-      "icon": "\ud83e\ude7a",
+      "icon": "🤰",
       "image": "https://my.clevelandclinic.org/-/scassets/images/org/health/articles/9129-pelvic-inflammatory-disease-pid",
       "patient": {
         "age": "Reproductive age",
@@ -732,12 +732,12 @@
     {
       "id": "cat_1788427213613_1hrm",
       "name": "Obstetrics",
-      "icon": "\ud83e\ude7a"
+      "icon": "🤰"
     },
     {
       "id": "cat_gynecology",
       "name": "Gynecology",
-      "icon": "\ud83e\ude7a"
+      "icon": "🤰"
     }
   ]
 }
