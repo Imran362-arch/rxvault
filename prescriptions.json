@@ -573,6 +573,50 @@
       "followUp": "3 cycles (assess response to NSAIDs/COCP); 3 months (assess response to supportive therapy)",
       "notes": "DIFFERENTIAL DIAGNOSIS & CLUES:\n\u2022 Endometriosis: Chronic pelvic pain, dyspareunia, infertility, pain unrelated to menses\n\u2022 Adenomyosis: Heavy menstrual bleeding, enlarged boggy uterus, pain throughout cycle\n\u2022 Pelvic Inflammatory Disease (PID): Fever, cervical motion tenderness, abnormal vaginal discharge, bilateral adnexal tenderness\n\u2022 Ovarian cyst (ruptured/hemorrhagic): Sudden onset of unilateral pain, may have nausea/vomiting, acute abdomen\n\u2022 Ectopic pregnancy: Amenorrhea, vaginal bleeding, unilateral pain, positive pregnancy test\n\u2022 Irritable Bowel Syndrome (IBS): Pain related to defecation, altered bowel habit, bloating\n\u2022 Urinary tract infection (cystitis): Dysuria, frequency, urgency, suprapubic pain, positive urine dipstick\n\u2022 Mittelschmerz: Mid-cycle (ovulation) pain, unilateral, brief duration (hours), no menstrual bleeding\n\nRED FLAGS (REFER FOR SECONDARY CAUSES):\n\u25a1 No response to NSAIDs or COCP after 3-6 cycles\n\u25a1 Pain onset >25 years of age (suggests secondary cause)\n\u25a1 Pain lasting >3 days\n\u25a1 Pain with intercourse (dyspareunia) \u2013 suggests endometriosis\n\u25a1 Irregular menstrual bleeding (intermenstrual, postcoital, heavy)\n\u25a1 Abnormal pelvic exam (tenderness, masses, nodules)\n\u25a1 Infertility\n\u25a1 Fever or abnormal vaginal discharge (PID)\n\u25a1 Symptoms of anemia (fatigue, pallor, dizziness) \u2013 suggests menorrhagia\n\nDO NOT GIVE:\n\u2717 Opioids for primary dysmenorrhea (ineffective, addictive)\n\u2717 NSAIDs in patients with peptic ulcer or renal disease\n\u2717 COCP in patients with contraindications (>35 years + smoking, migraine with aura, thromboembolic risk, uncontrolled hypertension, breast cancer)\n\nEXPECTED OUTCOME:\n\u2192 NSAIDs: Pain relief within 30-60 minutes\n\u2192 COCP: 60-90% reduction in pain after 3-6 cycles\n\u2192 Full response: 1-2 months\n\nPARENT EDUCATION:\n\"Dysmenorrhea is painful menstrual cramps caused by prostaglandins \u2013 chemicals that make the uterus contract. The pain is real and treatable. Start taking the painkiller 1-2 days BEFORE your period is expected \u2013 this is more effective than waiting for pain to start. Take it with food to prevent stomach upset. Apply a hot water bottle to your lower abdomen \u2013 this relaxes the uterus and reduces pain. Regular exercise and a healthy diet can reduce the severity of cramps over time. If the pain does not improve after 3-6 cycles, or if you have pain between periods, pain with intercourse, or heavy bleeding, come back \u2013 we may need to investigate for other causes.\"\n\nNON-PHARMACOLOGICAL OPTIONS:\n\u25a1 Regular aerobic exercise (20-30 min, 3-4 times/week)\n\u25a1 Dietary modifications: reduce salt, caffeine, alcohol; increase fruits, vegetables\n\u25a1 Transcutaneous Electrical Nerve Stimulation (TENS) \u2013 some evidence for pain relief\n\u25a1 Acupuncture \u2013 limited evidence\n\u25a1 Stress reduction \u2013 cognitive behavioral therapy, relaxation techniques\n\u25a1 Vitamin D supplementation \u2013 if deficiency present\n\u25a1 Fish oil (omega-3) \u2013 anti-inflammatory effect (modest benefit)",
       "id": "rx_1788506715_052d3325"
+    },
+    {
+      "name": "Pregnancy Constipation",
+      "category": "Obstetrics",
+      "icon": "\ud83d\udca9",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrVsTfHszG8XUNw96FHz8UxWt1Lp34bpaLoiddMWv3j2qX8zgEvA2bC8P&s=10",
+      "patient": {
+        "age": "Adult",
+        "gender": "Female (Pregnant)"
+      },
+      "summary": "Constipation in pregnancy is a common condition defined as infrequent bowel movements (<3 per week), hard stools, and straining, affecting up to 40% of pregnant women. It is caused by hormonal changes (increased progesterone), mechanical compression by the growing uterus, and iron supplementation. First-line treatment involves lifestyle modifications (increased fiber, hydration, exercise) and fiber supplements. Polyethylene Glycol 3350 (PEG) is the preferred osmotic laxative as it is minimally absorbed and safe in pregnancy. Lactulose is a safe alternative. Bulk-forming agents like psyllium require adequate water to avoid obstruction. Stimulant laxatives and mineral oil should be strictly avoided due to safety concerns.",
+      "prescriptions": [
+        {
+          "name": "Polyethylene Glycol 3350 (PEG) 17g powder",
+          "brand": "Movicol, ClearLax",
+          "sig": "1 sachet (17g) dissolved in 250-500ml water ONCE daily. Duration: 2-4 weeks, then reassess. Preferred by ACOG and AGA. Onset: 24-72 hours.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Second-line (if lifestyle + fiber fail)"
+        },
+        {
+          "name": "Lactulose 10g/15ml syrup",
+          "brand": "Duphalac, Lactulax",
+          "sig": "15-30ml (10-20g) ONCE daily. Duration: 2-4 weeks. Alternative if PEG unavailable. Onset: 24-48 hours.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Second-line (Alternative)"
+        },
+        {
+          "name": "Psyllium husk (Ispaghol) 6g",
+          "brand": "",
+          "sig": "1 tablespoon in 1 glass of water ONCE daily. Must be taken with adequate water to avoid obstruction.",
+          "icon": "\ud83c\udf3e",
+          "regimen": "First-line (Fiber Supplement)"
+        },
+        {
+          "name": "Docusate Sodium 100mg",
+          "brand": "",
+          "sig": "1 tablet twice daily (stool softener \u2013 considered safe if second-line fails after 1-2 weeks)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Third-line"
+        }
+      ],
+      "followUp": "2-4 weeks (assess response to treatment)",
+      "notes": "STEPWISE APPROACH:\n\nFIRST LINE (Lifestyle + Fiber):\n\u25a1 Increase fiber intake to 25-30g daily (fruits, vegetables, whole grains, legumes)\n\u25a1 Drink 8-12 cups (2-3 liters) of water daily\n\u25a1 Daily walking or exercise (20-30 minutes)\n\u25a1 Regular toileting routine (especially after meals)\n\u25a1 Psyllium husk 6g daily (if dietary fiber insufficient)\n\nSECOND LINE (If first-line fails):\n\u25a1 ADD Polyethylene Glycol 3350 17g daily (preferred)\n\u25a1 OR Lactulose 15-30ml daily (alternative)\n\nTHIRD LINE (If second-line fails after 1-2 weeks):\n\u25a1 ADD Docusate Sodium 100mg twice daily (stool softener)\n\nSTRICTLY AVOID:\n\u2717 Castor oil \u2013 uterine stimulation risk\n\u2717 Mineral oil \u2013 reduced vitamin absorption, risk of neonatal bleeding\n\u2717 Senna \u2013 contraindicated due to genotoxicity concerns\n\u2717 Magnesium citrate/sodium phosphate \u2013 risk of electrolyte imbalance\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 No bowel movement for 1 week despite treatment\n\u25a1 Severe abdominal pain\n\u25a1 Rectal bleeding\n\u25a1 Fever\n\u25a1 Signs of obstruction (vomiting, distension, no flatus)\n\nPATIENT EDUCATION:\n\"Constipation is very common in pregnancy due to hormonal changes and the growing baby pressing on your bowel. The safest approach is to increase your fiber intake and drink plenty of water. If that doesn't work, the powder laxative (PEG) is the preferred treatment during pregnancy \u2013 it works by drawing water into your bowel and is not absorbed into your body. Do NOT use castor oil or mineral oil \u2013 these are unsafe in pregnancy. If you have severe pain, bleeding, or no bowel movement for a week, come back immediately.\"\n\nEXPECTED OUTCOME:\n\u2192 Lifestyle changes + fiber: Improvement in 2-7 days\n\u2192 PEG or Lactulose: Bowel movement in 24-72 hours\n\u2192 Full response: 1-2 weeks with consistent treatment\n\nADDITIONAL NOTES:\n- Constipation is most common in the first and third trimesters\n- Iron supplements can worsen constipation \u2013 consider switching to a different formulation or reducing dose\n- Probiotics may have a modest benefit\n- Women with a history of constipation or pelvic floor dysfunction are at higher risk",
+      "id": "rx_1788507912_ad9b36d0"
     }
   ],
   "categories": [
