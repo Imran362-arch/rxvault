@@ -621,7 +621,7 @@
     {
       "name": "Neuropathic Pain (Peripheral Neuropathy)",
       "categoryId": "cat_neurology",
-      "icon": "./neurology-icon.jpg",
+      "icon": "🧠",
       "image": "https://i0.wp.com/ova.galencentre.org/wp-content/uploads/2023/09/Neuropathic.jpg?resize=1024%2C576&ssl=1",
       "patient": {
         "age": "Adult",
@@ -702,7 +702,7 @@
     {
       "id": "cat_neurology",
       "name": "Neurology",
-      "icon": "./neurology-icon.jpg"
+      "icon": "🧠"
     },
     {
       "id": "cat_dermatology",
