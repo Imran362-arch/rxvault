@@ -501,6 +501,78 @@
       "followUp": "48 hours (reassess for Plans A & B); immediate for Plan C",
       "notes": "DIFFERENTIAL DIAGNOSIS & CLUES:\n\u2022 Viral gastroenteritis (rotavirus, norovirus): Watery diarrhea, vomiting, fever, no blood, self-limiting\n\u2022 Bacterial gastroenteritis (Shigella, Salmonella, Campylobacter): Bloody diarrhea (dysentery), high fever, abdominal pain, tenesmus\n\u2022 Amebiasis (Entamoeba histolytica): Bloody diarrhea with mucus ('currant jelly'), no fever or low-grade, chronic\n\u2022 Giardiasis: Foul-smelling, greasy diarrhea, bloating, flatulence, prolonged course\n\u2022 Antibiotic-associated diarrhea: History of recent antibiotic use, watery stools, may have C. difficile toxin\n\u2022 Lactose intolerance: Diarrhea after milk consumption, acidic stools, diaper rash, often post-infectious\n\nKEY MEDICATIONS:\n\u2192 ORS - GOLD STANDARD for prevention of dehydration\n\u2192 Zinc - ALWAYS (reduces duration and recurrence)\n\u2192 Racecadotril - adjunct (reduces stool output)\n\u2192 Ondansetron - single dose for vomiting\n\nDO NOT GIVE:\n\u2717 Loperamide (Imodium) - contraindicated in children (dangerous)\n\u2717 Ibuprofen - risk of kidney injury with dehydration\n\u2717 Aspirin - Reye's syndrome\n\u2717 Routine antibiotics - only for dysentery or severe bacterial infection\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 Blood in stool (dysentery)\n\u25a1 Severe dehydration (sunken eyes, no urine >6 hours, lethargy, sunken fontanelle)\n\u25a1 Unable to drink ORS (vomiting everything)\n\u25a1 Fever >39\u00b0C for >48 hours\n\u25a1 Abdominal distension or severe pain\n\u25a1 Lethargy or altered consciousness\n\u25a1 Seizure\n\u25a1 Malnourished child (SAM) with diarrhea\n\u25a1 No improvement after 48 hours of treatment\n\nPARENT EDUCATION:\n\"Your child has diarrhea. The most important treatment is preventing dehydration. Give ORS after every loose stool. Continue feeding your child \u2013 do NOT stop milk or food. Give zinc daily for 14 days \u2013 this reduces the severity and duration of diarrhea and prevents recurrence. If you see blood in the stool, your child is unable to drink, passes no urine for 6 hours, or becomes very sleepy, bring back immediately. Do NOT give any medicine to stop diarrhea (like Imodium) \u2013 these are dangerous for children.\"\n\nEXPECTED OUTCOME:\n\u2192 ORS + Zinc: 3-5 days recovery\n\u2192 Add Racecadotril: 24-48 hours faster\n\u2192 IV fluids: 1-2 hours improvement\n\u2192 Full recovery: 5-7 days\n\nFEEDING GUIDELINES:\n\u2705 Continue breastfeeding or formula\n\u2705 Rice porridge (kanji), mashed banana, khichdi, toast, yogurt (if >6 months)\n\u2705 Small frequent meals\n\u274c No milk (if >6 months and lactose intolerance suspected \u2013 switch to lactose-free)\n\u274c No juice, soft drinks, sugary water\n\u274c No solid food for 4-6 hours if vomiting",
       "id": "rx_1788505903_eddfc35d"
+    },
+    {
+      "name": "Dysmenorrhea",
+      "category": "Gynecology",
+      "icon": "\ud83e\ude78",
+      "image": "https://www.invitra.com/en/wp-content/uploads/2019/11/dysmenorrhea.png.webp",
+      "patient": {
+        "age": "Adolescent to reproductive age",
+        "gender": "Female"
+      },
+      "summary": "Dysmenorrhea is defined as painful menstrual cramps of uterine origin, typically beginning 1-2 days before or at the onset of menses, and lasting 1-3 days. It is classified as primary (no underlying pelvic pathology, common in adolescents 6-12 months after menarche) or secondary (associated with pelvic pathology such as endometriosis, adenomyosis, fibroids, PID, or IUD). First-line treatment involves NSAIDs started 1-2 days before menses, combined with heat therapy. Combined Oral Contraceptive Pills (COCP) are second-line for moderate-severe cases or when NSAIDs are insufficient. Secondary dysmenorrhea requires investigation with pelvic ultrasound and referral to gynecology.",
+      "prescriptions": [
+        {
+          "name": "Mefenamic Acid 500mg",
+          "brand": "",
+          "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Mild-Moderate Primary Dysmenorrhea"
+        },
+        {
+          "name": "Ibuprofen 400mg",
+          "brand": "",
+          "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Mild-Moderate Primary Dysmenorrhea"
+        },
+        {
+          "name": "Naproxen 500mg",
+          "brand": "",
+          "sig": "1 tablet twice daily with food. Start 1-2 days before menses, continue for 3-5 days.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Mild-Moderate Primary Dysmenorrhea"
+        },
+        {
+          "name": "Diclofenac Sodium 50mg",
+          "brand": "",
+          "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Mild-Moderate Primary Dysmenorrhea"
+        },
+        {
+          "name": "Combined Oral Contraceptive Pill (COCP)",
+          "brand": "",
+          "sig": "1 tablet daily for 21-28 days. Duration: 3-6 cycles (then reassess). Indicated if NSAIDs insufficient.",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Moderate-Severe Primary Dysmenorrhea"
+        },
+        {
+          "name": "Vitamin E 400 IU",
+          "brand": "Evion",
+          "sig": "1 capsule daily during menses for 3-5 days (supportive therapy)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Supportive Therapy"
+        },
+        {
+          "name": "Magnesium 200mg",
+          "brand": "",
+          "sig": "1 tablet daily for 3 months (supportive therapy)",
+          "icon": "\ud83d\udc8a",
+          "regimen": "Supportive Therapy"
+        },
+        {
+          "name": "Heat therapy (hot water bottle)",
+          "brand": "",
+          "sig": "Apply to lower abdomen during menses",
+          "icon": "\ud83d\udd25",
+          "regimen": "All Patients"
+        }
+      ],
+      "followUp": "3 cycles (assess response to NSAIDs/COCP); 3 months (assess response to supportive therapy)",
+      "notes": "DIFFERENTIAL DIAGNOSIS & CLUES:\n\u2022 Endometriosis: Chronic pelvic pain, dyspareunia, infertility, pain unrelated to menses\n\u2022 Adenomyosis: Heavy menstrual bleeding, enlarged boggy uterus, pain throughout cycle\n\u2022 Pelvic Inflammatory Disease (PID): Fever, cervical motion tenderness, abnormal vaginal discharge, bilateral adnexal tenderness\n\u2022 Ovarian cyst (ruptured/hemorrhagic): Sudden onset of unilateral pain, may have nausea/vomiting, acute abdomen\n\u2022 Ectopic pregnancy: Amenorrhea, vaginal bleeding, unilateral pain, positive pregnancy test\n\u2022 Irritable Bowel Syndrome (IBS): Pain related to defecation, altered bowel habit, bloating\n\u2022 Urinary tract infection (cystitis): Dysuria, frequency, urgency, suprapubic pain, positive urine dipstick\n\u2022 Mittelschmerz: Mid-cycle (ovulation) pain, unilateral, brief duration (hours), no menstrual bleeding\n\nRED FLAGS (REFER FOR SECONDARY CAUSES):\n\u25a1 No response to NSAIDs or COCP after 3-6 cycles\n\u25a1 Pain onset >25 years of age (suggests secondary cause)\n\u25a1 Pain lasting >3 days\n\u25a1 Pain with intercourse (dyspareunia) \u2013 suggests endometriosis\n\u25a1 Irregular menstrual bleeding (intermenstrual, postcoital, heavy)\n\u25a1 Abnormal pelvic exam (tenderness, masses, nodules)\n\u25a1 Infertility\n\u25a1 Fever or abnormal vaginal discharge (PID)\n\u25a1 Symptoms of anemia (fatigue, pallor, dizziness) \u2013 suggests menorrhagia\n\nDO NOT GIVE:\n\u2717 Opioids for primary dysmenorrhea (ineffective, addictive)\n\u2717 NSAIDs in patients with peptic ulcer or renal disease\n\u2717 COCP in patients with contraindications (>35 years + smoking, migraine with aura, thromboembolic risk, uncontrolled hypertension, breast cancer)\n\nEXPECTED OUTCOME:\n\u2192 NSAIDs: Pain relief within 30-60 minutes\n\u2192 COCP: 60-90% reduction in pain after 3-6 cycles\n\u2192 Full response: 1-2 months\n\nPARENT EDUCATION:\n\"Dysmenorrhea is painful menstrual cramps caused by prostaglandins \u2013 chemicals that make the uterus contract. The pain is real and treatable. Start taking the painkiller 1-2 days BEFORE your period is expected \u2013 this is more effective than waiting for pain to start. Take it with food to prevent stomach upset. Apply a hot water bottle to your lower abdomen \u2013 this relaxes the uterus and reduces pain. Regular exercise and a healthy diet can reduce the severity of cramps over time. If the pain does not improve after 3-6 cycles, or if you have pain between periods, pain with intercourse, or heavy bleeding, come back \u2013 we may need to investigate for other causes.\"\n\nNON-PHARMACOLOGICAL OPTIONS:\n\u25a1 Regular aerobic exercise (20-30 min, 3-4 times/week)\n\u25a1 Dietary modifications: reduce salt, caffeine, alcohol; increase fruits, vegetables\n\u25a1 Transcutaneous Electrical Nerve Stimulation (TENS) \u2013 some evidence for pain relief\n\u25a1 Acupuncture \u2013 limited evidence\n\u25a1 Stress reduction \u2013 cognitive behavioral therapy, relaxation techniques\n\u25a1 Vitamin D supplementation \u2013 if deficiency present\n\u25a1 Fish oil (omega-3) \u2013 anti-inflammatory effect (modest benefit)",
+      "id": "rx_1788506715_052d3325"
     }
   ],
   "categories": [
