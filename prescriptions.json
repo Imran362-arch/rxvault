@@ -1,13 +1,24 @@
 {
-  "version": "1.0",
-  "app": "RxVault",
-  "exportedAt": "2026-09-03T11:38:03.992Z",
+  "categories": [
+    { "id": "cat_dermatology", "name": "Dermatology", "icon": "🔴" },
+    { "id": "cat_cardiology", "name": "Cardiology", "icon": "❤️" },
+    { "id": "cat_general", "name": "General Medicine", "icon": "💊" },
+    { "id": "cat_pediatrics", "name": "Pediatrics", "icon": "👶" },
+    { "id": "cat_neurology", "name": "Neurology", "icon": "🧠" },
+    { "id": "cat_respiratory", "name": "Respiratory", "icon": "🫁" },
+    { "id": "cat_endocrine", "name": "Endocrinology", "icon": "⚗️" },
+    { "id": "cat_gastro", "name": "Gastroenterology", "icon": "🫃" },
+    { "id": "cat_psychiatry", "name": "Psychiatry", "icon": "🧩" },
+    { "id": "cat_gynecology", "name": "Gynecology", "icon": "🤰" },
+    { "id": "cat_other", "name": "Other", "icon": "📋" }
+  ],
+
   "prescriptions": [
     {
       "id": "rx_1788426064988_l5gkqr",
       "name": "Acne Vulgaris",
       "categoryId": "cat_dermatology",
-      "icon": "\ud83d\udd34",
+      "icon": "🔴",
       "image": "https://www.health.com/thmb/M97lm60na0ix41eCtfli4D9NefE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-1390356588-f5c3a87b335a43238d4ef3eff16aa0fe.jpg",
       "patient": {
         "age": "15 years",
@@ -15,40 +26,112 @@
         "notes": ""
       },
       "summary": "Acne vulgaris is a common chronic inflammatory skin condition involving the pilosebaceous units. It commonly presents with comedones, papules, pustules, nodules, and scarring, often on the face, chest, and back. Treatment is tailored to severity and may include topical agents, oral antibiotics, and adjunctive skincare.",
-      "prescriptions": [
+      "regimens": [
         {
-          "name": "Doxycycline 100 mg",
-          "brand": "Doxynor, Doxy",
-          "sig": "1 capsule once daily with food for 12 weeks",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_1",
+          "name": "Oral Antibiotic + Topical Therapy",
+          "type": "Initial",
+          "description": "Combination therapy for moderate-severe inflammatory acne. Oral doxycycline provides systemic anti-inflammatory and antibacterial effects. Azelaic acid and benzoyl peroxide provide topical action.",
+          "duration": "12 weeks",
+          "medications": [
+            {
+              "name": "Doxycycline 100 mg",
+              "brand": "Doxynor, Doxy",
+              "dose": "100 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "12 weeks",
+              "sig": "1 capsule once daily with food for 12 weeks",
+              "icon": "💊"
+            },
+            {
+              "name": "Azelaic Acid 15% cream",
+              "brand": "Aziderm, Skinoren",
+              "dose": "15%",
+              "route": "Topical",
+              "frequency": "Twice daily",
+              "duration": "12 weeks",
+              "sig": "Apply thin layer to affected areas twice daily for 12 weeks",
+              "icon": "🧴"
+            },
+            {
+              "name": "Benzoyl Peroxide 2.5% gel",
+              "brand": "Benzac, Brevoxyl",
+              "dose": "2.5%",
+              "route": "Topical",
+              "frequency": "Once daily",
+              "duration": "12 weeks",
+              "sig": "Apply thin layer to affected areas at bedtime for 12 weeks",
+              "icon": "🧴"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Photosensitivity",
+              "text": "Doxycycline causes photosensitivity. Strict sun protection with SPF 50+ sunscreen essential. Avoid prolonged sun exposure and tanning beds."
+            },
+            {
+              "severity": "warning",
+              "label": "GI Side Effects",
+              "text": "Take doxycycline with food to minimize GI distress. Remain upright for 30 minutes after taking to prevent esophagitis. Monitor for nausea, diarrhea."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Timeline",
+              "text": "Expect gradual improvement over 6-8 weeks. Adherence to full 12-week course is important. Continue topical maintenance after stopping oral antibiotic."
+            }
+          ],
+          "followUp": "4 weeks, 12 weeks"
         },
         {
-          "name": "Azelaic Acid 15% cream",
-          "brand": "Aziderm, Skinoren",
-          "sig": "Apply thin layer to affected areas twice daily for 12 weeks",
-          "icon": "\ud83e\uddf4"
-        },
-        {
-          "name": "Benzoyl Peroxide 2.5% gel",
-          "brand": "Benzac, Brevoxyl",
-          "sig": "Apply thin layer to affected areas at bedtime for 12 weeks",
-          "icon": "\ud83e\uddf4"
-        },
-        {
-          "name": "Acne Soap (salicylic acid based)",
-          "brand": "",
-          "sig": "Wash face twice daily",
-          "icon": "\ud83e\uddfc"
-        },
-        {
-          "name": "Sunscreen SPF 30+",
-          "brand": "",
-          "sig": "Apply daily before sun exposure",
-          "icon": "\u2600\ufe0f"
+          "id": "reg_2",
+          "name": "Topical Only Maintenance",
+          "type": "Maintenance",
+          "description": "For mild acne or after completing oral antibiotic course. Focuses on topical maintenance to prevent recurrence.",
+          "duration": "Ongoing",
+          "medications": [
+            {
+              "name": "Azelaic Acid 15% cream",
+              "brand": "Aziderm, Skinoren",
+              "dose": "15%",
+              "route": "Topical",
+              "frequency": "Twice daily",
+              "duration": "Ongoing",
+              "sig": "Apply thin layer to affected areas twice daily",
+              "icon": "🧴"
+            },
+            {
+              "name": "Acne Soap (salicylic acid based)",
+              "brand": "",
+              "dose": "",
+              "route": "Topical",
+              "frequency": "Twice daily",
+              "duration": "Ongoing",
+              "sig": "Wash face twice daily",
+              "icon": "🧼"
+            },
+            {
+              "name": "Sunscreen SPF 30+",
+              "brand": "",
+              "dose": "",
+              "route": "Topical",
+              "frequency": "Once daily",
+              "duration": "Ongoing",
+              "sig": "Apply daily before sun exposure",
+              "icon": "☀️"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "info",
+              "label": "Maintenance",
+              "text": "Continue topical therapy even after acne clears to prevent recurrence. Sunscreen is essential for post-inflammatory hyperpigmentation prevention."
+            }
+          ],
+          "followUp": "3 months"
         }
       ],
-      "followUp": "4 weeks, 12 weeks",
-      "notes": "Combination therapy with oral antibiotic and topical agents. Counsel on potential photosensitivity with doxycycline; strict sun protection is essential. Expect gradual improvement over 6\u20138 weeks; adherence to full 12-week course is important. Monitor for gastrointestinal side effects and skin irritation.",
       "createdAt": 1788426064988,
       "updatedAt": 1788426064988
     },
@@ -56,7 +139,7 @@
       "id": "rx_1788426505446_fxq1xt",
       "name": "Melasma",
       "categoryId": "cat_dermatology",
-      "icon": "\ud83d\udfe4",
+      "icon": "🟤",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_dJldm7c7xnwYf6k2nVmX0uUdMncb1V_YmkG9p7zfhUtPhaQrTM15Cn3QSUUdcOQH&s=10&ec=121966386",
       "patient": {
         "age": "Adult",
@@ -64,47 +147,156 @@
         "notes": ""
       },
       "summary": "Melasma is an acquired hyperpigmentation disorder characterized by symmetric, blotchy brownish macules on sun-exposed areas, particularly the face. It is more common in females and darker skin types. Management involves photoprotection, topical depigmenting agents, and procedural therapies. Treatment is stepwise and requires long-term maintenance due to high recurrence rates.",
-      "prescriptions": [
+      "regimens": [
         {
-          "name": "Sunscreen SPF 50+ (tinted preferred)",
-          "brand": "",
-          "sig": "Apply daily, reapply every 2-3 hours (indefinite)",
-          "icon": "\u2600\ufe0f"
+          "id": "reg_1",
+          "name": "Triple Combination Therapy",
+          "type": "Initial",
+          "description": "First-line therapy for melasma. Triple combination cream with hydroquinone, tretinoin, and fluocinolone is the gold standard. Limited to 8 weeks due to hydroquinone risks.",
+          "duration": "8 weeks",
+          "medications": [
+            {
+              "name": "Hydroquinone 4% + Tretinoin 0.05% + Fluocinolone 0.01% cream",
+              "brand": "Tri-Luma, Skinshine",
+              "dose": "4%/0.05%/0.01%",
+              "route": "Topical",
+              "frequency": "Once daily",
+              "duration": "8 weeks",
+              "sig": "Apply thin layer to affected facial areas ONCE daily at bedtime (max 8 weeks)",
+              "icon": "🧴"
+            },
+            {
+              "name": "Sunscreen SPF 50+ (tinted preferred)",
+              "brand": "",
+              "dose": "",
+              "route": "Topical",
+              "frequency": "Daily",
+              "duration": "Indefinite",
+              "sig": "Apply daily, reapply every 2-3 hours",
+              "icon": "☀️"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Duration Limit",
+              "text": "Hydroquinone is limited to 8 weeks of continuous use. Longer use may cause ochronosis (blue-black pigmentation). After 8 weeks, switch to maintenance therapy."
+            },
+            {
+              "severity": "critical",
+              "label": "Sun Protection",
+              "text": "Strict photoprotection is CRITICAL. Tinted sunscreen provides visible light protection which is important for melasma. Reapply every 2-3 hours."
+            },
+            {
+              "severity": "warning",
+              "label": "Skin Irritation",
+              "text": "Tretinoin causes irritation, peeling, and redness initially. Start with alternate nights if sensitive. Use moisturizer during the day."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Response",
+              "text": "Improvement visible at 4-8 weeks. Complete response may require 12-16 weeks. Maintenance required lifelong."
+            }
+          ],
+          "followUp": "8 weeks, 12 weeks"
         },
         {
-          "name": "Hydroquinone 4% + Tretinoin 0.05% + Fluocinolone 0.01% cream",
-          "brand": "Tri-Luma, Skinshine",
-          "sig": "Apply thin layer to affected facial areas ONCE daily at bedtime (max 8 weeks)",
-          "icon": "\ud83e\uddf4"
+          "id": "reg_2",
+          "name": "Maintenance Therapy",
+          "type": "Maintenance",
+          "description": "After stopping hydroquinone, maintain results with azelaic acid, kojic acid, or other depigmenting agents. Sun protection remains essential.",
+          "duration": "Ongoing",
+          "medications": [
+            {
+              "name": "Azelaic acid 15-20% cream",
+              "brand": "",
+              "dose": "15-20%",
+              "route": "Topical",
+              "frequency": "Twice daily",
+              "duration": "Ongoing",
+              "sig": "Apply twice daily (maintenance after stopping hydroquinone)",
+              "icon": "🧴"
+            },
+            {
+              "name": "Kojic acid 2% / Tranexamic acid 3% serum",
+              "brand": "",
+              "dose": "2%/3%",
+              "route": "Topical",
+              "frequency": "Twice daily",
+              "duration": "Ongoing",
+              "sig": "Apply twice daily (alternative maintenance)",
+              "icon": "💧"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "warning",
+              "label": "Recurrence Risk",
+              "text": "Melasma has high recurrence rates. Consistent maintenance therapy and sun protection are essential. Pulse hydroquinone courses may be needed."
+            },
+            {
+              "severity": "info",
+              "label": "Long-term Strategy",
+              "text": "Maintenance cream + daily sunscreen + pulse hydroquinone courses as needed. Assess epidermal vs dermal vs mixed pattern using Wood's lamp."
+            }
+          ],
+          "followUp": "3-6 months"
         },
         {
-          "name": "Azelaic acid 15-20% cream",
-          "brand": "",
-          "sig": "Apply twice daily (maintenance after stopping hydroquinone)",
-          "icon": "\ud83e\uddf4"
-        },
-        {
-          "name": "Kojic acid 2% / Tranexamic acid 3% serum",
-          "brand": "",
-          "sig": "Apply twice daily (alternative maintenance)",
-          "icon": "\ud83d\udca7"
-        },
-        {
-          "name": "Tranexamic acid 250 mg",
-          "brand": "",
-          "sig": "1 tablet twice daily for 8-12 weeks (refractory cases)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_3",
+          "name": "Refractory Melasma",
+          "type": "Intensified",
+          "description": "For refractory cases not responding to topical therapy. Adds oral tranexamic acid which inhibits plasminogen activation and reduces melanogenesis.",
+          "duration": "8-12 weeks",
+          "medications": [
+            {
+              "name": "Tranexamic acid 250 mg",
+              "brand": "",
+              "dose": "250 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "8-12 weeks",
+              "sig": "1 tablet twice daily for 8-12 weeks (refractory cases)",
+              "icon": "💊"
+            },
+            {
+              "name": "Azelaic acid 15-20% cream",
+              "brand": "",
+              "dose": "15-20%",
+              "route": "Topical",
+              "frequency": "Twice daily",
+              "duration": "Ongoing",
+              "sig": "Continue maintenance cream",
+              "icon": "🧴"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Thrombosis Risk",
+              "text": "Tranexamic acid increases thrombotic risk. Contraindicated in patients with history of DVT, PE, or hypercoagulable states. Use with caution."
+            },
+            {
+              "severity": "warning",
+              "label": "GI Side Effects",
+              "text": "Oral tranexamic acid may cause nausea, GI upset. Take with food. Rarely causes visual disturbances."
+            },
+            {
+              "severity": "info",
+              "label": "Alternative Options",
+              "text": "If inadequate at 12 weeks: Consider PRP injections, gentle chemical peels, or low-fluence laser (dermatologist only)."
+            }
+          ],
+          "followUp": "12 weeks"
         }
       ],
-      "followUp": "8 weeks, 12 weeks",
-      "notes": "Stepwise approach: Step 1 (all patients): SPF 50+ sunscreen + sun avoidance. Step 2 (first-line): Triple combination cream \u00d7 8 weeks. Step 3 (at 8 weeks): If improved \u2192 stop hydroquinone \u2192 start maintenance (azelaic acid/kojic acid). If not improved \u2192 add oral tranexamic acid 250 mg BID. Step 4 (at 12 weeks if inadequate): Consider PRP injections, gentle chemical peels, or low-fluence laser (dermatologist only). Step 5 (long-term): Maintenance cream + daily sunscreen + pulse hydroquinone courses as needed. Assess epidermal vs dermal vs mixed pattern using Wood's lamp. Strict photoprotection is critical for all patients.",
       "createdAt": 1788426505446,
       "updatedAt": 1788426505446
     },
     {
       "id": "rx_1788427262432_v0mm1x",
       "name": "Acute Cystitis (Pregnant Patient)",
-      "categoryId": "cat_1788427213613_1hrm",
+      "categoryId": "cat_gynecology",
       "icon": "🤰",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHxTqe1d5hAWEk4xinGgsstDKgCaAvWDOnABWbdZ4vTWt7FkqyxagAkGU&s=10",
       "patient": {
@@ -113,35 +305,126 @@
         "notes": ""
       },
       "summary": "Acute cystitis in pregnancy is a common bacterial infection of the bladder that requires prompt antibiotic treatment to prevent complications such as pyelonephritis and preterm labor. Asymptomatic bacteriuria also requires treatment in pregnancy. Antibiotic selection must consider fetal safety, with fosfomycin and nitrofurantoin as first-line options, avoiding nitrofurantoin near term. Urine culture is essential to guide therapy, and test-of-cure is recommended.",
-      "prescriptions": [
+      "regimens": [
         {
-          "name": "Fosfomycin trometamol 3g sachet",
-          "brand": "Monurol, Fosfomycin",
-          "sig": "Dissolve in 50-100 ml water. Take as a single dose NOW.",
-          "icon": "\ud83e\uddea"
+          "id": "reg_1",
+          "name": "First-Line Fosfomycin",
+          "type": "Initial",
+          "description": "Single-dose fosfomycin has the highest cure rate for acute cystitis. Safe in pregnancy with excellent efficacy. Preferred for simple cystitis.",
+          "duration": "Single dose",
+          "medications": [
+            {
+              "name": "Fosfomycin trometamol 3g sachet",
+              "brand": "Monurol, Fosfomycin",
+              "dose": "3g",
+              "route": "Oral",
+              "frequency": "Single dose",
+              "duration": "Now",
+              "sig": "Dissolve in 50-100 ml water. Take as a single dose NOW.",
+              "icon": "🧪"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Urine Culture",
+              "text": "Send urine culture (midstream) BEFORE antibiotic. Test-of-cure urine culture 1-2 weeks after treatment completion."
+            },
+            {
+              "severity": "warning",
+              "label": "Hydration",
+              "text": "Encourage increased fluid intake. Hydration and urinary alkalinization may provide symptomatic relief."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Response",
+              "text": "Symptom improvement within 24-48 hours. If no improvement, consider alternative diagnosis or resistant organism."
+            },
+            {
+              "severity": "critical",
+              "label": "Refer Criteria",
+              "text": "REFER IF: Fever >38°C, flank pain, no improvement after 48 hours, vomiting. Consider admission for parenteral antibiotics if pyelonephritis suspected."
+            }
+          ],
+          "followUp": "2 days (symptom assessment), 1-2 weeks (test-of-cure urine culture)"
         },
         {
-          "name": "Nitrofurantoin 100 mg",
-          "brand": "Macrobid, Furadantin",
-          "sig": "1 capsule twice daily for 7 days (if fosfomycin unavailable; avoid at term 38-42 weeks)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_2",
+          "name": "Nitrofurantoin 7-Day Course",
+          "type": "Alternative",
+          "description": "Alternative first-line if fosfomycin unavailable. Safe in pregnancy but contraindicated near term (38-42 weeks) due to risk of neonatal hemolysis.",
+          "duration": "7 days",
+          "medications": [
+            {
+              "name": "Nitrofurantoin 100 mg",
+              "brand": "Macrobid, Furadantin",
+              "dose": "100 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "7 days",
+              "sig": "1 capsule twice daily for 7 days (if fosfomycin unavailable; avoid at term 38-42 weeks)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Gestational Age Check",
+              "text": "Avoid nitrofurantoin at term (38-42 weeks) due to risk of neonatal hemolysis. Confirm gestational age before prescribing."
+            },
+            {
+              "severity": "warning",
+              "label": "GI Side Effects",
+              "text": "Take with food to reduce nausea. Monitor for GI upset."
+            },
+            {
+              "severity": "info",
+              "label": "Alternative",
+              "text": "If nitrofurantoin contraindicated, use cephalexin 500mg QID × 7 days."
+            }
+          ],
+          "followUp": "1-2 weeks (test-of-cure urine culture)"
         },
         {
-          "name": "Cephalexin 500 mg",
-          "brand": "Ceporex, Keflex",
-          "sig": "1 capsule four times daily for 7 days (second-line if nitrofurantoin contraindicated)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_3",
+          "name": "Cephalexin 7-Day Course",
+          "type": "Second-line",
+          "description": "Second-line option if nitrofurantoin contraindicated (at term) or fosfomycin unavailable. Safe in pregnancy.",
+          "duration": "7 days",
+          "medications": [
+            {
+              "name": "Cephalexin 500 mg",
+              "brand": "Ceporex, Keflex",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Four times daily",
+              "duration": "7 days",
+              "sig": "1 capsule four times daily for 7 days (second-line if nitrofurantoin contraindicated)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "info",
+              "label": "Safe Alternative",
+              "text": "Cephalexin is a safe second-line option in pregnancy. Category B. Effective for E. coli and other common uropathogens."
+            },
+            {
+              "severity": "warning",
+              "label": "Compliance",
+              "text": "Four times daily dosing may affect compliance. Consider prescribing longer course for reliable patients."
+            }
+          ],
+          "followUp": "1-2 weeks (test-of-cure urine culture)"
         }
       ],
-      "followUp": "2 days (symptom assessment), 1-2 weeks (test-of-cure urine culture)",
-      "notes": "LABORATORY: Urine culture (midstream) \u2013 send NOW; Test-of-cure urine culture 1-2 weeks after treatment completion. REFER IF: Fever >38\u00b0C, flank pain, no improvement after 48 hours, vomiting. Single-dose fosfomycin has the highest cure rate for acute cystitis. Nitrofurantoin is safe in pregnancy but contraindicated at term (38-42 weeks) due to risk of neonatal hemolysis. Cephalexin is a safe second-line option. Asymptomatic bacteriuria in pregnancy must also be treated. Hydration and urinary alkalinization may provide symptomatic relief. Consider admission for parenteral antibiotics if pyelonephritis suspected.",
       "createdAt": 1788427262432,
       "updatedAt": 1788427262432
     },
     {
       "id": "rx_1788427794649_oygrci",
       "name": "Acute Tonsillitis (Pregnant - Penicillin Allergy)",
-      "categoryId": "cat_1788427213613_1hrm",
+      "categoryId": "cat_gynecology",
       "icon": "🤰",
       "image": "https://drsanu.com/wp-content/uploads/2023/12/acute-tonsillitis.png.webp",
       "patient": {
@@ -150,40 +433,134 @@
         "notes": ""
       },
       "summary": "Acute tonsillitis in pregnancy is an inflammatory infection of the palatine tonsils, commonly caused by group A Streptococcus (GAS). For penicillin-allergic pregnant patients without anaphylactic reaction, cephalexin is the first-line alternative. Erythromycin is the preferred macrolide in pregnancy due to extensive safety data. Azithromycin may be used if other options are unavailable. Supportive care with paracetamol, saline gargles, and hydration is essential. Monitor for complications and refer for suppurative complications or airway compromise.",
-      "prescriptions": [
+      "regimens": [
         {
-          "name": "Cephalexin 500 mg",
-          "brand": "Ceporex, Keflex",
-          "sig": "1 capsule FOUR times daily (every 6 hours) for 7-10 days (Pregnancy Category B)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_1",
+          "name": "Cephalexin 7-10 Day Course",
+          "type": "Initial",
+          "description": "First-line for penicillin-allergic pregnant patients without anaphylactic reaction. Cephalexin is safe and effective for GAS tonsillitis.",
+          "duration": "7-10 days",
+          "medications": [
+            {
+              "name": "Cephalexin 500 mg",
+              "brand": "Ceporex, Keflex",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Four times daily",
+              "duration": "7-10 days",
+              "sig": "1 capsule FOUR times daily (every 6 hours) for 7-10 days (Pregnancy Category B)",
+              "icon": "💊"
+            },
+            {
+              "name": "Paracetamol 500 mg",
+              "brand": "",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "As needed",
+              "duration": "PRN",
+              "sig": "As needed for pain/fever (safe in pregnancy)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Penicillin Allergy Type",
+              "text": "Cephalexin is safe for non-anaphylactic penicillin allergy. If anaphylactic reaction history, avoid cephalosporins and use erythromycin instead."
+            },
+            {
+              "severity": "critical",
+              "label": "Refer Criteria",
+              "text": "REFER IF: Difficulty breathing or stridor, inability to swallow saliva (drooling), muffled voice (hot potato voice), unilateral tonsillar swelling pushing uvula, fever >39°C for >48 hours, dehydration."
+            },
+            {
+              "severity": "warning",
+              "label": "Throat Swab",
+              "text": "Consider throat swab for culture if no improvement at 5-7 days."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "24-48 hours: Significant symptom improvement; 7-10 days: Complete resolution."
+            }
+          ],
+          "followUp": "5-7 days (if no improvement, consider throat swab and culture)"
         },
         {
-          "name": "Erythromycin 500 mg",
-          "brand": "Erythrocin",
-          "sig": "1 tablet FOUR times daily for 7-10 days (Pregnancy Category B)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_2",
+          "name": "Erythromycin 7-10 Day Course",
+          "type": "Alternative",
+          "description": "Preferred macrolide in pregnancy with most documented experience. Use if cephalexin contraindicated or patient has anaphylactic penicillin allergy.",
+          "duration": "7-10 days",
+          "medications": [
+            {
+              "name": "Erythromycin 500 mg",
+              "brand": "Erythrocin",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Four times daily",
+              "duration": "7-10 days",
+              "sig": "1 tablet FOUR times daily for 7-10 days (Pregnancy Category B)",
+              "icon": "💊"
+            },
+            {
+              "name": "Paracetamol 500 mg",
+              "brand": "",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "As needed",
+              "duration": "PRN",
+              "sig": "As needed for pain/fever",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "warning",
+              "label": "GI Side Effects",
+              "text": "Erythromycin commonly causes GI upset. Take with food. Consider dividing doses or using enteric-coated formulation."
+            },
+            {
+              "severity": "warning",
+              "label": "Drug Interactions",
+              "text": "Erythromycin interacts with many drugs (CYP3A4 inhibitor). Check for interactions with other medications."
+            }
+          ],
+          "followUp": "5-7 days"
         },
         {
-          "name": "Azithromycin 500 mg",
-          "brand": "Zithromax, Azit",
-          "sig": "1 tablet ONCE daily for 3 days (use only if cephalexin and erythromycin unavailable)",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Paracetamol 500 mg",
-          "brand": "",
-          "sig": "As needed for pain/fever (safe in pregnancy)",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Warm saline gargles",
-          "brand": "",
-          "sig": "3 times daily for symptomatic relief",
-          "icon": "\ud83e\uddc2"
+          "id": "reg_3",
+          "name": "Azithromycin 3-Day Course",
+          "type": "Alternative",
+          "description": "Use only if cephalexin and erythromycin unavailable. Azithromycin is not first-line for Strep pyogenes but can be used if other options unavailable.",
+          "duration": "3 days",
+          "medications": [
+            {
+              "name": "Azithromycin 500 mg",
+              "brand": "Zithromax, Azit",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3 days",
+              "sig": "1 tablet ONCE daily for 3 days (use only if cephalexin and erythromycin unavailable)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "warning",
+              "label": "Not First-line",
+              "text": "Azithromycin is not first-line for Strep pyogenes. Use only if other options unavailable. Lower cure rate for GAS compared to beta-lactams."
+            },
+            {
+              "severity": "info",
+              "label": "Advantage",
+              "text": "Short 3-day course improves compliance. Well-tolerated with once-daily dosing."
+            }
+          ],
+          "followUp": "5-7 days"
         }
       ],
-      "followUp": "5-7 days (if no improvement, consider throat swab and culture)",
-      "notes": "EXPECTED OUTCOME: 24-48 hours: Significant symptom improvement; 7-10 days: Complete resolution. REFER IF: Difficulty breathing or stridor, inability to swallow saliva (drooling), muffled voice (hot potato voice), unilateral tonsillar swelling pushing uvula, fever >39\u00b0C for >48 hours, dehydration. Cephalexin is first-line for non-anaphylactic penicillin allergy (safe, Category B). Erythromycin is the preferred macrolide in pregnancy with most documented experience. Azithromycin is not first-line for Strep pyogenes but can be used if other options unavailable. Emphasize rest and hydration. Consider throat swab for culture if no improvement at 5-7 days.",
       "createdAt": 1788427794649,
       "updatedAt": 1788427794649
     },
@@ -191,7 +568,7 @@
       "id": "rx_1788435416875_fx55w4",
       "name": "Scabies",
       "categoryId": "cat_dermatology",
-      "icon": "\ud83d\udd34",
+      "icon": "🔴",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU5bYLdVP5RgYB-cK0GHW8If4ZLYTHVkPySG6GIJSBzA&s",
       "patient": {
         "age": "All ages",
@@ -199,28 +576,107 @@
         "notes": ""
       },
       "summary": "Scabies is a highly contagious parasitic infestation caused by Sarcoptes scabiei var. hominis, characterized by intense nocturnal pruritus and burrows in interdigital spaces, wrists, and flexural areas. Diagnosis is clinical, with burrow identification and family history being key. Treatment involves topical permethrin 5% cream as first-line, with ivermectin for refractory or crusted cases. All household contacts must be treated simultaneously to prevent reinfestation. Environmental decontamination is essential for cure.",
-      "prescriptions": [
+      "regimens": [
         {
-          "name": "Permethrin 5% cream",
-          "brand": "Nixcal, Scaboma, Permite",
-          "sig": "Apply to entire body from neck to toes (including under nails, between fingers/toes, groin, buttocks, soles). Leave 8-12 hours. Wash off. Repeat after 7 days.",
-          "icon": "\ud83e\uddf4"
+          "id": "reg_1",
+          "name": "Permethrin 5% Cream (Two Applications)",
+          "type": "Initial",
+          "description": "First-line treatment for scabies. Apply to entire body from neck to toes. Two applications 7 days apart kills mites and eggs.",
+          "duration": "7-14 days",
+          "medications": [
+            {
+              "name": "Permethrin 5% cream",
+              "brand": "Nixcal, Scaboma, Permite",
+              "dose": "5%",
+              "route": "Topical",
+              "frequency": "Two applications",
+              "duration": "Leave 8-12 hours",
+              "sig": "Apply to entire body from neck to toes (including under nails, between fingers/toes, groin, buttocks, soles). Leave 8-12 hours. Wash off. Repeat after 7 days.",
+              "icon": "🧴"
+            },
+            {
+              "name": "Cetirizine 10 mg",
+              "brand": "Alzene, Zyrtec",
+              "dose": "10 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "2-4 weeks",
+              "sig": "1 tablet daily for 2-4 weeks (for itching)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "All Household Contacts",
+              "text": "All household contacts must be treated simultaneously regardless of symptoms. Failure to treat contacts causes reinfestation."
+            },
+            {
+              "severity": "critical",
+              "label": "Environmental Decontamination",
+              "text": "Hot water wash (≥50°C/122°F) for bedding, clothes, towels. Seal non-washable items in plastic bag for 1 week. Vacuum carpets and furniture."
+            },
+            {
+              "severity": "warning",
+              "label": "Persistent Pruritus",
+              "text": "Pruritus may persist for 2-4 weeks due to hypersensitivity reaction even after successful treatment. This does not mean treatment failed."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "Mites killed after 1st application. Complete cure after 2 applications (days 1 and 7-14)."
+            },
+            {
+              "severity": "info",
+              "label": "Safety",
+              "text": "Permethrin is safe in pregnancy and children >2 months."
+            }
+          ],
+          "followUp": "2 weeks (assess response), 4 weeks (if no improvement, reassess)"
         },
         {
-          "name": "Ivermectin 200 mcg/kg",
-          "brand": "Scabo, Ivecop",
-          "sig": "Single dose (weight-based). Repeat after 7-14 days if needed (for refractory/crusted scabies).",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Cetirizine 10 mg",
-          "brand": "Alzene, Zyrtec",
-          "sig": "1 tablet daily for 2-4 weeks (for itching)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_2",
+          "name": "Ivermectin (Refractory/Crusted Scabies)",
+          "type": "Intensified",
+          "description": "For refractory cases, crusted scabies, immunocompromised patients, or when topical treatment fails. Oral ivermectin is effective and convenient.",
+          "duration": "7-14 days",
+          "medications": [
+            {
+              "name": "Ivermectin 200 mcg/kg",
+              "brand": "Scabo, Ivecop",
+              "dose": "200 mcg/kg",
+              "route": "Oral",
+              "frequency": "Single dose",
+              "duration": "Repeat after 7-14 days",
+              "sig": "Single dose (weight-based). Repeat after 7-14 days if needed (for refractory/crusted scabies).",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Pregnancy Category C",
+              "text": "Ivermectin is pregnancy category C. Use only when benefits outweigh risks. Avoid in pregnancy if possible."
+            },
+            {
+              "severity": "critical",
+              "label": "Crusted Scabies",
+              "text": "Crusted scabies requires multiple doses of ivermectin (day 1, 7, and 14). May need combination with topical permethrin. Refer to dermatologist."
+            },
+            {
+              "severity": "warning",
+              "label": "Drug Interactions",
+              "text": "Avoid concurrent use with other CNS-active drugs. Use with caution in patients with liver disease or on warfarin."
+            },
+            {
+              "severity": "info",
+              "label": "Indication",
+              "text": "REFER IF: Crusted scabies, immunocompromised patient, no improvement after 2 cycles, secondary bacterial infection."
+            }
+          ],
+          "followUp": "2-4 weeks"
         }
       ],
-      "followUp": "2 weeks (assess response), 4 weeks (if no improvement, reassess)",
-      "notes": "DIFFERENTIAL DIAGNOSIS: Atopic dermatitis (no burrows, flexural distribution, less nocturnal itch); Papular urticaria (insect bites, no burrows); Contact dermatitis (exposure history, sharp borders); Pediculosis (lice visible); Prurigo nodularis (chronic, excoriated nodules).\n\nENVIRONMENTAL: Hot water wash (\u226550\u00b0C/122\u00b0F) for bedding, clothes, towels; Seal non-washable items in plastic bag for 1 week; Vacuum carpets and furniture; Treat all household contacts simultaneously.\n\nREFER IF: Crusted scabies, immunocompromised patient, no improvement after 2 cycles, secondary bacterial infection.\n\nEXPECTED OUTCOME: Mites killed after 1st application; Pruritus resolves in 2-4 weeks; Complete cure after 2 applications (days 1 and 7-14).\n\nKEY POINTS: All household contacts must be treated simultaneously regardless of symptoms. Permethrin is safe in pregnancy and children >2 months. Ivermectin is pregnancy category C. Pruritus may persist for 2-4 weeks due to hypersensitivity reaction even after successful treatment.",
       "createdAt": 1788435416875,
       "updatedAt": 1788435416875
     },
@@ -235,509 +691,1359 @@
         "gender": "Female",
         "notes": ""
       },
-      "summary": "Pelvic Inflammatory Disease (PID) is an infection of the upper female genital tract, including the uterus, fallopian tubes, and ovaries, typically caused by ascending organisms from the lower tract (Neisseria gonorrhoeae, Chlamydia trachomatis, and anaerobic bacteria). Classic presentation includes bilateral lower abdominal pain, adnexal tenderness, cervical motion tenderness, fever, and abnormal vaginal discharge. Prompt antibiotic treatment is essential to prevent complications such as infertility, ectopic pregnancy, and chronic pelvic pain. Empiric broad-spectrum therapy covering gonorrhea, chlamydia, and anaerobes is recommended. Treatment should be initiated empirically in sexually active young women with pelvic pain and no other identifiable cause.",
-      "prescriptions": [
+      "summary": "Pelvic Inflammatory Disease (PID) is an infection of the upper female genital tract, including the uterus, fallopian tubes, and ovaries, typically caused by ascending organisms from the lower tract (Neisseria gonorrhoeae, Chlamydia trachomatis, and anaerobic bacteria). Classic presentation includes bilateral lower abdominal pain, adnexal tenderness, cervical motion tenderness, fever, and abnormal vaginal discharge. Prompt antibiotic treatment is essential to prevent complications such as infertility, ectopic pregnancy, and chronic pelvic pain. Empiric broad-spectrum therapy covering gonorrhea, chlamydia, and anaerobes is recommended.",
+      "regimens": [
         {
-          "name": "Ceftriaxone 1g IM",
-          "brand": "",
-          "sig": "Single dose",
-          "icon": "\ud83d\udc89"
+          "id": "reg_1",
+          "name": "Cephalosporin-Based Regimen",
+          "type": "Initial",
+          "description": "First-line empiric therapy for PID. Ceftriaxone IM covers gonorrhea, doxycycline covers chlamydia, metronidazole covers anaerobes. Broad-spectrum coverage for all common pathogens.",
+          "duration": "14 days",
+          "medications": [
+            {
+              "name": "Ceftriaxone 1g IM",
+              "brand": "",
+              "dose": "1g",
+              "route": "Intramuscular",
+              "frequency": "Single dose",
+              "duration": "Now",
+              "sig": "Single dose",
+              "icon": "💉"
+            },
+            {
+              "name": "Doxycycline 100 mg",
+              "brand": "",
+              "dose": "100 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "14 days",
+              "sig": "1 tablet twice daily for 14 days",
+              "icon": "💊"
+            },
+            {
+              "name": "Metronidazole 400 mg",
+              "brand": "",
+              "dose": "400 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "14 days",
+              "sig": "1 tablet twice daily for 14 days",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Partner Treatment",
+              "text": "Treat all partners within 60 days. Screen for HIV, syphilis, and other STIs. Avoid sexual intercourse until treatment completed and symptoms resolved."
+            },
+            {
+              "severity": "critical",
+              "label": "Hospitalization Criteria",
+              "text": "Hospitalize if: pregnant, severe illness, suspected surgical emergency, tubo-ovarian abscess, inability to tolerate oral medications, or lack of response after 72 hours."
+            },
+            {
+              "severity": "warning",
+              "label": "Pregnancy Test",
+              "text": "Consider pregnancy test in all reproductive-age women before treatment."
+            },
+            {
+              "severity": "warning",
+              "label": "IUD Removal",
+              "text": "Consider IUD removal if symptoms persist after 72 hours."
+            },
+            {
+              "severity": "info",
+              "label": "Test of Cure",
+              "text": "Test of cure not routinely recommended for chlamydia/gonorrhea unless symptoms persist or pregnancy. Repeat testing in 3-6 months due to high reinfection rates."
+            }
+          ],
+          "followUp": "72 hours (reassess; if no improvement, hospitalize)"
         },
         {
-          "name": "Doxycycline 100 mg",
-          "brand": "",
-          "sig": "1 tablet twice daily for 14 days",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_2",
+          "name": "Fluoroquinolone-Based Regimen",
+          "type": "Alternative",
+          "description": "Second-line for patients allergic to cephalosporins or when cephalosporins unavailable. Levofloxacin provides gonorrhea and chlamydia coverage.",
+          "duration": "14 days",
+          "medications": [
+            {
+              "name": "Levofloxacin 500 mg",
+              "brand": "",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "14 days",
+              "sig": "1 tablet once daily for 14 days",
+              "icon": "💊"
+            },
+            {
+              "name": "Metronidazole 500 mg",
+              "brand": "",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "14 days",
+              "sig": "1 tablet twice daily for 14 days",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Fluoroquinolone Resistance",
+              "text": "Increasing gonococcal resistance to fluoroquinolones. Use only if cephalosporin contraindicated or local resistance rates <5%."
+            },
+            {
+              "severity": "warning",
+              "label": "Tendon Risk",
+              "text": "Fluoroquinolones increase risk of tendonitis and tendon rupture. Avoid in patients >60 years, on corticosteroids, or with renal impairment."
+            }
+          ],
+          "followUp": "72 hours"
         },
         {
-          "name": "Metronidazole 400 mg",
-          "brand": "",
-          "sig": "1 tablet twice daily for 14 days",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Levofloxacin 500 mg",
-          "brand": "",
-          "sig": "1 tablet once daily for 14 days",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Metronidazole 500 mg",
-          "brand": "",
-          "sig": "1 tablet twice daily for 14 days",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Moxifloxacin 400 mg",
-          "brand": "",
-          "sig": "1 tablet once daily for 14 days (if M. genitalium suspected)",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Cefoxitin 2g IM",
-          "brand": "",
-          "sig": "Single dose",
-          "icon": "\ud83d\udc89"
-        },
-        {
-          "name": "Probenecid 1g oral",
-          "brand": "",
-          "sig": "Single dose",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Cefotetan 2g IV",
-          "brand": "",
-          "sig": "Every 12 hours (switch to oral doxycycline after 24-48 hrs), total 14 days",
-          "icon": "\ud83d\udc89"
-        },
-        {
-          "name": "Cefoxitin 2g IV",
-          "brand": "",
-          "sig": "Every 6 hours (switch to oral doxycycline after 24-48 hrs), total 14 days",
-          "icon": "\ud83d\udc89"
-        },
-        {
-          "name": "Clindamycin 900mg IV",
-          "brand": "",
-          "sig": "Every 8 hours (switch to oral doxycycline 100mg BID to complete 14 days)",
-          "icon": "\ud83d\udc89"
-        },
-        {
-          "name": "Gentamicin IV/IM",
-          "brand": "",
-          "sig": "2mg/kg loading, then 1.5mg/kg every 8 hours (switch to oral doxycycline 100mg BID to complete 14 days)",
-          "icon": "\ud83d\udc89"
+          "id": "reg_3",
+          "name": "Parenteral (IV) Regimen",
+          "type": "Intensified",
+          "description": "For severe PID requiring hospitalization. IV antibiotics followed by oral doxycycline to complete 14-day course.",
+          "duration": "14 days (IV 24-48 hrs + oral)",
+          "medications": [
+            {
+              "name": "Cefotetan 2g IV",
+              "brand": "",
+              "dose": "2g",
+              "route": "Intravenous",
+              "frequency": "Every 12 hours",
+              "duration": "24-48 hours",
+              "sig": "Every 12 hours (switch to oral doxycycline after 24-48 hrs), total 14 days",
+              "icon": "💉"
+            },
+            {
+              "name": "Doxycycline 100 mg",
+              "brand": "",
+              "dose": "100 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "Complete 14 days",
+              "sig": "Switch to oral doxycycline 100mg BID to complete 14 days",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Hospitalization Required",
+              "text": "For severe illness, tubo-ovarian abscess, pregnancy, inability to tolerate oral, or no response to outpatient therapy."
+            },
+            {
+              "severity": "warning",
+              "label": "Alternative IV Regimen",
+              "text": "Alternative: Clindamycin 900mg IV q8h + Gentamicin 2mg/kg IV/IM loading then 1.5mg/kg IV/IM q8h (switch to oral doxycycline 100mg BID to complete 14 days)."
+            }
+          ],
+          "followUp": "24-48 hours (switch to oral), 72 hours (reassess)"
         }
       ],
-      "followUp": "72 hours (reassess; if no improvement, hospitalize)",
-      "notes": "REGIMEN A (First-line - Cephalosporin-Based): Ceftriaxone 1g IM single dose + Doxycycline 100mg BID \u00d7 14 days + Metronidazole 400mg BID \u00d7 14 days.\n\nREGIMEN B (Second-line - Fluoroquinolone-Based): \n- Option 1: Levofloxacin 500mg OD \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days\n- Option 2: Moxifloxacin 400mg OD \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days (if M. genitalium suspected)\n\nREGIMEN C (Third-line - Alternative): Cefoxitin 2g IM single dose + Probenecid 1g oral single dose + Doxycycline 100mg BID \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days.\n\nREGIMEN D (Fourth-line - Parenteral/Hospital): \n- Option 1: Cefotetan 2g IV q12h OR Cefoxitin 2g IV q6h + Doxycycline 100mg BID (switch to oral after 24-48 hrs), total 14 days\n- Option 2: Clindamycin 900mg IV q8h + Gentamicin 2mg/kg IV/IM loading then 1.5mg/kg IV/IM q8h (switch to oral doxycycline 100mg BID to complete 14 days)\n\nPARTNERS: Treat all partners within 60 days.\n\nREFER IF: No improvement after 72 hours, pregnancy, severe illness, tubo-ovarian abscess, or inability to tolerate oral medications.\n\nADDITIONAL CONSIDERATIONS: \n- Screen for HIV, syphilis, and other STIs\n- Counsel on safe sex practices and contraception\n- Avoid sexual intercourse until treatment completed and symptoms resolved\n- Consider pregnancy test in all reproductive-age women\n- Hospitalization criteria: pregnant, severe illness, suspected surgical emergency, tubo-ovarian abscess, inability to tolerate oral medications, or lack of response to outpatient therapy\n- Test of cure not routinely recommended for chlamydia/gonorrhea unless symptoms persist or pregnancy\n- Repeat testing for chlamydia/gonorrhea recommended in 3-6 months due to high reinfection rates\n- Consider IUD removal if symptoms persist after 72 hours",
       "createdAt": 1788435416876,
       "updatedAt": 1788435416876
     },
     {
+      "id": "rx_1788440280_dac1beed",
       "name": "Abnormal Uterine Bleeding (AUB-O - Ovulatory Dysfunction)",
-      "category": "Gynecology",
-      "icon": "\ud83e\ude78",
+      "categoryId": "cat_gynecology",
+      "icon": "🩸",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbi-5w6lgttuWnnd-1IpUL1TG4GSU3Z68aIh0Koc3i6NWqQFXYQNUNhdU&s=10",
       "patient": {
         "age": "Reproductive age",
-        "gender": "Female"
+        "gender": "Female",
+        "notes": ""
       },
       "summary": "Abnormal Uterine Bleeding (AUB) is a common gynecological condition characterized by irregular, heavy, or prolonged menstrual bleeding in the absence of structural pathology. In ovulatory dysfunction (AUB-O), bleeding results from anovulation or oligo-ovulation, leading to unopposed estrogen stimulation and endometrial instability. Diagnosis is clinical with normal pelvic exam and negative pregnancy test. Medical management focuses on controlling acute bleeding, regulating menstrual cycles, and preventing recurrence. The combination of tranexamic acid and combined oral contraceptives is highly effective, with tranexamic acid reducing blood loss by 40-60%.",
-      "prescriptions": [
+      "regimens": [
         {
-          "name": "Tranexamic Acid 500mg",
-          "brand": "",
-          "sig": "1-2 tablets (500-1000mg) three times daily for 3-5 days during menses (reduces blood loss by 40-60%)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_1",
+          "name": "Acute Bleeding Control",
+          "type": "Initial",
+          "description": "First-line for acute heavy menstrual bleeding. Tranexamic acid reduces blood loss by 40-60%. Start at onset of menses.",
+          "duration": "3-5 days during menses",
+          "medications": [
+            {
+              "name": "Tranexamic Acid 500mg",
+              "brand": "",
+              "dose": "500mg",
+              "route": "Oral",
+              "frequency": "Three times daily",
+              "duration": "3-5 days",
+              "sig": "1-2 tablets (500-1000mg) three times daily for 3-5 days during menses (reduces blood loss by 40-60%)",
+              "icon": "💊"
+            },
+            {
+              "name": "Ferrous Sulfate 200mg",
+              "brand": "Fespans",
+              "dose": "200mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "3 months",
+              "sig": "1 tablet twice daily for 3 months (treats iron deficiency anemia)",
+              "icon": "💊"
+            },
+            {
+              "name": "Folic Acid 5mg",
+              "brand": "",
+              "dose": "5mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3 months",
+              "sig": "1 tablet once daily for 3 months",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Rule Out Pregnancy",
+              "text": "Rule out pregnancy with serum/urine hCG before treatment. Pregnancy complications can cause bleeding."
+            },
+            {
+              "severity": "critical",
+              "label": "Endometrial Biopsy Criteria",
+              "text": "Endometrial biopsy indicated in women >45 years or with risk factors for endometrial cancer (obesity, PCOS, chronic anovulation, tamoxifen use)."
+            },
+            {
+              "severity": "warning",
+              "label": "Thrombosis Risk",
+              "text": "Tranexamic acid increases thrombotic risk. Contraindicated in patients with history of DVT, PE, or hypercoagulable states."
+            },
+            {
+              "severity": "warning",
+              "label": "Anemia Assessment",
+              "text": "Evaluate for iron deficiency anemia with complete blood count and ferritin. Ferrous sulfate may cause GI upset – take with food."
+            },
+            {
+              "severity": "info",
+              "label": "Response",
+              "text": "Expected reduction in bleeding within 24-48 hours. If no response, consider alternative diagnosis or structural cause."
+            }
+          ],
+          "followUp": "4 weeks (assess bleeding control), 3 months (repeat hemoglobin)"
         },
         {
-          "name": "Combined Oral Contraceptive Pill (ethinyl estradiol 30-35mcg + progestin)",
-          "brand": "",
-          "sig": "1 tablet daily for 3-6 months (regulates cycle, prevents recurrence)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_2",
+          "name": "Cycle Regulation (COCP)",
+          "type": "Maintenance",
+          "description": "Combined Oral Contraceptive Pill regulates menstrual cycles and prevents recurrence of AUB. Effective for long-term management.",
+          "duration": "3-6 months",
+          "medications": [
+            {
+              "name": "Combined Oral Contraceptive Pill (ethinyl estradiol 30-35mcg + progestin)",
+              "brand": "",
+              "dose": "30-35mcg EE",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3-6 months",
+              "sig": "1 tablet daily for 3-6 months (regulates cycle, prevents recurrence)",
+              "icon": "💊"
+            },
+            {
+              "name": "Paracetamol 500mg",
+              "brand": "",
+              "dose": "500mg",
+              "route": "Oral",
+              "frequency": "As needed",
+              "duration": "PRN",
+              "sig": "As needed for dysmenorrhea (painful periods)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "COCP Contraindications",
+              "text": "Avoid COCP if: >35 years + smoking, migraine with aura, thromboembolic risk, uncontrolled hypertension, breast cancer."
+            },
+            {
+              "severity": "warning",
+              "label": "NSAID Option",
+              "text": "NSAIDs (mefenamic acid, ibuprofen) can reduce menstrual blood loss by 20-30%. Consider if COCP contraindicated."
+            },
+            {
+              "severity": "info",
+              "label": "Lifestyle",
+              "text": "Lifestyle modifications: weight management if obese, regular exercise. Levonorgestrel-releasing IUD (Mirena) is excellent long-term option."
+            }
+          ],
+          "followUp": "3-6 months"
         },
         {
-          "name": "Ferrous Sulfate 200mg",
-          "brand": "Fespans",
-          "sig": "1 tablet twice daily for 3 months (treats iron deficiency anemia)",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Folic Acid 5mg",
-          "brand": "",
-          "sig": "1 tablet once daily for 3 months",
-          "icon": "\ud83d\udc8a"
-        },
-        {
-          "name": "Paracetamol 500mg",
-          "brand": "",
-          "sig": "As needed for dysmenorrhea (painful periods)",
-          "icon": "\ud83d\udc8a"
+          "id": "reg_3",
+          "name": "Refractory Bleeding",
+          "type": "Intensified",
+          "description": "If bleeding persists despite medical therapy, consider endometrial ablation or hysterectomy. Refer to gynecology for further evaluation.",
+          "duration": "Varies",
+          "medications": [],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Structural Causes",
+              "text": "Consider pelvic ultrasound to exclude structural pathology (fibroids, polyps, adenomyosis). Evaluate for coagulopathies (von Willebrand disease) and thyroid dysfunction."
+            },
+            {
+              "severity": "warning",
+              "label": "Referral Criteria",
+              "text": "REFER IF: No response to medical therapy, persistent heavy bleeding, endometrial hyperplasia, or abnormal imaging findings."
+            }
+          ],
+          "followUp": "Refer to gynecology"
         }
       ],
-      "followUp": "4 weeks (assess bleeding control), 3 months (repeat hemoglobin)",
-      "notes": "CLUES: Irregular heavy/prolonged bleeding + no structural cause + anovulatory pattern + normal pelvic exam + negative pregnancy test.\n\nBEST SINGLE PRESCRIPTION (Highest Cure Rate): Tranexamic Acid 500mg - 1-2 tablets (500-1000mg) TID for 3-5 days during menses + Combined Oral Contraceptive Pill (ethinyl estradiol 30-35mcg + progestin) - 1 tablet daily for 3-6 months.\n\nSUPPORTIVE THERAPY: Ferrous Sulfate 200mg BID for 3 months (treats iron deficiency anemia) + Folic Acid 5mg OD for 3 months + Paracetamol 500mg as needed for dysmenorrhea.\n\nDIFFERENTIAL DIAGNOSIS: Structural causes (fibroids, polyps, adenomyosis), coagulopathies, thyroid dysfunction, endometrial hyperplasia/malignancy, pregnancy complications, infection.\n\nADDITIONAL CONSIDERATIONS:\n- Rule out pregnancy with serum/urine hCG\n- Evaluate for iron deficiency anemia with complete blood count and ferritin\n- Consider pelvic ultrasound to exclude structural pathology\n- Endometrial biopsy indicated in women >45 years or with risk factors for endometrial cancer (obesity, PCOS, chronic anovulation, tamoxifen use)\n- Lifestyle modifications: weight management if obese, regular exercise\n- NSAIDs (mefenamic acid, ibuprofen) can also reduce menstrual blood loss by 20-30%\n- Levonorgestrel-releasing IUD (Mirena) is an excellent long-term option for heavy menstrual bleeding\n- If bleeding persists despite medical therapy, consider endometrial ablation or hysterectomy\n- Screen for thyroid disorders and coagulopathies (von Willebrand disease) in appropriate patients",
-      "id": "rx_1788440280_dac1beed"
+      "createdAt": 1788440280000,
+      "updatedAt": 1788440280000
     },
     {
+      "id": "rx_1788441019_811eae44",
       "name": "H. pylori Infection in Pregnancy",
-      "category": "Obstetrics",
-      "icon": "\ud83e\udda0",
+      "categoryId": "cat_gynecology",
+      "icon": "🦠",
       "image": "https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/BigBead/h_pylori_bigbead/1800x1200_h_pylori_bacteria_bigbead.jpg?resize=750px:*&output-quality=75",
       "patient": {
         "age": "Adult",
-        "gender": "Female (Pregnant)"
+        "gender": "Female (Pregnant)",
+        "notes": ""
       },
-      "summary": "Helicobacter pylori (H. pylori) infection in pregnancy requires careful management when treatment is indicated, such as in cases of severe hyperemesis gravidarum, active peptic ulcer disease, or documented infection with significant symptoms. Treatment decisions must balance maternal benefits against potential fetal risks, with antibiotic selection guided by trimester. Dual therapy with amoxicillin and a proton pump inhibitor (PPI) is the preferred first-line regimen across all trimesters due to its safety profile. Triple therapy with metronidazole is reserved for second/third trimester if dual therapy fails. Eradication of H. pylori may improve pregnancy outcomes, including resolution of hyperemesis and reduction of anemia.",
-      "prescriptions": [
+      "summary": "Helicobacter pylori (H. pylori) infection in pregnancy requires careful management when treatment is indicated, such as in cases of severe hyperemesis gravidarum, active peptic ulcer disease, or documented infection with significant symptoms. Treatment decisions must balance maternal benefits against potential fetal risks, with antibiotic selection guided by trimester. Dual therapy with amoxicillin and a proton pump inhibitor (PPI) is the preferred first-line regimen across all trimesters due to its safety profile. Triple therapy with metronidazole is reserved for second/third trimester if dual therapy fails.",
+      "regimens": [
         {
-          "name": "Amoxicillin 1000mg",
-          "brand": "",
-          "sig": "1 tablet three times daily for 14 days",
-          "icon": "\ud83d\udc8a",
-          "regimen": "First Trimester (or preferred for all trimesters)",
-          "combination_with": "Omeprazole 40mg (or Esomeprazole 40mg) BID \u00d7 14 days"
+          "id": "reg_1",
+          "name": "Dual Therapy (Amoxicillin + PPI) - All Trimesters",
+          "type": "Initial",
+          "description": "Preferred first-line regimen across all trimesters. Amoxicillin is safe (Category B) and PPI provides acid suppression. Dual therapy has good efficacy with minimal fetal risk.",
+          "duration": "14 days",
+          "medications": [
+            {
+              "name": "Amoxicillin 1000mg",
+              "brand": "",
+              "dose": "1000mg",
+              "route": "Oral",
+              "frequency": "Three times daily",
+              "duration": "14 days",
+              "sig": "1 tablet three times daily for 14 days",
+              "icon": "💊"
+            },
+            {
+              "name": "Omeprazole 40mg",
+              "brand": "",
+              "dose": "40mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "14 days",
+              "sig": "1 capsule twice daily for 14 days",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Indications",
+              "text": "Treat ONLY if: confirmed H. pylori + severe hyperemesis OR active peptic ulcer bleeding where benefit of treatment outweighs risk."
+            },
+            {
+              "severity": "critical",
+              "label": "First Trimester Safety",
+              "text": "Amoxicillin: Pregnancy Category B - safe and preferred. Omeprazole: Category C - use when benefits outweigh risks; limited data but generally safe."
+            },
+            {
+              "severity": "warning",
+              "label": "Avoid Clarithromycin",
+              "text": "Clarithromycin: Avoid in pregnancy (Category C, associated with miscarriage risk)."
+            },
+            {
+              "severity": "warning",
+              "label": "Avoid Tetracycline",
+              "text": "Tetracycline: Contraindicated in pregnancy (Category D)."
+            },
+            {
+              "severity": "info",
+              "label": "Test of Cure",
+              "text": "Test of cure 4-6 weeks post-treatment with stool antigen or urea breath test."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "Symptom improvement expected within 1-2 weeks. Complete resolution after 14-day course. If no improvement after 72 hours, reassess."
+            }
+          ],
+          "followUp": "4-6 weeks post-treatment (test of cure)"
         },
         {
-          "name": "Omeprazole 40mg",
-          "brand": "",
-          "sig": "1 capsule twice daily for 14 days",
-          "icon": "\ud83d\udc8a",
-          "regimen": "First Trimester (or preferred for all trimesters)",
-          "combination_with": "Amoxicillin 1000mg TID \u00d7 14 days"
-        },
-        {
-          "name": "Esomeprazole 40mg",
-          "brand": "",
-          "sig": "1 capsule twice daily for 14 days",
-          "icon": "\ud83d\udc8a",
-          "regimen": "First Trimester (or preferred for all trimesters)",
-          "combination_with": "Amoxicillin 1000mg TID \u00d7 14 days"
-        },
-        {
-          "name": "Metronidazole 500mg",
-          "brand": "",
-          "sig": "1 tablet twice daily for 14 days (use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past first trimester)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Second/Third Trimester (Alternative if dual therapy fails)",
-          "combination_with": "Amoxicillin 1000mg TID \u00d7 14 days"
+          "id": "reg_2",
+          "name": "Triple Therapy (Amoxicillin + Metronidazole + PPI)",
+          "type": "Intensified",
+          "description": "Use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past the first trimester. Metronidazole is safe after first trimester.",
+          "duration": "14 days",
+          "medications": [
+            {
+              "name": "Amoxicillin 1000mg",
+              "brand": "",
+              "dose": "1000mg",
+              "route": "Oral",
+              "frequency": "Three times daily",
+              "duration": "14 days",
+              "sig": "1 tablet three times daily for 14 days",
+              "icon": "💊"
+            },
+            {
+              "name": "Metronidazole 500mg",
+              "brand": "",
+              "dose": "500mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "14 days",
+              "sig": "1 tablet twice daily for 14 days (use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past first trimester)",
+              "icon": "💊"
+            },
+            {
+              "name": "Omeprazole 40mg",
+              "brand": "",
+              "dose": "40mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "14 days",
+              "sig": "Continue PPI twice daily",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Trimester Check",
+              "text": "Metronidazole is Category B - safe after first trimester. CONFIRM patient is past first trimester before prescribing."
+            },
+            {
+              "severity": "warning",
+              "label": "Resistance",
+              "text": "Metronidazole resistance is common. Consider culture and sensitivity if available."
+            },
+            {
+              "severity": "info",
+              "label": "Alternative Options",
+              "text": "Retreatment options if eradication fails: consider clarithromycin-based triple therapy (postpartum) or bismuth-based quadruple therapy."
+            }
+          ],
+          "followUp": "4-6 weeks post-treatment"
         }
       ],
-      "followUp": "4-6 weeks post-treatment (test of cure with stool antigen or urea breath test)",
-      "notes": "INDICATIONS: Pregnant patient with confirmed H. pylori + severe hyperemesis OR active peptic ulcer bleeding where benefit of treatment outweighs risk.\n\nFIRST TRIMESTER (or preferred for all trimesters): Amoxicillin 1000mg TID \u00d7 14 days + Omeprazole 40mg (or Esomeprazole 40mg) BID \u00d7 14 days.\n\nSECOND/THIRD TRIMESTER (Alternative if dual therapy fails): Amoxicillin 1000mg TID \u00d7 14 days + Metronidazole 500mg BID \u00d7 14 days. Use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past the first trimester.\n\nSAFETY CONSIDERATIONS:\n- Amoxicillin: Pregnancy Category B - safe and preferred\n- Omeprazole/Esomeprazole: Pregnancy Category C - use when benefits outweigh risks; limited data but generally considered safe\n- Metronidazole: Pregnancy Category B - safe after first trimester; avoid in first trimester\n- Clarithromycin: Avoid in pregnancy (Category C, associated with miscarriage risk)\n- Tetracycline: Contraindicated in pregnancy (Category D)\n\nOBSTETRIC CONSIDERATIONS:\n- H. pylori infection is associated with hyperemesis gravidarum, iron deficiency anemia, and preeclampsia\n- Eradication may improve nausea/vomiting in hyperemesis patients\n- Screen for iron deficiency anemia as H. pylori can cause occult blood loss\n- Consider testing for H. pylori in patients with refractory hyperemesis or unexplained anemia\n- Counsel on dietary modifications: avoid spicy foods, caffeine, alcohol, and smoking\n- Consider testing and treating household members if recurrent infection\n- Retreatment options if eradication fails: consider clarithromycin-based triple therapy (postpartum) or bismuth-based quadruple therapy\n- Symptom improvement expected within 1-2 weeks; complete resolution after 14-day course\n- If no improvement after 72 hours, reassess for treatment failure or alternative diagnosis\n\nREFER IF: Severe hyperemesis requiring hospitalization, active gastrointestinal bleeding, weight loss, failure to respond to therapy, or need for endoscopic evaluation",
-      "id": "rx_1788441019_811eae44"
+      "createdAt": 1788441019000,
+      "updatedAt": 1788441019000
     },
     {
+      "id": "rx_1788505903_eddfc35d",
       "name": "Acute Diarrhea in Children (<5 years)",
-      "category": "Pediatrics",
-      "icon": "\ud83d\udca7",
+      "categoryId": "cat_pediatrics",
+      "icon": "💧",
       "image": "",
       "patient": {
         "age": "1 year (example - range: 0-5 years)",
-        "gender": "All genders"
+        "gender": "All genders",
+        "notes": ""
       },
-      "summary": "Acute diarrhea in children under 5 years is defined as \u22653 loose or watery stools in 24 hours, lasting <14 days. The leading cause is viral (rotavirus, norovirus, adenovirus), though bacterial (Shigella, Salmonella, Campylobacter) and parasitic (Giardia) causes should be considered in severe cases or those with dysentery. Management is stepwise based on dehydration severity: Plan A (no dehydration - home care with ORS, zinc, and continued feeding), Plan B (some dehydration - 75 ml/kg ORS over 4 hours in OPD), and Plan C (severe dehydration - IV Ringer's Lactate with hospital referral). Zinc supplementation for 14 days reduces duration and recurrence. Antibiotics are reserved for dysentery or severe bacterial infection. Loperamide is contraindicated in children.",
-      "prescriptions": [
+      "summary": "Acute diarrhea in children under 5 years is defined as ≥3 loose or watery stools in 24 hours, lasting <14 days. The leading cause is viral (rotavirus, norovirus, adenovirus), though bacterial (Shigella, Salmonella, Campylobacter) and parasitic (Giardia) causes should be considered in severe cases or those with dysentery. Management is stepwise based on dehydration severity: Plan A (no dehydration - home care with ORS, zinc, and continued feeding), Plan B (some dehydration - 75 ml/kg ORS over 4 hours in OPD), and Plan C (severe dehydration - IV Ringer's Lactate with hospital referral). Zinc supplementation for 14 days reduces duration and recurrence.",
+      "regimens": [
         {
-          "name": "ORS (Low-osmolarity) sachets",
-          "brand": "",
-          "sig": "1 sachet in 1 liter boiled cooled water. Give 50-100 ml after each loose stool (Plan A - No Dehydration)",
-          "icon": "\ud83e\uddc2",
-          "regimen": "Plan A - No Dehydration"
+          "id": "reg_1",
+          "name": "Plan A - No Dehydration (Home Care)",
+          "type": "Initial",
+          "description": "For children with no signs of dehydration. Home management with ORS, zinc, continued feeding, and close monitoring.",
+          "duration": "3-5 days",
+          "medications": [
+            {
+              "name": "ORS (Low-osmolarity) sachets",
+              "brand": "",
+              "dose": "1 sachet",
+              "route": "Oral",
+              "frequency": "After each loose stool",
+              "duration": "Until diarrhea stops",
+              "sig": "1 sachet in 1 liter boiled cooled water. Give 50-100 ml after each loose stool (Plan A - No Dehydration)",
+              "icon": "🧪"
+            },
+            {
+              "name": "Zinc sulfate 20mg/5ml syrup",
+              "brand": "Zincofer",
+              "dose": "2.5 ml (10mg)",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "14 days",
+              "sig": "2.5 ml (10mg) once daily for 14 days (for 1 year old; 20mg daily for children >6 months)",
+              "icon": "💊"
+            },
+            {
+              "name": "Racecadotril 10mg sachet",
+              "brand": "Resgyl, Redotil",
+              "dose": "10mg",
+              "route": "Oral",
+              "frequency": "Three times daily",
+              "duration": "3 days",
+              "sig": "1 sachet three times daily for 3 days (if available - reduces stool output)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "DO NOT GIVE",
+              "text": "Loperamide (Imodium) - contraindicated in children (dangerous). Ibuprofen - risk of kidney injury with dehydration. Aspirin - Reye's syndrome."
+            },
+            {
+              "severity": "critical",
+              "label": "Continue Feeding",
+              "text": "Continue breastfeeding or formula. Rice porridge (kanji), mashed banana, khichdi, toast, yogurt (if >6 months). Small frequent meals."
+            },
+            {
+              "severity": "warning",
+              "label": "Red Flags",
+              "text": "Blood in stool, severe dehydration (sunken eyes, no urine >6 hours), unable to drink, fever >39°C for >48 hours, lethargy, abdominal distension. REFER URGENTLY."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "ORS + Zinc: 3-5 days recovery. Add Racecadotril: 24-48 hours faster."
+            }
+          ],
+          "followUp": "48 hours"
         },
         {
-          "name": "Zinc sulfate 20mg/5ml syrup",
-          "brand": "Zincofer",
-          "sig": "2.5 ml (10mg) once daily for 14 days (for 1 year old; 20mg daily for children >6 months)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "All Plans (A, B, C)"
+          "id": "reg_2",
+          "name": "Plan B - Some Dehydration",
+          "type": "Intensified",
+          "description": "For children with some dehydration (sunken eyes, reduced skin turgor, thirst, decreased urine output). Requires ORS rehydration over 4 hours.",
+          "duration": "4 hours",
+          "medications": [
+            {
+              "name": "ORS - Plan B (Some Dehydration)",
+              "brand": "",
+              "dose": "75 ml/kg",
+              "route": "Oral",
+              "frequency": "Sips every 5-10 minutes",
+              "duration": "4 hours",
+              "sig": "75 ml/kg over 4 hours (e.g., 750 ml for 10 kg child) - sips every 5-10 minutes",
+              "icon": "🧪"
+            },
+            {
+              "name": "Zinc sulfate 20mg/5ml syrup",
+              "brand": "Zincofer",
+              "dose": "2.5 ml (10mg)",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "14 days",
+              "sig": "Continue zinc for 14 days",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Monitor Response",
+              "text": "Reassess after 4 hours. If still dehydrated, repeat ORS or escalate to Plan C. If improved, transition to Plan A."
+            },
+            {
+              "severity": "warning",
+              "label": "Vomiting",
+              "text": "If vomiting, give small sips every 5-10 minutes. If unable to drink, consider IV fluids."
+            }
+          ],
+          "followUp": "4 hours (reassess)"
         },
         {
-          "name": "Racecadotril 10mg sachet",
-          "brand": "Resgyl, Redotil",
-          "sig": "1 sachet three times daily for 3 days (if available - reduces stool output)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Plan A - Adjunct"
+          "id": "reg_3",
+          "name": "Plan C - Severe Dehydration",
+          "type": "Emergency",
+          "description": "For children with severe dehydration (sunken eyes, no urine >6 hours, lethargy, sunken fontanelle). Requires immediate IV fluids and hospitalization.",
+          "duration": "Emergency",
+          "medications": [
+            {
+              "name": "IV Ringer's Lactate",
+              "brand": "",
+              "dose": "100 ml/kg total",
+              "route": "Intravenous",
+              "frequency": "Infusion",
+              "duration": "1-6 hours",
+              "sig": "100 ml/kg total: <12 months: 30 ml/kg over 1 hr, then 70 ml/kg over 5 hrs; >12 months: 30 ml/kg over 30 min, then 70 ml/kg over 2.5 hrs",
+              "icon": "💉"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "HOSPITAL REFERRAL",
+              "text": "Immediate hospitalization required. Monitor urine output, vital signs, and hydration status closely."
+            },
+            {
+              "severity": "warning",
+              "label": "IV Access",
+              "text": "If unable to get IV access, consider intraosseous (IO) line. Monitor for signs of fluid overload."
+            }
+          ],
+          "followUp": "Immediate referral to hospital"
         },
         {
-          "name": "ORS - Plan B (Some Dehydration)",
-          "brand": "",
-          "sig": "75 ml/kg over 4 hours (e.g., 750 ml for 10 kg child) - sips every 5-10 minutes",
-          "icon": "\ud83e\uddc2",
-          "regimen": "Plan B - Some Dehydration"
-        },
-        {
-          "name": "IV Ringer's Lactate",
-          "brand": "",
-          "sig": "100 ml/kg total: <12 months: 30 ml/kg over 1 hr, then 70 ml/kg over 5 hrs; >12 months: 30 ml/kg over 30 min, then 70 ml/kg over 2.5 hrs",
-          "icon": "\ud83d\udc89",
-          "regimen": "Plan C - Severe Dehydration (Hospital Referral)"
-        },
-        {
-          "name": "Azithromycin 200mg/5ml suspension",
-          "brand": "",
-          "sig": "10-20 mg/kg once daily for 3-5 days (for dysentery or bacterial infection)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Dysentery Protocol"
-        },
-        {
-          "name": "Ciprofloxacin 250mg/5ml suspension",
-          "brand": "",
-          "sig": "15 mg/kg/dose twice daily for 3 days (alternative for dysentery)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Dysentery Protocol"
-        },
-        {
-          "name": "Ceftriaxone IV",
-          "brand": "",
-          "sig": "50-80 mg/kg IV once daily (for severe bacterial suspected)",
-          "icon": "\ud83d\udc89",
-          "regimen": "Severe Bacterial Infection"
-        },
-        {
-          "name": "Ondansetron",
-          "brand": "",
-          "sig": "0.15 mg/kg IV/IM/oral - single dose (for vomiting)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Supportive Therapy"
-        },
-        {
-          "name": "Paracetamol",
-          "brand": "",
-          "sig": "15 mg/kg every 6 hours PRN fever (avoid ibuprofen with dehydration)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Supportive Therapy"
-        },
-        {
-          "name": "Metronidazole",
-          "brand": "",
-          "sig": "35-50 mg/kg/day divided TID for 7-10 days (for amebiasis)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Amebiasis Protocol"
+          "id": "reg_4",
+          "name": "Dysentery Protocol",
+          "type": "Specialized",
+          "description": "For children with blood in stool (dysentery). Requires antibiotics directed at Shigella, Salmonella, or Campylobacter.",
+          "duration": "3-5 days",
+          "medications": [
+            {
+              "name": "Azithromycin 200mg/5ml suspension",
+              "brand": "",
+              "dose": "10-20 mg/kg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3-5 days",
+              "sig": "10-20 mg/kg once daily for 3-5 days (for dysentery or bacterial infection)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Stool Culture",
+              "text": "Send stool culture and sensitivity before starting antibiotics. Monitor for worsening symptoms."
+            },
+            {
+              "severity": "warning",
+              "label": "Alternative Antibiotics",
+              "text": "Ciprofloxacin 15 mg/kg/dose BID × 3 days is alternative. Ceftriaxone IV 50-80 mg/kg IV once daily for severe bacterial suspected."
+            },
+            {
+              "severity": "info",
+              "label": "Differential",
+              "text": "Amebiasis: Bloody diarrhea with mucus ('currant jelly'), no fever. Treat with Metronidazole 35-50 mg/kg/day divided TID × 7-10 days."
+            }
+          ],
+          "followUp": "48 hours (reassess)"
         }
       ],
-      "followUp": "48 hours (reassess for Plans A & B); immediate for Plan C",
-      "notes": "DIFFERENTIAL DIAGNOSIS & CLUES:\n\u2022 Viral gastroenteritis (rotavirus, norovirus): Watery diarrhea, vomiting, fever, no blood, self-limiting\n\u2022 Bacterial gastroenteritis (Shigella, Salmonella, Campylobacter): Bloody diarrhea (dysentery), high fever, abdominal pain, tenesmus\n\u2022 Amebiasis (Entamoeba histolytica): Bloody diarrhea with mucus ('currant jelly'), no fever or low-grade, chronic\n\u2022 Giardiasis: Foul-smelling, greasy diarrhea, bloating, flatulence, prolonged course\n\u2022 Antibiotic-associated diarrhea: History of recent antibiotic use, watery stools, may have C. difficile toxin\n\u2022 Lactose intolerance: Diarrhea after milk consumption, acidic stools, diaper rash, often post-infectious\n\nKEY MEDICATIONS:\n\u2192 ORS - GOLD STANDARD for prevention of dehydration\n\u2192 Zinc - ALWAYS (reduces duration and recurrence)\n\u2192 Racecadotril - adjunct (reduces stool output)\n\u2192 Ondansetron - single dose for vomiting\n\nDO NOT GIVE:\n\u2717 Loperamide (Imodium) - contraindicated in children (dangerous)\n\u2717 Ibuprofen - risk of kidney injury with dehydration\n\u2717 Aspirin - Reye's syndrome\n\u2717 Routine antibiotics - only for dysentery or severe bacterial infection\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 Blood in stool (dysentery)\n\u25a1 Severe dehydration (sunken eyes, no urine >6 hours, lethargy, sunken fontanelle)\n\u25a1 Unable to drink ORS (vomiting everything)\n\u25a1 Fever >39\u00b0C for >48 hours\n\u25a1 Abdominal distension or severe pain\n\u25a1 Lethargy or altered consciousness\n\u25a1 Seizure\n\u25a1 Malnourished child (SAM) with diarrhea\n\u25a1 No improvement after 48 hours of treatment\n\nPARENT EDUCATION:\n\"Your child has diarrhea. The most important treatment is preventing dehydration. Give ORS after every loose stool. Continue feeding your child \u2013 do NOT stop milk or food. Give zinc daily for 14 days \u2013 this reduces the severity and duration of diarrhea and prevents recurrence. If you see blood in the stool, your child is unable to drink, passes no urine for 6 hours, or becomes very sleepy, bring back immediately. Do NOT give any medicine to stop diarrhea (like Imodium) \u2013 these are dangerous for children.\"\n\nEXPECTED OUTCOME:\n\u2192 ORS + Zinc: 3-5 days recovery\n\u2192 Add Racecadotril: 24-48 hours faster\n\u2192 IV fluids: 1-2 hours improvement\n\u2192 Full recovery: 5-7 days\n\nFEEDING GUIDELINES:\n\u2705 Continue breastfeeding or formula\n\u2705 Rice porridge (kanji), mashed banana, khichdi, toast, yogurt (if >6 months)\n\u2705 Small frequent meals\n\u274c No milk (if >6 months and lactose intolerance suspected \u2013 switch to lactose-free)\n\u274c No juice, soft drinks, sugary water\n\u274c No solid food for 4-6 hours if vomiting",
-      "id": "rx_1788505903_eddfc35d"
+      "createdAt": 1788505903000,
+      "updatedAt": 1788505903000
     },
     {
+      "id": "rx_1788506715_052d3325",
       "name": "Dysmenorrhea",
-      "category": "Gynecology",
-      "icon": "\ud83e\ude78",
+      "categoryId": "cat_gynecology",
+      "icon": "🩸",
       "image": "https://www.invitra.com/en/wp-content/uploads/2019/11/dysmenorrhea.png.webp",
       "patient": {
         "age": "Adolescent to reproductive age",
-        "gender": "Female"
+        "gender": "Female",
+        "notes": ""
       },
-      "summary": "Dysmenorrhea is defined as painful menstrual cramps of uterine origin, typically beginning 1-2 days before or at the onset of menses, and lasting 1-3 days. It is classified as primary (no underlying pelvic pathology, common in adolescents 6-12 months after menarche) or secondary (associated with pelvic pathology such as endometriosis, adenomyosis, fibroids, PID, or IUD). First-line treatment involves NSAIDs started 1-2 days before menses, combined with heat therapy. Combined Oral Contraceptive Pills (COCP) are second-line for moderate-severe cases or when NSAIDs are insufficient. Secondary dysmenorrhea requires investigation with pelvic ultrasound and referral to gynecology.",
-      "prescriptions": [
+      "summary": "Dysmenorrhea is defined as painful menstrual cramps of uterine origin, typically beginning 1-2 days before or at the onset of menses, and lasting 1-3 days. It is classified as primary (no underlying pelvic pathology, common in adolescents 6-12 months after menarche) or secondary (associated with pelvic pathology such as endometriosis, adenomyosis, fibroids, PID, or IUD). First-line treatment involves NSAIDs started 1-2 days before menses, combined with heat therapy. Combined Oral Contraceptive Pills (COCP) are second-line for moderate-severe cases or when NSAIDs are insufficient.",
+      "regimens": [
         {
-          "name": "Mefenamic Acid 500mg",
-          "brand": "",
-          "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Mild-Moderate Primary Dysmenorrhea"
+          "id": "reg_1",
+          "name": "NSAID Therapy",
+          "type": "Initial",
+          "description": "First-line treatment for dysmenorrhea. NSAIDs inhibit prostaglandin synthesis, reducing uterine contractions and pain. Start 1-2 days before menses.",
+          "duration": "3-5 days during menses",
+          "medications": [
+            {
+              "name": "Mefenamic Acid 500mg",
+              "brand": "",
+              "dose": "500mg",
+              "route": "Oral",
+              "frequency": "Three times daily",
+              "duration": "3-5 days",
+              "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
+              "icon": "💊"
+            },
+            {
+              "name": "Heat therapy (hot water bottle)",
+              "brand": "",
+              "dose": "",
+              "route": "Physical",
+              "frequency": "As needed",
+              "duration": "During menses",
+              "sig": "Apply to lower abdomen during menses",
+              "icon": "🔥"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Start BEFORE Menses",
+              "text": "Start NSAID 1-2 days BEFORE period expected - more effective than waiting for pain to start. Take with food to prevent GI upset."
+            },
+            {
+              "severity": "critical",
+              "label": "Contraindications",
+              "text": "Avoid NSAIDs in patients with peptic ulcer or renal disease. Use with caution in patients on anticoagulants."
+            },
+            {
+              "severity": "warning",
+              "label": "Primary vs Secondary",
+              "text": "Secondary causes (endometriosis, adenomyosis, PID) present with: pain >25 years, pain >3 days, dyspareunia, irregular bleeding, infertility, abnormal pelvic exam."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "Pain relief within 30-60 minutes. If no relief after 3 cycles, consider COCP or evaluate for secondary causes."
+            }
+          ],
+          "followUp": "3 cycles"
         },
         {
-          "name": "Ibuprofen 400mg",
-          "brand": "",
-          "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Mild-Moderate Primary Dysmenorrhea"
+          "id": "reg_2",
+          "name": "Combined Oral Contraceptive Pill",
+          "type": "Alternative",
+          "description": "Second-line for moderate-severe dysmenorrhea or when NSAIDs insufficient. COCP suppresses ovulation and reduces prostaglandin production.",
+          "duration": "3-6 cycles",
+          "medications": [
+            {
+              "name": "Combined Oral Contraceptive Pill (COCP)",
+              "brand": "",
+              "dose": "30-35mcg EE + progestin",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3-6 cycles",
+              "sig": "1 tablet daily for 21-28 days. Duration: 3-6 cycles (then reassess). Indicated if NSAIDs insufficient.",
+              "icon": "💊"
+            },
+            {
+              "name": "Vitamin E 400 IU",
+              "brand": "Evion",
+              "dose": "400 IU",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3-5 days",
+              "sig": "1 capsule daily during menses for 3-5 days (supportive therapy)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "COCP Contraindications",
+              "text": "Avoid COCP if: >35 years + smoking, migraine with aura, thromboembolic risk, uncontrolled hypertension, breast cancer."
+            },
+            {
+              "severity": "warning",
+              "label": "Side Effects",
+              "text": "COCP may cause nausea, breast tenderness, mood changes, breakthrough bleeding. Usually resolve within 1-3 cycles."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "60-90% reduction in pain after 3-6 cycles. Reassess need for continued use."
+            }
+          ],
+          "followUp": "3-6 cycles"
         },
         {
-          "name": "Naproxen 500mg",
-          "brand": "",
-          "sig": "1 tablet twice daily with food. Start 1-2 days before menses, continue for 3-5 days.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Mild-Moderate Primary Dysmenorrhea"
-        },
-        {
-          "name": "Diclofenac Sodium 50mg",
-          "brand": "",
-          "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Mild-Moderate Primary Dysmenorrhea"
-        },
-        {
-          "name": "Combined Oral Contraceptive Pill (COCP)",
-          "brand": "",
-          "sig": "1 tablet daily for 21-28 days. Duration: 3-6 cycles (then reassess). Indicated if NSAIDs insufficient.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Moderate-Severe Primary Dysmenorrhea"
-        },
-        {
-          "name": "Vitamin E 400 IU",
-          "brand": "Evion",
-          "sig": "1 capsule daily during menses for 3-5 days (supportive therapy)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Supportive Therapy"
-        },
-        {
-          "name": "Magnesium 200mg",
-          "brand": "",
-          "sig": "1 tablet daily for 3 months (supportive therapy)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Supportive Therapy"
-        },
-        {
-          "name": "Heat therapy (hot water bottle)",
-          "brand": "",
-          "sig": "Apply to lower abdomen during menses",
-          "icon": "\ud83d\udd25",
-          "regimen": "All Patients"
+          "id": "reg_3",
+          "name": "Supportive & Lifestyle",
+          "type": "Adjunctive",
+          "description": "Lifestyle modifications and supportive therapies that reduce menstrual pain. Regular exercise, dietary changes, and stress reduction improve symptoms.",
+          "duration": "Ongoing",
+          "medications": [
+            {
+              "name": "Magnesium 200mg",
+              "brand": "",
+              "dose": "200mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3 months",
+              "sig": "1 tablet daily for 3 months (supportive therapy)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "info",
+              "label": "Lifestyle",
+              "text": "Regular aerobic exercise (20-30 min, 3-4 times/week). Dietary modifications: reduce salt, caffeine, alcohol; increase fruits, vegetables."
+            },
+            {
+              "severity": "info",
+              "label": "Non-pharmacological",
+              "text": "TENS, acupuncture, cognitive behavioral therapy, relaxation techniques. Vitamin D supplementation if deficiency present."
+            }
+          ],
+          "followUp": "3 months"
         }
       ],
-      "followUp": "3 cycles (assess response to NSAIDs/COCP); 3 months (assess response to supportive therapy)",
-      "notes": "DIFFERENTIAL DIAGNOSIS & CLUES:\n\u2022 Endometriosis: Chronic pelvic pain, dyspareunia, infertility, pain unrelated to menses\n\u2022 Adenomyosis: Heavy menstrual bleeding, enlarged boggy uterus, pain throughout cycle\n\u2022 Pelvic Inflammatory Disease (PID): Fever, cervical motion tenderness, abnormal vaginal discharge, bilateral adnexal tenderness\n\u2022 Ovarian cyst (ruptured/hemorrhagic): Sudden onset of unilateral pain, may have nausea/vomiting, acute abdomen\n\u2022 Ectopic pregnancy: Amenorrhea, vaginal bleeding, unilateral pain, positive pregnancy test\n\u2022 Irritable Bowel Syndrome (IBS): Pain related to defecation, altered bowel habit, bloating\n\u2022 Urinary tract infection (cystitis): Dysuria, frequency, urgency, suprapubic pain, positive urine dipstick\n\u2022 Mittelschmerz: Mid-cycle (ovulation) pain, unilateral, brief duration (hours), no menstrual bleeding\n\nRED FLAGS (REFER FOR SECONDARY CAUSES):\n\u25a1 No response to NSAIDs or COCP after 3-6 cycles\n\u25a1 Pain onset >25 years of age (suggests secondary cause)\n\u25a1 Pain lasting >3 days\n\u25a1 Pain with intercourse (dyspareunia) \u2013 suggests endometriosis\n\u25a1 Irregular menstrual bleeding (intermenstrual, postcoital, heavy)\n\u25a1 Abnormal pelvic exam (tenderness, masses, nodules)\n\u25a1 Infertility\n\u25a1 Fever or abnormal vaginal discharge (PID)\n\u25a1 Symptoms of anemia (fatigue, pallor, dizziness) \u2013 suggests menorrhagia\n\nDO NOT GIVE:\n\u2717 Opioids for primary dysmenorrhea (ineffective, addictive)\n\u2717 NSAIDs in patients with peptic ulcer or renal disease\n\u2717 COCP in patients with contraindications (>35 years + smoking, migraine with aura, thromboembolic risk, uncontrolled hypertension, breast cancer)\n\nEXPECTED OUTCOME:\n\u2192 NSAIDs: Pain relief within 30-60 minutes\n\u2192 COCP: 60-90% reduction in pain after 3-6 cycles\n\u2192 Full response: 1-2 months\n\nPARENT EDUCATION:\n\"Dysmenorrhea is painful menstrual cramps caused by prostaglandins \u2013 chemicals that make the uterus contract. The pain is real and treatable. Start taking the painkiller 1-2 days BEFORE your period is expected \u2013 this is more effective than waiting for pain to start. Take it with food to prevent stomach upset. Apply a hot water bottle to your lower abdomen \u2013 this relaxes the uterus and reduces pain. Regular exercise and a healthy diet can reduce the severity of cramps over time. If the pain does not improve after 3-6 cycles, or if you have pain between periods, pain with intercourse, or heavy bleeding, come back \u2013 we may need to investigate for other causes.\"\n\nNON-PHARMACOLOGICAL OPTIONS:\n\u25a1 Regular aerobic exercise (20-30 min, 3-4 times/week)\n\u25a1 Dietary modifications: reduce salt, caffeine, alcohol; increase fruits, vegetables\n\u25a1 Transcutaneous Electrical Nerve Stimulation (TENS) \u2013 some evidence for pain relief\n\u25a1 Acupuncture \u2013 limited evidence\n\u25a1 Stress reduction \u2013 cognitive behavioral therapy, relaxation techniques\n\u25a1 Vitamin D supplementation \u2013 if deficiency present\n\u25a1 Fish oil (omega-3) \u2013 anti-inflammatory effect (modest benefit)",
-      "id": "rx_1788506715_052d3325"
+      "createdAt": 1788506715000,
+      "updatedAt": 1788506715000
     },
     {
+      "id": "rx_1788507912_ad9b36d0",
       "name": "Pregnancy Constipation",
-      "category": "Obstetrics",
-      "icon": "\ud83d\udca9",
+      "categoryId": "cat_gynecology",
+      "icon": "💩",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrVsTfHszG8XUNw96FHz8UxWt1Lp34bpaLoiddMWv3j2qX8zgEvA2bC8P&s=10",
       "patient": {
         "age": "Adult",
-        "gender": "Female (Pregnant)"
+        "gender": "Female (Pregnant)",
+        "notes": ""
       },
-      "summary": "Constipation in pregnancy is a common condition defined as infrequent bowel movements (<3 per week), hard stools, and straining, affecting up to 40% of pregnant women. It is caused by hormonal changes (increased progesterone), mechanical compression by the growing uterus, and iron supplementation. First-line treatment involves lifestyle modifications (increased fiber, hydration, exercise) and fiber supplements. Polyethylene Glycol 3350 (PEG) is the preferred osmotic laxative as it is minimally absorbed and safe in pregnancy. Lactulose is a safe alternative. Bulk-forming agents like psyllium require adequate water to avoid obstruction. Stimulant laxatives and mineral oil should be strictly avoided due to safety concerns.",
-      "prescriptions": [
+      "summary": "Constipation in pregnancy is a common condition defined as infrequent bowel movements (<3 per week), hard stools, and straining, affecting up to 40% of pregnant women. It is caused by hormonal changes (increased progesterone), mechanical compression by the growing uterus, and iron supplementation. First-line treatment involves lifestyle modifications (increased fiber, hydration, exercise) and fiber supplements. Polyethylene Glycol 3350 (PEG) is the preferred osmotic laxative as it is minimally absorbed and safe in pregnancy. Lactulose is a safe alternative.",
+      "regimens": [
         {
-          "name": "Polyethylene Glycol 3350 (PEG) 17g powder",
-          "brand": "Movicol, ClearLax",
-          "sig": "1 sachet (17g) dissolved in 250-500ml water ONCE daily. Duration: 2-4 weeks, then reassess. Preferred by ACOG and AGA. Onset: 24-72 hours.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Second-line (if lifestyle + fiber fail)"
+          "id": "reg_1",
+          "name": "Lifestyle + Fiber",
+          "type": "Initial",
+          "description": "First-line treatment for pregnancy constipation. Lifestyle modifications are safe and effective. Fiber supplements if dietary fiber insufficient.",
+          "duration": "Ongoing",
+          "medications": [
+            {
+              "name": "Psyllium husk (Ispaghol) 6g",
+              "brand": "",
+              "dose": "6g",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Ongoing",
+              "sig": "1 tablespoon in 1 glass of water ONCE daily. Must be taken with adequate water to avoid obstruction.",
+              "icon": "🌾"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "STRICTLY AVOID",
+              "text": "Castor oil (uterine stimulation risk). Mineral oil (reduced vitamin absorption, risk of neonatal bleeding). Senna (genotoxicity concerns). Magnesium citrate/sodium phosphate (electrolyte imbalance)."
+            },
+            {
+              "severity": "warning",
+              "label": "Adequate Water",
+              "text": "Fiber supplements MUST be taken with adequate water (1 glass minimum) to avoid obstruction. Increase to 8-12 cups (2-3 liters) water daily."
+            },
+            {
+              "severity": "info",
+              "label": "Lifestyle",
+              "text": "Increase fiber intake to 25-30g daily (fruits, vegetables, whole grains, legumes). Drink 8-12 cups water daily. Daily walking or exercise (20-30 minutes). Regular toileting routine (especially after meals)."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "Lifestyle changes + fiber: Improvement in 2-7 days."
+            }
+          ],
+          "followUp": "2-4 weeks"
         },
         {
-          "name": "Lactulose 10g/15ml syrup",
-          "brand": "Duphalac, Lactulax",
-          "sig": "15-30ml (10-20g) ONCE daily. Duration: 2-4 weeks. Alternative if PEG unavailable. Onset: 24-48 hours.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Second-line (Alternative)"
+          "id": "reg_2",
+          "name": "Osmotic Laxative (PEG or Lactulose)",
+          "type": "Alternative",
+          "description": "Second-line if lifestyle + fiber fails. Polyethylene Glycol 3350 is preferred by ACOG and AGA. Minimally absorbed and safe in pregnancy.",
+          "duration": "2-4 weeks",
+          "medications": [
+            {
+              "name": "Polyethylene Glycol 3350 (PEG) 17g powder",
+              "brand": "Movicol, ClearLax",
+              "dose": "17g",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "2-4 weeks",
+              "sig": "1 sachet (17g) dissolved in 250-500ml water ONCE daily. Duration: 2-4 weeks, then reassess. Preferred by ACOG and AGA. Onset: 24-72 hours.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Safety",
+              "text": "PEG is NOT absorbed systemically. Preferred by ACOG and AGA for pregnancy constipation. Safe for long-term use."
+            },
+            {
+              "severity": "warning",
+              "label": "Alternative",
+              "text": "Lactulose 15-30ml (10-20g) ONCE daily is alternative if PEG unavailable. Onset: 24-48 hours."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "PEG or Lactulose: Bowel movement in 24-72 hours. Full response: 1-2 weeks with consistent treatment."
+            }
+          ],
+          "followUp": "2-4 weeks"
         },
         {
-          "name": "Psyllium husk (Ispaghol) 6g",
-          "brand": "",
-          "sig": "1 tablespoon in 1 glass of water ONCE daily. Must be taken with adequate water to avoid obstruction.",
-          "icon": "\ud83c\udf3e",
-          "regimen": "First-line (Fiber Supplement)"
-        },
-        {
-          "name": "Docusate Sodium 100mg",
-          "brand": "",
-          "sig": "1 tablet twice daily (stool softener \u2013 considered safe if second-line fails after 1-2 weeks)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Third-line"
+          "id": "reg_3",
+          "name": "Stool Softener (Docusate)",
+          "type": "Intensified",
+          "description": "Third-line if second-line fails after 1-2 weeks. Docusate sodium is a stool softener. Considered safe in pregnancy but less effective than osmotic laxatives.",
+          "duration": "2-4 weeks",
+          "medications": [
+            {
+              "name": "Docusate Sodium 100mg",
+              "brand": "",
+              "dose": "100mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "2-4 weeks",
+              "sig": "1 tablet twice daily (stool softener – considered safe if second-line fails after 1-2 weeks)",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Red Flags",
+              "text": "REFER URGENTLY: No bowel movement for 1 week despite treatment, severe abdominal pain, rectal bleeding, fever, signs of obstruction (vomiting, distension, no flatus)."
+            },
+            {
+              "severity": "warning",
+              "label": "Iron Supplements",
+              "text": "Iron supplements can worsen constipation – consider switching to a different formulation or reducing dose."
+            },
+            {
+              "severity": "info",
+              "label": "Risk Factors",
+              "text": "Constipation is most common in first and third trimesters. Women with history of constipation or pelvic floor dysfunction are at higher risk."
+            }
+          ],
+          "followUp": "2-4 weeks"
         }
       ],
-      "followUp": "2-4 weeks (assess response to treatment)",
-      "notes": "STEPWISE APPROACH:\n\nFIRST LINE (Lifestyle + Fiber):\n\u25a1 Increase fiber intake to 25-30g daily (fruits, vegetables, whole grains, legumes)\n\u25a1 Drink 8-12 cups (2-3 liters) of water daily\n\u25a1 Daily walking or exercise (20-30 minutes)\n\u25a1 Regular toileting routine (especially after meals)\n\u25a1 Psyllium husk 6g daily (if dietary fiber insufficient)\n\nSECOND LINE (If first-line fails):\n\u25a1 ADD Polyethylene Glycol 3350 17g daily (preferred)\n\u25a1 OR Lactulose 15-30ml daily (alternative)\n\nTHIRD LINE (If second-line fails after 1-2 weeks):\n\u25a1 ADD Docusate Sodium 100mg twice daily (stool softener)\n\nSTRICTLY AVOID:\n\u2717 Castor oil \u2013 uterine stimulation risk\n\u2717 Mineral oil \u2013 reduced vitamin absorption, risk of neonatal bleeding\n\u2717 Senna \u2013 contraindicated due to genotoxicity concerns\n\u2717 Magnesium citrate/sodium phosphate \u2013 risk of electrolyte imbalance\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 No bowel movement for 1 week despite treatment\n\u25a1 Severe abdominal pain\n\u25a1 Rectal bleeding\n\u25a1 Fever\n\u25a1 Signs of obstruction (vomiting, distension, no flatus)\n\nPATIENT EDUCATION:\n\"Constipation is very common in pregnancy due to hormonal changes and the growing baby pressing on your bowel. The safest approach is to increase your fiber intake and drink plenty of water. If that doesn't work, the powder laxative (PEG) is the preferred treatment during pregnancy \u2013 it works by drawing water into your bowel and is not absorbed into your body. Do NOT use castor oil or mineral oil \u2013 these are unsafe in pregnancy. If you have severe pain, bleeding, or no bowel movement for a week, come back immediately.\"\n\nEXPECTED OUTCOME:\n\u2192 Lifestyle changes + fiber: Improvement in 2-7 days\n\u2192 PEG or Lactulose: Bowel movement in 24-72 hours\n\u2192 Full response: 1-2 weeks with consistent treatment\n\nADDITIONAL NOTES:\n- Constipation is most common in the first and third trimesters\n- Iron supplements can worsen constipation \u2013 consider switching to a different formulation or reducing dose\n- Probiotics may have a modest benefit\n- Women with a history of constipation or pelvic floor dysfunction are at higher risk",
-      "id": "rx_1788507912_ad9b36d0"
+      "createdAt": 1788507912000,
+      "updatedAt": 1788507912000
     },
     {
+      "id": "rx_1788509199_b1233f29",
       "name": "Neuropathic Pain (Peripheral Neuropathy)",
       "categoryId": "cat_neurology",
       "icon": "🧠",
       "image": "https://i0.wp.com/ova.galencentre.org/wp-content/uploads/2023/09/Neuropathic.jpg?resize=1024%2C576&ssl=1",
       "patient": {
         "age": "Adult",
-        "gender": "All genders"
+        "gender": "All genders",
+        "notes": ""
       },
-      "summary": "Peripheral neuropathy is a length-dependent, stocking-glove distribution of nerve damage characterized by burning pain, tingling, numbness, and night worsening. Common causes include diabetes mellitus, vitamin B12 deficiency, alcohol, hypothyroidism, uremia, and drug toxicity. First-line treatment according to NICE guidelines includes pregabalin, gabapentin, or duloxetine, chosen based on patient profile and comorbidities. Treatment requires gradual titration and 4-6 weeks to assess response. Secondary causes must be investigated and treated simultaneously. Specialist referral is needed for refractory cases, rapidly progressive weakness, or autonomic involvement.",
-      "prescriptions": [
+      "summary": "Peripheral neuropathy is a length-dependent, stocking-glove distribution of nerve damage characterized by burning pain, tingling, numbness, and night worsening. Common causes include diabetes mellitus, vitamin B12 deficiency, alcohol, hypothyroidism, uremia, and drug toxicity. First-line treatment according to NICE guidelines includes pregabalin, gabapentin, or duloxetine, chosen based on patient profile and comorbidities. Treatment requires gradual titration and 4-6 weeks to assess response. Secondary causes must be investigated and treated simultaneously.",
+      "regimens": [
         {
-          "name": "Pregabalin 75mg",
-          "brand": "Pregabid, Nervigesic",
-          "sig": "Start 75mg at bedtime for 7 days, then 75mg twice daily for 7 days, then 150mg twice daily. Max 600mg/day. Duration: 4-6 weeks, then reassess.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "First-line (Option A)"
+          "id": "reg_1",
+          "name": "Pregabalin (First-Line Option A)",
+          "type": "Initial",
+          "description": "First-line treatment for neuropathic pain. Pregabalin binds to alpha-2-delta subunit of voltage-gated calcium channels, reducing neurotransmitter release. Start low and titrate slowly.",
+          "duration": "4-6 weeks",
+          "medications": [
+            {
+              "name": "Pregabalin 75mg",
+              "brand": "Pregabid, Nervigesic",
+              "dose": "75mg",
+              "route": "Oral",
+              "frequency": "Titrating",
+              "duration": "4-6 weeks",
+              "sig": "Start 75mg at bedtime for 7 days, then 75mg twice daily for 7 days, then 150mg twice daily. Max 600mg/day. Duration: 4-6 weeks, then reassess.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Diagnostic Workup",
+              "text": "Must rule out causes: Diabetes (HbA1c), Vitamin B12 deficiency (B12 level), Alcohol (LFTs), Hypothyroidism (TSH, T4), Uremia (Creatinine, BUN), Drugs (isoniazid, metronidazole, vincristine)."
+            },
+            {
+              "severity": "critical",
+              "label": "Red Flags",
+              "text": "REFER URGENTLY: Rapidly progressive weakness, asymmetric neuropathy, autonomic symptoms, unexplained weight loss/fever, history of cancer, bowel/bladder dysfunction, no improvement after 6 weeks."
+            },
+            {
+              "severity": "warning",
+              "label": "Side Effects",
+              "text": "Common: dizziness, somnolence, peripheral edema, weight gain. Start low and titrate slowly. Take bedtime dose first to minimize daytime drowsiness."
+            },
+            {
+              "severity": "warning",
+              "label": "Withdrawal",
+              "text": "Do NOT stop abruptly. Taper gradually over 1-2 weeks to prevent withdrawal symptoms (insomnia, headache, nausea)."
+            },
+            {
+              "severity": "info",
+              "label": "Expected Outcome",
+              "text": "2 weeks: Initial response. 4-6 weeks: Full effect. 3 months: Reassess and adjust."
+            }
+          ],
+          "followUp": "2 weeks, 4-6 weeks, 3 months"
         },
         {
-          "name": "Gabapentin 100mg",
-          "brand": "Gabator, Neurotin",
-          "sig": "Start 100mg three times daily. Increase weekly: 300mg TID, 600mg TID, 900mg TID. Max 3600mg/day. Duration: 4-6 weeks, then reassess.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "First-line (Option B)"
+          "id": "reg_2",
+          "name": "Gabapentin (First-Line Option B)",
+          "type": "Initial",
+          "description": "First-line alternative to pregabalin. Gabapentin has similar mechanism and efficacy. May be preferred in patients with renal impairment or for cost reasons.",
+          "duration": "4-6 weeks",
+          "medications": [
+            {
+              "name": "Gabapentin 100mg",
+              "brand": "Gabator, Neurotin",
+              "dose": "100mg",
+              "route": "Oral",
+              "frequency": "Titrating",
+              "duration": "4-6 weeks",
+              "sig": "Start 100mg three times daily. Increase weekly: 300mg TID, 600mg TID, 900mg TID. Max 3600mg/day. Duration: 4-6 weeks, then reassess.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "warning",
+              "label": "Renal Dosing",
+              "text": "Gabapentin is renally excreted. Dose adjustment needed in renal impairment (eGFR <60). Start with lower doses and titrate slowly."
+            },
+            {
+              "severity": "info",
+              "label": "Alternative",
+              "text": "May have fewer drug interactions than pregabalin. Consider in patients on multiple medications."
+            }
+          ],
+          "followUp": "2 weeks, 4-6 weeks"
         },
         {
-          "name": "Duloxetine 30mg",
-          "brand": "Cymbalta, Duzela",
-          "sig": "30mg once daily for 7 days, then increase to 60mg once daily. Max 120mg/day. Duration: 4-6 weeks, then reassess. Indicated for neuropathic pain with depression, diabetic neuropathy.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "First-line (Option C)"
+          "id": "reg_3",
+          "name": "Duloxetine (First-Line Option C)",
+          "type": "Initial",
+          "description": "SNRI antidepressant with proven efficacy in neuropathic pain. Preferred in patients with comorbid depression or diabetic neuropathy.",
+          "duration": "4-6 weeks",
+          "medications": [
+            {
+              "name": "Duloxetine 30mg",
+              "brand": "Cymbalta, Duzela",
+              "dose": "30mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "4-6 weeks",
+              "sig": "30mg once daily for 7 days, then increase to 60mg once daily. Max 120mg/day. Duration: 4-6 weeks, then reassess. Indicated for neuropathic pain with depression, diabetic neuropathy.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "warning",
+              "label": "Side Effects",
+              "text": "Common: nausea, dry mouth, somnolence, dizziness, insomnia. Take with food to reduce nausea. Start with 30mg for 1 week to improve tolerability."
+            },
+            {
+              "severity": "warning",
+              "label": "Suicide Risk",
+              "text": "Monitor for worsening depression, suicidal thoughts, especially in young adults (18-24 years)."
+            },
+            {
+              "severity": "info",
+              "label": "Diabetic Neuropathy",
+              "text": "Duloxetine is specifically indicated for diabetic neuropathy. Tight glycemic control (HbA1c <7%) is essential."
+            }
+          ],
+          "followUp": "2 weeks, 4-6 weeks"
         },
         {
-          "name": "Amitriptyline 10-25mg",
-          "brand": "Trytanol, Amitrip",
-          "sig": "Start 10-25mg at bedtime. Increase by 10-25mg weekly. Max 75mg/day. Duration: 4-6 weeks, then reassess.",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Second-line"
-        },
-        {
-          "name": "Tramadol 50mg",
-          "brand": "",
-          "sig": "50mg 3-4 times daily. Max 400mg/day. Short-term use only (<4 weeks).",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Second-line (Short-term)"
-        },
-        {
-          "name": "Vitamin B Complex",
-          "brand": "Neurobion, Becadexamin",
-          "sig": "1 tablet once daily for 3 months",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Supportive Therapy"
-        },
-        {
-          "name": "Alpha-lipoic acid 600mg",
-          "brand": "",
-          "sig": "1 capsule once daily for 3 months (modest benefit in diabetic neuropathy)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Supportive Therapy"
-        },
-        {
-          "name": "Methylcobalamin 1500mcg",
-          "brand": "Nurokind OD",
-          "sig": "1 tablet once daily for 1 month, then 1500mcg once weekly for 2 months (for Vitamin B12 deficiency)",
-          "icon": "\ud83d\udc8a",
-          "regimen": "Cause-Specific (B12 Deficiency)"
-        },
-        {
-          "name": "Topical Capsaicin 0.075% cream",
-          "brand": "",
-          "sig": "Apply to painful areas 3-4 times daily",
-          "icon": "\ud83e\uddf4",
-          "regimen": "Supportive Therapy"
+          "id": "reg_4",
+          "name": "Cause-Specific Therapy",
+          "type": "Specialized",
+          "description": "Treat underlying cause of neuropathy. Essential for long-term management. Vitamin B12 deficiency, diabetic neuropathy, and alcohol-related neuropathy have specific treatments.",
+          "duration": "1-3 months",
+          "medications": [
+            {
+              "name": "Methylcobalamin 1500mcg",
+              "brand": "Nurokind OD",
+              "dose": "1500mcg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "1 month, then weekly",
+              "sig": "1 tablet once daily for 1 month, then 1500mcg once weekly for 2 months (for Vitamin B12 deficiency)",
+              "icon": "💊"
+            },
+            {
+              "name": "Vitamin B Complex",
+              "brand": "Neurobion, Becadexamin",
+              "dose": "",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "3 months",
+              "sig": "1 tablet once daily for 3 months",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "B12 Deficiency",
+              "text": "Vitamin B12 deficiency: Methylcobalamin 1500mcg daily for 1 month, then weekly for 2 months. Check B12 levels and treat aggressively."
+            },
+            {
+              "severity": "critical",
+              "label": "Diabetic Neuropathy",
+              "text": "Tight glycemic control (HbA1c <7%) + Gabapentin or Duloxetine. Alpha-lipoic acid 600mg daily has modest benefit."
+            },
+            {
+              "severity": "critical",
+              "label": "Alcohol-Related",
+              "text": "Stop alcohol + Thiamine 100mg daily + Folic acid 5mg daily for 1 month."
+            },
+            {
+              "severity": "warning",
+              "label": "NSAIDs",
+              "text": "DO NOT GIVE: NSAIDs (ineffective for neuropathic pain). Opioids as first-line (limited efficacy, risk of dependence). Corticosteroids (unless inflammatory cause confirmed)."
+            }
+          ],
+          "followUp": "1 month, 3 months"
         }
       ],
-      "followUp": "2 weeks (assess pain reduction, side effects, dose titration); 4-6 weeks (reassess pain levels, switch or combine if inadequate); 3 months (repeat NCS if initially abnormal, review cause treatment)",
-      "notes": "DIAGNOSTIC WORKUP (Must Rule Out Causes):\n\u2022 Diabetes mellitus: HbA1c, Fasting Blood Sugar (FBS)\n\u2022 Vitamin B12 deficiency: Vitamin B12 level\n\u2022 Alcohol: LFTs, history\n\u2022 Hypothyroidism: TSH, T4\n\u2022 Uremia: Creatinine, BUN\n\u2022 Drugs: Medication history (isoniazid, metronidazole, vincristine, amiodarone)\n\u2022 Inflammatory: Nerve conduction study (NCS) if uncertain\n\nRED FLAGS (REFER URGENTLY):\n\u25a1 Rapidly progressive weakness (Guillain-Barr\u00e9, CIDP)\n\u25a1 Asymmetric neuropathy (mononeuritis multiplex)\n\u25a1 Autonomic symptoms (orthostatic hypotension, urinary retention, erectile dysfunction)\n\u25a1 Unexplained weight loss or fever\n\u25a1 History of cancer or neurotoxic drug exposure\n\u25a1 Bowel/bladder dysfunction\n\u25a1 No improvement after 6 weeks of first-line therapy\n\nCAUSE-SPECIFIC TREATMENT:\n\u2022 Diabetic Neuropathy: Tight glycemic control (HbA1c <7%) + Gabapentin or Duloxetine\n\u2022 Vitamin B12 Deficiency: Methylcobalamin 1500mcg daily for 1 month, then weekly for 2 months\n\u2022 Alcohol-Related Neuropathy: Stop alcohol + Thiamine 100mg daily + Folic acid 5mg daily for 1 month\n\nEXPECTED OUTCOME:\n\u2192 2 weeks: Initial response\n\u2192 4-6 weeks: Full effect\n\u2192 3 months: Reassess and adjust\n\nPATIENT EDUCATION:\n\"You have nerve pain (neuropathy). This is caused by damaged nerves sending false pain signals to your brain. The burning and tingling you feel is NOT in your imagination \u2013 it is real nerve pain. The medicine I am prescribing works by calming down the overactive nerves. It takes 2-4 weeks to work fully. Start with a low dose and increase gradually as I have instructed. Do NOT stop suddenly \u2013 this can cause withdrawal symptoms. If you feel dizzy or sleepy, increase the dose more slowly and take it at bedtime. We must find the cause of your neuropathy. I am ordering blood tests to check for diabetes, B12 deficiency, and thyroid problems. Treating the cause is as important as treating the pain.\"\n\nDO NOT GIVE:\n\u2717 NSAIDs \u2013 ineffective for neuropathic pain\n\u2717 Opioids as first-line \u2013 limited efficacy, risk of dependence\n\u2717 Corticosteroids \u2013 unless inflammatory cause confirmed",
-      "id": "rx_1788509199_b1233f29"
-    }
-  ],
-  "categories": [
-    {
-      "id": "cat_neurology",
-      "name": "Neurology",
-      "icon": "🧠"
+      "createdAt": 1788509199000,
+      "updatedAt": 1788509199000
     },
     {
-      "id": "cat_dermatology",
-      "name": "Dermatology",
-      "icon": "\ud83d\udd34"
-    },
-    {
-      "id": "cat_cardiology",
-      "name": "Cardiology",
-      "icon": "\u2764\ufe0f"
-    },
-    {
-      "id": "cat_general",
-      "name": "General Medicine",
-      "icon": "\ud83d\udc8a"
-    },
-    {
-      "id": "cat_pediatrics",
-      "name": "Pediatrics",
-      "icon": "\ud83d\udc76"
-    },
-    {
-      "id": "cat_other",
-      "name": "Other",
-      "icon": "\ud83d\udccb"
-    },
-    {
-      "id": "cat_1788427213613_1hrm",
-      "name": "Obstetrics",
-      "icon": "🤰"
-    },
-    {
-      "id": "cat_gynecology",
-      "name": "Gynecology",
-      "icon": "🤰"
+      "id": "rxgyn_infert_007",
+      "name": "Female Infertility (Anovulatory/PCOS)",
+      "categoryId": "cat_gynecology",
+      "icon": "🤰",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxY3z8MgzCZNYyclyWhC4xmqCp3vfNqU1S4iz8TP4jD9AQdIz6YYXgW5lT&s=10",
+      "patient": {
+        "age": "28 years",
+        "gender": "Female",
+        "notes": "BMI 28, PCOS, anovulatory cycles, no tubal/male factor, trying >6 months"
+      },
+      "summary": "Primary infertility due to anovulatory PCOS. Regular cycles >6 months, BMI <30. No evidence of tubal blockage or male factor infertility. Patient is 28 years old with confirmed PCOS by Rotterdam criteria. Normal AMH, TSH, and prolactin levels. Partner semen analysis normal.",
+      "regimens": [
+        {
+          "id": "reg_1",
+          "name": "Letrozole First-Line Therapy",
+          "type": "Initial",
+          "description": "Evidence-based first-line ovulation induction for PCOS-related infertility. Superior to clomiphene with higher pregnancy rates, better endometrial thickness, and lower multiple pregnancy risk.",
+          "duration": "Up to 6 cycles",
+          "medications": [
+            {
+              "name": "Letrozole",
+              "brand": "Femara",
+              "dose": "2.5 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Cycle days 3-7 (5 days total)",
+              "sig": "Take 1 tablet (2.5 mg) by mouth once daily on cycle days 3 through 7. Track menstrual cycles and use LH ovulation predictor kits starting day 10. Timed intercourse every 2 days between days 12-16 or as directed by LH surge.",
+              "icon": "💊"
+            },
+            {
+              "name": "Folic Acid",
+              "brand": "Generic",
+              "dose": "5 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Throughout treatment",
+              "sig": "Take 1 tablet (5 mg) by mouth once daily with food. Essential for neural tube defect prevention in early pregnancy.",
+              "icon": "💊"
+            },
+            {
+              "name": "Vitamin D3",
+              "brand": "Generic",
+              "dose": "2000 IU",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Throughout treatment",
+              "sig": "Take 1 capsule (2000 IU) by mouth once daily with meals. Supports overall reproductive health and ovarian function.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Pregnancy Test Required",
+              "text": "Confirm negative pregnancy test before each cycle. Letrozole is category X in pregnancy. Perform serum β-hCG or urine pregnancy test at cycle start."
+            },
+            {
+              "severity": "critical",
+              "label": "Multiple Pregnancy Risk",
+              "text": "Multiple pregnancy rate: 5-8% with letrozole (lower than clomiphene 10-15%). Still, counsel patient on risks of twins. Ultrasound monitoring recommended if possible."
+            },
+            {
+              "severity": "critical",
+              "label": "Ovarian Hyperstimulation",
+              "text": "OHSS risk is low with letrozole (<2%) but still possible. Monitor for symptoms: severe pelvic pain, nausea, vomiting, weight gain. Report immediately."
+            },
+            {
+              "severity": "warning",
+              "label": "Timing",
+              "text": "Most fertile window: 12-16 days after period starts. Use LH predictor kits. Ovulation usually occurs 5-10 days after last dose (cycle days 9-14). Timing intercourse every 2-3 days maximizes chances."
+            },
+            {
+              "severity": "warning",
+              "label": "Side Effects",
+              "text": "Common: hot flashes (up to 30%), headache (20%), mood changes, dizziness, fatigue. Usually mild and transient. Counsel that these are temporary. Severe side effects are rare."
+            },
+            {
+              "severity": "info",
+              "label": "Ovulation Rate",
+              "text": "Ovulation rate: 31.3-41.3% per cycle. Pregnancy rate: up to 33.8% per cycle if ovulation occurs. Cumulative pregnancy rate: 60-70% over 6 cycles."
+            },
+            {
+              "severity": "info",
+              "label": "Evidence",
+              "text": "Meta-analysis of 7 studies (n=1,200+) confirmed letrozole significantly improves pregnancy rates (RR 1.50, 95% CI: 1.28-1.77) and ovulation rates (RR 1.29, 95% CI: 1.15-1.44) vs clomiphene in PCOS patients. Combination regimen shows highest ovulation rate of 41.3%."
+            },
+            {
+              "severity": "success",
+              "label": "Expected Outcome",
+              "text": "Cycles 1-3: 40-50% ovulation rate. Cycles 4-6: cumulative pregnancy rate 60-70%. If no pregnancy after 6 cycles, refer for IVF evaluation."
+            },
+            {
+              "severity": "warning",
+              "label": "BMI Target",
+              "text": "Target BMI: 18.5-24.9. Weight loss of 5-10% if overweight significantly improves ovulation rates. Even 5% weight loss can restore ovulation in 60% of overweight women with PCOS."
+            },
+            {
+              "severity": "info",
+              "label": "Lifestyle",
+              "text": "Recommend 30 minutes of walking daily. Stop smoking, limit alcohol. Track menstrual cycles meticulously. Use LH ovulation predictor kits from day 10. Consider basal body temperature charting."
+            }
+          ],
+          "followUp": "Monitor with mid-luteal progesterone (day 21) to confirm ovulation. If no ovulation after 3 cycles, consider dose increase to 5 mg or combination therapy. Perform pelvic ultrasound before each cycle if available. Reassess every 2-3 cycles."
+        },
+        {
+          "id": "reg_2",
+          "name": "Combination Therapy (Letrozole + Clomiphene)",
+          "type": "Intensified",
+          "description": "For patients who fail letrozole alone after 3-6 cycles. Highest ovulation rate (41.3%) and pregnancy rate (33.8%) reported with this combination.",
+          "duration": "3-6 cycles",
+          "medications": [
+            {
+              "name": "Letrozole",
+              "brand": "Femara",
+              "dose": "2.5 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Cycle days 3-7",
+              "sig": "Take 1 tablet (2.5 mg) by mouth once daily on cycle days 3 through 7.",
+              "icon": "💊"
+            },
+            {
+              "name": "Clomiphene Citrate",
+              "brand": "Clomid",
+              "dose": "50 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Cycle days 5-9",
+              "sig": "Take 1 tablet (50 mg) by mouth once daily on cycle days 5 through 9. Start monitoring with ovulation predictor kits from day 10.",
+              "icon": "💊"
+            },
+            {
+              "name": "Folic Acid",
+              "brand": "Generic",
+              "dose": "5 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Throughout treatment",
+              "sig": "Continue folic acid 5 mg daily.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "Higher Multiple Risk",
+              "text": "Combination therapy increases multiple pregnancy risk to 10-15%. Close monitoring with ultrasound is strongly recommended. Consider canceling cycle if >3 mature follicles develop."
+            },
+            {
+              "severity": "critical",
+              "label": "OHSS Risk",
+              "text": "OHSS risk increases with combination therapy. Monitor closely for symptoms: severe pelvic pain, nausea, vomiting, rapid weight gain (>2 lbs/day), shortness of breath."
+            },
+            {
+              "severity": "warning",
+              "label": "Anti-estrogenic Effects",
+              "text": "Clomiphene may reduce endometrial thickness and cervical mucus quality. Consider estrogen supplementation if endometrial thickness <. Counsel on these effects."
+            },
+            {
+              "severity": "warning",
+              "label": "Visual Disturbances",
+              "text": "Clomiphene can cause visual symptoms (blurred vision, scotomas) in 1.5% of patients. Discontinue immediately if visual changes occur. Notify physician."
+            },
+            {
+              "severity": "info",
+              "label": "Evidence",
+              "text": "Combination therapy showed the highest ovulation rate (41.3%) and pregnancy rate (33.8%) among all regimens in a 2025 meta-analysis. Consider if letrozole alone is insufficient."
+            },
+            {
+              "severity": "success",
+              "label": "Alternative",
+              "text": "If combination therapy fails after 6 cycles, refer to fertility specialist for gonadotropin therapy or IVF. Success rates with IVF in PCOS patients exceed 60% in this age group."
+            }
+          ],
+          "followUp": "Ultrasound monitoring for follicle tracking and endometrial thickness. Mid-luteal progesterone for ovulation confirmation. Monthly review. Reassess after 3 cycles. If no success, refer to reproductive specialist."
+        },
+        {
+          "id": "reg_3",
+          "name": "Metformin Addition (For Obese PCOS)",
+          "type": "Alternative",
+          "description": "For PCOS patients with BMI >27 or insulin resistance. Metformin improves ovulation and pregnancy rates when added to letrozole, particularly in obese patients.",
+          "duration": "Ongoing",
+          "medications": [
+            {
+              "name": "Letrozole",
+              "brand": "Femara",
+              "dose": "2.5 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Cycle days 3-7",
+              "sig": "Take 1 tablet (2.5 mg) by mouth once daily on cycle days 3 through 7.",
+              "icon": "💊"
+            },
+            {
+              "name": "Metformin HCl",
+              "brand": "Glucophage",
+              "dose": "500 mg",
+              "route": "Oral",
+              "frequency": "Twice daily",
+              "duration": "With meals",
+              "sig": "Take 1 tablet (500 mg) by mouth twice daily with meals. Start at 500 mg once daily for 1 week, then increase to 500 mg twice daily. Titrate up to 1000 mg twice daily as tolerated.",
+              "icon": "💊"
+            },
+            {
+              "name": "Folic Acid",
+              "brand": "Generic",
+              "dose": "5 mg",
+              "route": "Oral",
+              "frequency": "Once daily",
+              "duration": "Throughout treatment",
+              "sig": "Continue folic acid 5 mg daily.",
+              "icon": "💊"
+            }
+          ],
+          "highlights": [
+            {
+              "severity": "critical",
+              "label": "GI Side Effects",
+              "text": "Metformin commonly causes GI distress (nausea, diarrhea, metallic taste). Start with low dose (500 mg once daily) and titrate slowly over 4-6 weeks. Extended-release formulation may be better tolerated."
+            },
+            {
+              "severity": "critical",
+              "label": "Vitamin B12 Deficiency",
+              "text": "Long-term metformin use causes B12 deficiency. Monitor B12 annually. Consider supplementation if deficient. Counsel on long-term monitoring."
+            },
+            {
+              "severity": "warning",
+              "label": "Renal Function",
+              "text": "Check baseline renal function. Contraindicated if eGFR . Use with caution if eGFR 30-45. Monitor creatinine periodically."
+            },
+            {
+              "severity": "warning",
+              "label": "Weight Loss Benefit",
+              "text": "Metformin promotes modest weight loss (2-3 kg). Combine with lifestyle changes for best results. Weight loss improves ovulation rates independently."
+            },
+            {
+              "severity": "info",
+              "label": "Evidence",
+              "text": "Metformin plus letrozole improves ovulation rates in obese PCOS patients compared to letrozole alone. Particularly beneficial in women with insulin resistance (HOMA-IR >2.5)."
+            },
+            {
+              "severity": "success",
+              "label": "Clinical Trial Data",
+              "text": "Studies show 60-70% ovulation rate and 40-50% pregnancy rate over 6 cycles with metformin plus letrozole in obese PCOS. Especially effective when combined with lifestyle modification."
+            }
+          ],
+          "followUp": "Monitor HbA1c and fasting glucose at 3 months. Check B12 annually. Renal function at baseline and yearly. Review weight and ovulation response at each visit."
+        }
+      ],
+      "createdAt": 1722000000000,
+      "updatedAt": 1724800000000
     }
   ]
 }
