@@ -1,24 +1,67 @@
 {
   "categories": [
-    { "id": "cat_dermatology", "name": "Dermatology", "icon": "🔴" },
-    { "id": "cat_cardiology", "name": "Cardiology", "icon": "❤️" },
-    { "id": "cat_general", "name": "General Medicine", "icon": "💊" },
-    { "id": "cat_pediatrics", "name": "Pediatrics", "icon": "👶" },
-    { "id": "cat_neurology", "name": "Neurology", "icon": "🧠" },
-    { "id": "cat_respiratory", "name": "Respiratory", "icon": "🫁" },
-    { "id": "cat_endocrine", "name": "Endocrinology", "icon": "⚗️" },
-    { "id": "cat_gastro", "name": "Gastroenterology", "icon": "🫃" },
-    { "id": "cat_psychiatry", "name": "Psychiatry", "icon": "🧩" },
-    { "id": "cat_gynecology", "name": "Gynecology", "icon": "🤰" },
-    { "id": "cat_other", "name": "Other", "icon": "📋" }
+    {
+      "id": "cat_dermatology",
+      "name": "Dermatology",
+      "icon": "\ud83d\udd34"
+    },
+    {
+      "id": "cat_cardiology",
+      "name": "Cardiology",
+      "icon": "\u2764\ufe0f"
+    },
+    {
+      "id": "cat_general",
+      "name": "General Medicine",
+      "icon": "\ud83d\udc8a"
+    },
+    {
+      "id": "cat_pediatrics",
+      "name": "Pediatrics",
+      "icon": "\ud83d\udc76"
+    },
+    {
+      "id": "cat_neurology",
+      "name": "Neurology",
+      "icon": "\ud83e\udde0"
+    },
+    {
+      "id": "cat_respiratory",
+      "name": "Respiratory",
+      "icon": "\ud83e\udec1"
+    },
+    {
+      "id": "cat_endocrine",
+      "name": "Endocrinology",
+      "icon": "\u2697\ufe0f"
+    },
+    {
+      "id": "cat_gastro",
+      "name": "Gastroenterology",
+      "icon": "\ud83e\udec3"
+    },
+    {
+      "id": "cat_psychiatry",
+      "name": "Psychiatry",
+      "icon": "\ud83e\udde9"
+    },
+    {
+      "id": "cat_gynecology",
+      "name": "Gynecology",
+      "icon": "\ud83e\udd30"
+    },
+    {
+      "id": "cat_other",
+      "name": "Other",
+      "icon": "\ud83d\udccb"
+    }
   ],
-
   "prescriptions": [
     {
       "id": "rx_1788426064988_l5gkqr",
       "name": "Acne Vulgaris",
       "categoryId": "cat_dermatology",
-      "icon": "🔴",
+      "icon": "\ud83d\udd34",
       "image": "https://www.health.com/thmb/M97lm60na0ix41eCtfli4D9NefE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-1390356588-f5c3a87b335a43238d4ef3eff16aa0fe.jpg",
       "patient": {
         "age": "15 years",
@@ -42,7 +85,7 @@
               "frequency": "Once daily",
               "duration": "12 weeks",
               "sig": "1 capsule once daily with food for 12 weeks",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Azelaic Acid 15% cream",
@@ -52,7 +95,7 @@
               "frequency": "Twice daily",
               "duration": "12 weeks",
               "sig": "Apply thin layer to affected areas twice daily for 12 weeks",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             },
             {
               "name": "Benzoyl Peroxide 2.5% gel",
@@ -62,7 +105,7 @@
               "frequency": "Once daily",
               "duration": "12 weeks",
               "sig": "Apply thin layer to affected areas at bedtime for 12 weeks",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             }
           ],
           "highlights": [
@@ -99,7 +142,7 @@
               "frequency": "Twice daily",
               "duration": "Ongoing",
               "sig": "Apply thin layer to affected areas twice daily",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             },
             {
               "name": "Acne Soap (salicylic acid based)",
@@ -109,7 +152,7 @@
               "frequency": "Twice daily",
               "duration": "Ongoing",
               "sig": "Wash face twice daily",
-              "icon": "🧼"
+              "icon": "\ud83e\uddfc"
             },
             {
               "name": "Sunscreen SPF 30+",
@@ -119,7 +162,7 @@
               "frequency": "Once daily",
               "duration": "Ongoing",
               "sig": "Apply daily before sun exposure",
-              "icon": "☀️"
+              "icon": "\u2600\ufe0f"
             }
           ],
           "highlights": [
@@ -139,7 +182,7 @@
       "id": "rx_1788426505446_fxq1xt",
       "name": "Melasma",
       "categoryId": "cat_dermatology",
-      "icon": "🟤",
+      "icon": "\ud83d\udfe4",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_dJldm7c7xnwYf6k2nVmX0uUdMncb1V_YmkG9p7zfhUtPhaQrTM15Cn3QSUUdcOQH&s=10&ec=121966386",
       "patient": {
         "age": "Adult",
@@ -163,7 +206,7 @@
               "frequency": "Once daily",
               "duration": "8 weeks",
               "sig": "Apply thin layer to affected facial areas ONCE daily at bedtime (max 8 weeks)",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             },
             {
               "name": "Sunscreen SPF 50+ (tinted preferred)",
@@ -173,7 +216,7 @@
               "frequency": "Daily",
               "duration": "Indefinite",
               "sig": "Apply daily, reapply every 2-3 hours",
-              "icon": "☀️"
+              "icon": "\u2600\ufe0f"
             }
           ],
           "highlights": [
@@ -215,7 +258,7 @@
               "frequency": "Twice daily",
               "duration": "Ongoing",
               "sig": "Apply twice daily (maintenance after stopping hydroquinone)",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             },
             {
               "name": "Kojic acid 2% / Tranexamic acid 3% serum",
@@ -225,7 +268,7 @@
               "frequency": "Twice daily",
               "duration": "Ongoing",
               "sig": "Apply twice daily (alternative maintenance)",
-              "icon": "💧"
+              "icon": "\ud83d\udca7"
             }
           ],
           "highlights": [
@@ -257,7 +300,7 @@
               "frequency": "Twice daily",
               "duration": "8-12 weeks",
               "sig": "1 tablet twice daily for 8-12 weeks (refractory cases)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Azelaic acid 15-20% cream",
@@ -267,7 +310,7 @@
               "frequency": "Twice daily",
               "duration": "Ongoing",
               "sig": "Continue maintenance cream",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             }
           ],
           "highlights": [
@@ -297,7 +340,7 @@
       "id": "rx_1788427262432_v0mm1x",
       "name": "Acute Cystitis (Pregnant Patient)",
       "categoryId": "cat_gynecology",
-      "icon": "🤰",
+      "icon": "\ud83e\udd30",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHxTqe1d5hAWEk4xinGgsstDKgCaAvWDOnABWbdZ4vTWt7FkqyxagAkGU&s=10",
       "patient": {
         "age": "Adult",
@@ -321,7 +364,7 @@
               "frequency": "Single dose",
               "duration": "Now",
               "sig": "Dissolve in 50-100 ml water. Take as a single dose NOW.",
-              "icon": "🧪"
+              "icon": "\ud83e\uddea"
             }
           ],
           "highlights": [
@@ -343,7 +386,7 @@
             {
               "severity": "critical",
               "label": "Refer Criteria",
-              "text": "REFER IF: Fever >38°C, flank pain, no improvement after 48 hours, vomiting. Consider admission for parenteral antibiotics if pyelonephritis suspected."
+              "text": "REFER IF: Fever >38\u00b0C, flank pain, no improvement after 48 hours, vomiting. Consider admission for parenteral antibiotics if pyelonephritis suspected."
             }
           ],
           "followUp": "2 days (symptom assessment), 1-2 weeks (test-of-cure urine culture)"
@@ -363,7 +406,7 @@
               "frequency": "Twice daily",
               "duration": "7 days",
               "sig": "1 capsule twice daily for 7 days (if fosfomycin unavailable; avoid at term 38-42 weeks)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -380,7 +423,7 @@
             {
               "severity": "info",
               "label": "Alternative",
-              "text": "If nitrofurantoin contraindicated, use cephalexin 500mg QID × 7 days."
+              "text": "If nitrofurantoin contraindicated, use cephalexin 500mg QID \u00d7 7 days."
             }
           ],
           "followUp": "1-2 weeks (test-of-cure urine culture)"
@@ -400,7 +443,7 @@
               "frequency": "Four times daily",
               "duration": "7 days",
               "sig": "1 capsule four times daily for 7 days (second-line if nitrofurantoin contraindicated)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -425,7 +468,7 @@
       "id": "rx_1788427794649_oygrci",
       "name": "Acute Tonsillitis (Pregnant - Penicillin Allergy)",
       "categoryId": "cat_gynecology",
-      "icon": "🤰",
+      "icon": "\ud83e\udd30",
       "image": "https://drsanu.com/wp-content/uploads/2023/12/acute-tonsillitis.png.webp",
       "patient": {
         "age": "Adult",
@@ -449,7 +492,7 @@
               "frequency": "Four times daily",
               "duration": "7-10 days",
               "sig": "1 capsule FOUR times daily (every 6 hours) for 7-10 days (Pregnancy Category B)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Paracetamol 500 mg",
@@ -459,7 +502,7 @@
               "frequency": "As needed",
               "duration": "PRN",
               "sig": "As needed for pain/fever (safe in pregnancy)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -471,7 +514,7 @@
             {
               "severity": "critical",
               "label": "Refer Criteria",
-              "text": "REFER IF: Difficulty breathing or stridor, inability to swallow saliva (drooling), muffled voice (hot potato voice), unilateral tonsillar swelling pushing uvula, fever >39°C for >48 hours, dehydration."
+              "text": "REFER IF: Difficulty breathing or stridor, inability to swallow saliva (drooling), muffled voice (hot potato voice), unilateral tonsillar swelling pushing uvula, fever >39\u00b0C for >48 hours, dehydration."
             },
             {
               "severity": "warning",
@@ -501,7 +544,7 @@
               "frequency": "Four times daily",
               "duration": "7-10 days",
               "sig": "1 tablet FOUR times daily for 7-10 days (Pregnancy Category B)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Paracetamol 500 mg",
@@ -511,7 +554,7 @@
               "frequency": "As needed",
               "duration": "PRN",
               "sig": "As needed for pain/fever",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -543,7 +586,7 @@
               "frequency": "Once daily",
               "duration": "3 days",
               "sig": "1 tablet ONCE daily for 3 days (use only if cephalexin and erythromycin unavailable)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -568,7 +611,7 @@
       "id": "rx_1788435416875_fx55w4",
       "name": "Scabies",
       "categoryId": "cat_dermatology",
-      "icon": "🔴",
+      "icon": "\ud83d\udd34",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU5bYLdVP5RgYB-cK0GHW8If4ZLYTHVkPySG6GIJSBzA&s",
       "patient": {
         "age": "All ages",
@@ -592,7 +635,7 @@
               "frequency": "Two applications",
               "duration": "Leave 8-12 hours",
               "sig": "Apply to entire body from neck to toes (including under nails, between fingers/toes, groin, buttocks, soles). Leave 8-12 hours. Wash off. Repeat after 7 days.",
-              "icon": "🧴"
+              "icon": "\ud83e\uddf4"
             },
             {
               "name": "Cetirizine 10 mg",
@@ -602,7 +645,7 @@
               "frequency": "Once daily",
               "duration": "2-4 weeks",
               "sig": "1 tablet daily for 2-4 weeks (for itching)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -614,7 +657,7 @@
             {
               "severity": "critical",
               "label": "Environmental Decontamination",
-              "text": "Hot water wash (≥50°C/122°F) for bedding, clothes, towels. Seal non-washable items in plastic bag for 1 week. Vacuum carpets and furniture."
+              "text": "Hot water wash (\u226550\u00b0C/122\u00b0F) for bedding, clothes, towels. Seal non-washable items in plastic bag for 1 week. Vacuum carpets and furniture."
             },
             {
               "severity": "warning",
@@ -649,7 +692,7 @@
               "frequency": "Single dose",
               "duration": "Repeat after 7-14 days",
               "sig": "Single dose (weight-based). Repeat after 7-14 days if needed (for refractory/crusted scabies).",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -684,7 +727,7 @@
       "id": "rx_pid_001",
       "name": "Pelvic Inflammatory Disease (PID)",
       "categoryId": "cat_gynecology",
-      "icon": "🤰",
+      "icon": "\ud83e\udd30",
       "image": "https://my.clevelandclinic.org/-/scassets/images/org/health/articles/9129-pelvic-inflammatory-disease-pid",
       "patient": {
         "age": "Reproductive age",
@@ -708,7 +751,7 @@
               "frequency": "Single dose",
               "duration": "Now",
               "sig": "Single dose",
-              "icon": "💉"
+              "icon": "\ud83d\udc89"
             },
             {
               "name": "Doxycycline 100 mg",
@@ -718,7 +761,7 @@
               "frequency": "Twice daily",
               "duration": "14 days",
               "sig": "1 tablet twice daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Metronidazole 400 mg",
@@ -728,7 +771,7 @@
               "frequency": "Twice daily",
               "duration": "14 days",
               "sig": "1 tablet twice daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -775,7 +818,7 @@
               "frequency": "Once daily",
               "duration": "14 days",
               "sig": "1 tablet once daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Metronidazole 500 mg",
@@ -785,7 +828,7 @@
               "frequency": "Twice daily",
               "duration": "14 days",
               "sig": "1 tablet twice daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -817,7 +860,7 @@
               "frequency": "Every 12 hours",
               "duration": "24-48 hours",
               "sig": "Every 12 hours (switch to oral doxycycline after 24-48 hrs), total 14 days",
-              "icon": "💉"
+              "icon": "\ud83d\udc89"
             },
             {
               "name": "Doxycycline 100 mg",
@@ -827,7 +870,7 @@
               "frequency": "Twice daily",
               "duration": "Complete 14 days",
               "sig": "Switch to oral doxycycline 100mg BID to complete 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -852,7 +895,7 @@
       "id": "rx_1788440280_dac1beed",
       "name": "Abnormal Uterine Bleeding (AUB-O - Ovulatory Dysfunction)",
       "categoryId": "cat_gynecology",
-      "icon": "🩸",
+      "icon": "\ud83e\ude78",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbi-5w6lgttuWnnd-1IpUL1TG4GSU3Z68aIh0Koc3i6NWqQFXYQNUNhdU&s=10",
       "patient": {
         "age": "Reproductive age",
@@ -876,7 +919,7 @@
               "frequency": "Three times daily",
               "duration": "3-5 days",
               "sig": "1-2 tablets (500-1000mg) three times daily for 3-5 days during menses (reduces blood loss by 40-60%)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Ferrous Sulfate 200mg",
@@ -886,7 +929,7 @@
               "frequency": "Twice daily",
               "duration": "3 months",
               "sig": "1 tablet twice daily for 3 months (treats iron deficiency anemia)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Folic Acid 5mg",
@@ -896,7 +939,7 @@
               "frequency": "Once daily",
               "duration": "3 months",
               "sig": "1 tablet once daily for 3 months",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -918,7 +961,7 @@
             {
               "severity": "warning",
               "label": "Anemia Assessment",
-              "text": "Evaluate for iron deficiency anemia with complete blood count and ferritin. Ferrous sulfate may cause GI upset – take with food."
+              "text": "Evaluate for iron deficiency anemia with complete blood count and ferritin. Ferrous sulfate may cause GI upset \u2013 take with food."
             },
             {
               "severity": "info",
@@ -943,7 +986,7 @@
               "frequency": "Once daily",
               "duration": "3-6 months",
               "sig": "1 tablet daily for 3-6 months (regulates cycle, prevents recurrence)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Paracetamol 500mg",
@@ -953,7 +996,7 @@
               "frequency": "As needed",
               "duration": "PRN",
               "sig": "As needed for dysmenorrhea (painful periods)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1004,7 +1047,7 @@
       "id": "rx_1788441019_811eae44",
       "name": "H. pylori Infection in Pregnancy",
       "categoryId": "cat_gynecology",
-      "icon": "🦠",
+      "icon": "\ud83e\udda0",
       "image": "https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/BigBead/h_pylori_bigbead/1800x1200_h_pylori_bacteria_bigbead.jpg?resize=750px:*&output-quality=75",
       "patient": {
         "age": "Adult",
@@ -1028,7 +1071,7 @@
               "frequency": "Three times daily",
               "duration": "14 days",
               "sig": "1 tablet three times daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Omeprazole 40mg",
@@ -1038,7 +1081,7 @@
               "frequency": "Twice daily",
               "duration": "14 days",
               "sig": "1 capsule twice daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1090,7 +1133,7 @@
               "frequency": "Three times daily",
               "duration": "14 days",
               "sig": "1 tablet three times daily for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Metronidazole 500mg",
@@ -1100,7 +1143,7 @@
               "frequency": "Twice daily",
               "duration": "14 days",
               "sig": "1 tablet twice daily for 14 days (use ONLY if Amoxicillin + PPI dual therapy has failed, and confirm patient is past first trimester)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Omeprazole 40mg",
@@ -1110,7 +1153,7 @@
               "frequency": "Twice daily",
               "duration": "14 days",
               "sig": "Continue PPI twice daily",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1140,14 +1183,14 @@
       "id": "rx_1788505903_eddfc35d",
       "name": "Acute Diarrhea in Children (<5 years)",
       "categoryId": "cat_pediatrics",
-      "icon": "💧",
+      "icon": "\ud83d\udca7",
       "image": "",
       "patient": {
         "age": "1 year (example - range: 0-5 years)",
         "gender": "All genders",
         "notes": ""
       },
-      "summary": "Acute diarrhea in children under 5 years is defined as ≥3 loose or watery stools in 24 hours, lasting <14 days. The leading cause is viral (rotavirus, norovirus, adenovirus), though bacterial (Shigella, Salmonella, Campylobacter) and parasitic (Giardia) causes should be considered in severe cases or those with dysentery. Management is stepwise based on dehydration severity: Plan A (no dehydration - home care with ORS, zinc, and continued feeding), Plan B (some dehydration - 75 ml/kg ORS over 4 hours in OPD), and Plan C (severe dehydration - IV Ringer's Lactate with hospital referral). Zinc supplementation for 14 days reduces duration and recurrence.",
+      "summary": "Acute diarrhea in children under 5 years is defined as \u22653 loose or watery stools in 24 hours, lasting <14 days. The leading cause is viral (rotavirus, norovirus, adenovirus), though bacterial (Shigella, Salmonella, Campylobacter) and parasitic (Giardia) causes should be considered in severe cases or those with dysentery. Management is stepwise based on dehydration severity: Plan A (no dehydration - home care with ORS, zinc, and continued feeding), Plan B (some dehydration - 75 ml/kg ORS over 4 hours in OPD), and Plan C (severe dehydration - IV Ringer's Lactate with hospital referral). Zinc supplementation for 14 days reduces duration and recurrence.",
       "regimens": [
         {
           "id": "reg_1",
@@ -1164,7 +1207,7 @@
               "frequency": "After each loose stool",
               "duration": "Until diarrhea stops",
               "sig": "1 sachet in 1 liter boiled cooled water. Give 50-100 ml after each loose stool (Plan A - No Dehydration)",
-              "icon": "🧪"
+              "icon": "\ud83e\uddea"
             },
             {
               "name": "Zinc sulfate 20mg/5ml syrup",
@@ -1174,7 +1217,7 @@
               "frequency": "Once daily",
               "duration": "14 days",
               "sig": "2.5 ml (10mg) once daily for 14 days (for 1 year old; 20mg daily for children >6 months)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Racecadotril 10mg sachet",
@@ -1184,7 +1227,7 @@
               "frequency": "Three times daily",
               "duration": "3 days",
               "sig": "1 sachet three times daily for 3 days (if available - reduces stool output)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1201,7 +1244,7 @@
             {
               "severity": "warning",
               "label": "Red Flags",
-              "text": "Blood in stool, severe dehydration (sunken eyes, no urine >6 hours), unable to drink, fever >39°C for >48 hours, lethargy, abdominal distension. REFER URGENTLY."
+              "text": "Blood in stool, severe dehydration (sunken eyes, no urine >6 hours), unable to drink, fever >39\u00b0C for >48 hours, lethargy, abdominal distension. REFER URGENTLY."
             },
             {
               "severity": "info",
@@ -1226,7 +1269,7 @@
               "frequency": "Sips every 5-10 minutes",
               "duration": "4 hours",
               "sig": "75 ml/kg over 4 hours (e.g., 750 ml for 10 kg child) - sips every 5-10 minutes",
-              "icon": "🧪"
+              "icon": "\ud83e\uddea"
             },
             {
               "name": "Zinc sulfate 20mg/5ml syrup",
@@ -1236,7 +1279,7 @@
               "frequency": "Once daily",
               "duration": "14 days",
               "sig": "Continue zinc for 14 days",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1268,7 +1311,7 @@
               "frequency": "Infusion",
               "duration": "1-6 hours",
               "sig": "100 ml/kg total: <12 months: 30 ml/kg over 1 hr, then 70 ml/kg over 5 hrs; >12 months: 30 ml/kg over 30 min, then 70 ml/kg over 2.5 hrs",
-              "icon": "💉"
+              "icon": "\ud83d\udc89"
             }
           ],
           "highlights": [
@@ -1300,7 +1343,7 @@
               "frequency": "Once daily",
               "duration": "3-5 days",
               "sig": "10-20 mg/kg once daily for 3-5 days (for dysentery or bacterial infection)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1312,12 +1355,12 @@
             {
               "severity": "warning",
               "label": "Alternative Antibiotics",
-              "text": "Ciprofloxacin 15 mg/kg/dose BID × 3 days is alternative. Ceftriaxone IV 50-80 mg/kg IV once daily for severe bacterial suspected."
+              "text": "Ciprofloxacin 15 mg/kg/dose BID \u00d7 3 days is alternative. Ceftriaxone IV 50-80 mg/kg IV once daily for severe bacterial suspected."
             },
             {
               "severity": "info",
               "label": "Differential",
-              "text": "Amebiasis: Bloody diarrhea with mucus ('currant jelly'), no fever. Treat with Metronidazole 35-50 mg/kg/day divided TID × 7-10 days."
+              "text": "Amebiasis: Bloody diarrhea with mucus ('currant jelly'), no fever. Treat with Metronidazole 35-50 mg/kg/day divided TID \u00d7 7-10 days."
             }
           ],
           "followUp": "48 hours (reassess)"
@@ -1330,7 +1373,7 @@
       "id": "rx_1788506715_052d3325",
       "name": "Dysmenorrhea",
       "categoryId": "cat_gynecology",
-      "icon": "🩸",
+      "icon": "\ud83e\ude78",
       "image": "https://www.invitra.com/en/wp-content/uploads/2019/11/dysmenorrhea.png.webp",
       "patient": {
         "age": "Adolescent to reproductive age",
@@ -1354,7 +1397,7 @@
               "frequency": "Three times daily",
               "duration": "3-5 days",
               "sig": "1 tablet three times daily with food. Start 1-2 days before menses, continue for 3-5 days.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Heat therapy (hot water bottle)",
@@ -1364,7 +1407,7 @@
               "frequency": "As needed",
               "duration": "During menses",
               "sig": "Apply to lower abdomen during menses",
-              "icon": "🔥"
+              "icon": "\ud83d\udd25"
             }
           ],
           "highlights": [
@@ -1406,7 +1449,7 @@
               "frequency": "Once daily",
               "duration": "3-6 cycles",
               "sig": "1 tablet daily for 21-28 days. Duration: 3-6 cycles (then reassess). Indicated if NSAIDs insufficient.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Vitamin E 400 IU",
@@ -1416,7 +1459,7 @@
               "frequency": "Once daily",
               "duration": "3-5 days",
               "sig": "1 capsule daily during menses for 3-5 days (supportive therapy)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1453,7 +1496,7 @@
               "frequency": "Once daily",
               "duration": "3 months",
               "sig": "1 tablet daily for 3 months (supportive therapy)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1478,7 +1521,7 @@
       "id": "rx_1788507912_ad9b36d0",
       "name": "Pregnancy Constipation",
       "categoryId": "cat_gynecology",
-      "icon": "💩",
+      "icon": "\ud83d\udca9",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrVsTfHszG8XUNw96FHz8UxWt1Lp34bpaLoiddMWv3j2qX8zgEvA2bC8P&s=10",
       "patient": {
         "age": "Adult",
@@ -1502,7 +1545,7 @@
               "frequency": "Once daily",
               "duration": "Ongoing",
               "sig": "1 tablespoon in 1 glass of water ONCE daily. Must be taken with adequate water to avoid obstruction.",
-              "icon": "🌾"
+              "icon": "\ud83c\udf3e"
             }
           ],
           "highlights": [
@@ -1544,7 +1587,7 @@
               "frequency": "Once daily",
               "duration": "2-4 weeks",
               "sig": "1 sachet (17g) dissolved in 250-500ml water ONCE daily. Duration: 2-4 weeks, then reassess. Preferred by ACOG and AGA. Onset: 24-72 hours.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1580,8 +1623,8 @@
               "route": "Oral",
               "frequency": "Twice daily",
               "duration": "2-4 weeks",
-              "sig": "1 tablet twice daily (stool softener – considered safe if second-line fails after 1-2 weeks)",
-              "icon": "💊"
+              "sig": "1 tablet twice daily (stool softener \u2013 considered safe if second-line fails after 1-2 weeks)",
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1593,7 +1636,7 @@
             {
               "severity": "warning",
               "label": "Iron Supplements",
-              "text": "Iron supplements can worsen constipation – consider switching to a different formulation or reducing dose."
+              "text": "Iron supplements can worsen constipation \u2013 consider switching to a different formulation or reducing dose."
             },
             {
               "severity": "info",
@@ -1611,7 +1654,7 @@
       "id": "rx_1788509199_b1233f29",
       "name": "Neuropathic Pain (Peripheral Neuropathy)",
       "categoryId": "cat_neurology",
-      "icon": "🧠",
+      "icon": "\ud83e\udde0",
       "image": "https://i0.wp.com/ova.galencentre.org/wp-content/uploads/2023/09/Neuropathic.jpg?resize=1024%2C576&ssl=1",
       "patient": {
         "age": "Adult",
@@ -1635,7 +1678,7 @@
               "frequency": "Titrating",
               "duration": "4-6 weeks",
               "sig": "Start 75mg at bedtime for 7 days, then 75mg twice daily for 7 days, then 150mg twice daily. Max 600mg/day. Duration: 4-6 weeks, then reassess.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1682,7 +1725,7 @@
               "frequency": "Titrating",
               "duration": "4-6 weeks",
               "sig": "Start 100mg three times daily. Increase weekly: 300mg TID, 600mg TID, 900mg TID. Max 3600mg/day. Duration: 4-6 weeks, then reassess.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1714,7 +1757,7 @@
               "frequency": "Once daily",
               "duration": "4-6 weeks",
               "sig": "30mg once daily for 7 days, then increase to 60mg once daily. Max 120mg/day. Duration: 4-6 weeks, then reassess. Indicated for neuropathic pain with depression, diabetic neuropathy.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1751,7 +1794,7 @@
               "frequency": "Once daily",
               "duration": "1 month, then weekly",
               "sig": "1 tablet once daily for 1 month, then 1500mcg once weekly for 2 months (for Vitamin B12 deficiency)",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Vitamin B Complex",
@@ -1761,7 +1804,7 @@
               "frequency": "Once daily",
               "duration": "3 months",
               "sig": "1 tablet once daily for 3 months",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1796,7 +1839,7 @@
       "id": "rxgyn_infert_007",
       "name": "Female Infertility (Anovulatory/PCOS)",
       "categoryId": "cat_gynecology",
-      "icon": "🤰",
+      "icon": "\ud83e\udd30",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxY3z8MgzCZNYyclyWhC4xmqCp3vfNqU1S4iz8TP4jD9AQdIz6YYXgW5lT&s=10",
       "patient": {
         "age": "28 years",
@@ -1820,7 +1863,7 @@
               "frequency": "Once daily",
               "duration": "Cycle days 3-7 (5 days total)",
               "sig": "Take 1 tablet (2.5 mg) by mouth once daily on cycle days 3 through 7. Track menstrual cycles and use LH ovulation predictor kits starting day 10. Timed intercourse every 2 days between days 12-16 or as directed by LH surge.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Folic Acid",
@@ -1830,7 +1873,7 @@
               "frequency": "Once daily",
               "duration": "Throughout treatment",
               "sig": "Take 1 tablet (5 mg) by mouth once daily with food. Essential for neural tube defect prevention in early pregnancy.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Vitamin D3",
@@ -1840,14 +1883,14 @@
               "frequency": "Once daily",
               "duration": "Throughout treatment",
               "sig": "Take 1 capsule (2000 IU) by mouth once daily with meals. Supports overall reproductive health and ovarian function.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
             {
               "severity": "critical",
               "label": "Pregnancy Test Required",
-              "text": "Confirm negative pregnancy test before each cycle. Letrozole is category X in pregnancy. Perform serum β-hCG or urine pregnancy test at cycle start."
+              "text": "Confirm negative pregnancy test before each cycle. Letrozole is category X in pregnancy. Perform serum \u03b2-hCG or urine pregnancy test at cycle start."
             },
             {
               "severity": "critical",
@@ -1912,7 +1955,7 @@
               "frequency": "Once daily",
               "duration": "Cycle days 3-7",
               "sig": "Take 1 tablet (2.5 mg) by mouth once daily on cycle days 3 through 7.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Clomiphene Citrate",
@@ -1922,7 +1965,7 @@
               "frequency": "Once daily",
               "duration": "Cycle days 5-9",
               "sig": "Take 1 tablet (50 mg) by mouth once daily on cycle days 5 through 9. Start monitoring with ovulation predictor kits from day 10.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Folic Acid",
@@ -1932,7 +1975,7 @@
               "frequency": "Once daily",
               "duration": "Throughout treatment",
               "sig": "Continue folic acid 5 mg daily.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -1984,7 +2027,7 @@
               "frequency": "Once daily",
               "duration": "Cycle days 3-7",
               "sig": "Take 1 tablet (2.5 mg) by mouth once daily on cycle days 3 through 7.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Metformin HCl",
@@ -1994,7 +2037,7 @@
               "frequency": "Twice daily",
               "duration": "With meals",
               "sig": "Take 1 tablet (500 mg) by mouth twice daily with meals. Start at 500 mg once daily for 1 week, then increase to 500 mg twice daily. Titrate up to 1000 mg twice daily as tolerated.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             },
             {
               "name": "Folic Acid",
@@ -2004,7 +2047,7 @@
               "frequency": "Once daily",
               "duration": "Throughout treatment",
               "sig": "Continue folic acid 5 mg daily.",
-              "icon": "💊"
+              "icon": "\ud83d\udc8a"
             }
           ],
           "highlights": [
@@ -2044,6 +2087,271 @@
       ],
       "createdAt": 1722000000000,
       "updatedAt": 1724800000000
+    },
+    {
+      "categories": [
+        {
+          "id": "cat_dermatology",
+          "name": "Dermatology",
+          "icon": "\ud83d\udd34"
+        },
+        {
+          "id": "cat_cardiology",
+          "name": "Cardiology",
+          "icon": "\u2764\ufe0f"
+        },
+        {
+          "id": "cat_general",
+          "name": "General Medicine",
+          "icon": "\ud83d\udc8a"
+        },
+        {
+          "id": "cat_pediatrics",
+          "name": "Pediatrics",
+          "icon": "\ud83d\udc76"
+        },
+        {
+          "id": "cat_neurology",
+          "name": "Neurology",
+          "icon": "\ud83e\udde0"
+        },
+        {
+          "id": "cat_respiratory",
+          "name": "Respiratory",
+          "icon": "\ud83e\udec1"
+        },
+        {
+          "id": "cat_endocrine",
+          "name": "Endocrinology",
+          "icon": "\u2697\ufe0f"
+        },
+        {
+          "id": "cat_gastro",
+          "name": "Gastroenterology",
+          "icon": "\ud83e\udec3"
+        },
+        {
+          "id": "cat_psychiatry",
+          "name": "Psychiatry",
+          "icon": "\ud83e\udde9"
+        },
+        {
+          "id": "cat_gynecology",
+          "name": "Gynecology",
+          "icon": "\ud83e\udd30"
+        },
+        {
+          "id": "cat_other",
+          "name": "Other",
+          "icon": "\ud83d\udccb"
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "rx_purulent_wound_008",
+          "name": "Purulent Skin & Soft Tissue Infection (Abscess)",
+          "categoryId": "cat_dermatology",
+          "icon": "\ud83e\ude79",
+          "image": "https://cdn.rankyak.com/114760/the-color-and-consistency-tell-the-story.png",
+          "patient": {
+            "age": "Adult",
+            "gender": "All genders",
+            "notes": "Pus-containing wound, localized abscess, no systemic signs of sepsis"
+          },
+          "summary": "Purulent skin and soft tissue infection (abscess) is a localized collection of pus within the dermis or subcutaneous tissue, most commonly caused by Staphylococcus aureus (including community-acquired MRSA). The primary treatment is INCISION AND DRAINAGE (I&D) \u2014 antibiotics alone cannot penetrate the abscess cavity and will not cure the infection. Following adequate drainage, antibiotics are indicated for moderate-severe, extensive, or systemic infections. Given high resistance rates in Afghanistan (amoxicillin-clavulanate ~82%, cefixime ~86%), clindamycin or linezolid are preferred for MRSA coverage. Vancomycin IV is reserved for severe/systemic infection requiring hospitalization.",
+          "regimens": [
+            {
+              "id": "reg_1",
+              "name": "I&D + Clindamycin (Mild-Moderate, Preferred)",
+              "type": "Initial",
+              "description": "Primary treatment for drained, localized purulent wound. Clindamycin covers most Staph including community MRSA, with good tissue penetration. Preferred in Afghanistan due to high resistance to amoxicillin-clavulanate and cefixime.",
+              "duration": "7-10 days",
+              "medications": [
+                {
+                  "name": "Clindamycin",
+                  "brand": "Dalacin C",
+                  "dose": "300 mg",
+                  "route": "Oral",
+                  "frequency": "Three times daily",
+                  "duration": "7-10 days",
+                  "sig": "Take 1 capsule (300 mg) by mouth three times daily for 7-10 days. Take with a full glass of water to reduce esophageal irritation. Complete the full course even if symptoms improve.",
+                  "icon": "\ud83d\udc8a"
+                },
+                {
+                  "name": "Paracetamol",
+                  "brand": "Panadol",
+                  "dose": "500 mg",
+                  "route": "Oral",
+                  "frequency": "Every 6 hours as needed",
+                  "duration": "As needed for pain",
+                  "sig": "Take 1 tablet (500 mg) by mouth every 6 hours as needed for pain. Maximum 4 g (8 tablets) in 24 hours.",
+                  "icon": "\ud83d\udc8a"
+                }
+              ],
+              "highlights": [
+                {
+                  "severity": "critical",
+                  "label": "I&D is PRIMARY",
+                  "text": "INCISION AND DRAINAGE is the definitive treatment, NOT antibiotics. Open the wound, drain all pus, break any loculations, and irrigate with normal saline. Leave the wound open to heal by secondary intention. Antibiotics alone will NOT cure a pus-filled wound."
+                },
+                {
+                  "severity": "critical",
+                  "label": "C. difficile Risk",
+                  "text": "Clindamycin carries the highest risk of Clostridioides difficile-associated diarrhea among common antibiotics. Counsel patient to report severe or bloody diarrhea immediately. Avoid in patients with history of C. difficile colitis."
+                },
+                {
+                  "severity": "warning",
+                  "label": "Resistance Avoidance",
+                  "text": "Do NOT use Amoxicillin-Clavulanate (Augmentin) or Cefixime as first-line for purulent wounds in Afghanistan \u2014 resistance rates exceed 80%. These will likely fail."
+                },
+                {
+                  "severity": "warning",
+                  "label": "Follow-Up",
+                  "text": "Reassess at 48-72 hours. If no improvement, worsening cellulitis, fever, or systemic symptoms develop \u2014 escalate to IV antibiotics and consider hospitalization."
+                },
+                {
+                  "severity": "info",
+                  "label": "Wound Care",
+                  "text": "Pack the wound loosely with gauze if cavity is large. Change dressing daily. Keep wound clean and dry. Patient may shower after 24 hours but avoid soaking. Return if packing falls out, bleeding, or increasing pain."
+                },
+                {
+                  "severity": "success",
+                  "label": "Expected Outcome",
+                  "text": "Pain and swelling improve within 24-48 hours after I&D. Complete resolution in 7-14 days. Antibiotics reduce recurrence risk when indicated."
+                }
+              ],
+              "followUp": "48-72 hours (wound check, assess response). If improving, continue antibiotics and wound care. If not improving, consider culture-directed therapy or IV antibiotics."
+            },
+            {
+              "id": "reg_2",
+              "name": "I&D + Linezolid (If Clindamycin Unavailable)",
+              "type": "Alternative",
+              "description": "Alternative when clindamycin is unavailable or contraindicated (e.g., C. difficile history). Linezolid provides excellent MRSA coverage with 100% oral bioavailability.",
+              "duration": "7-10 days",
+              "medications": [
+                {
+                  "name": "Linezolid",
+                  "brand": "Zyvox",
+                  "dose": "600 mg",
+                  "route": "Oral",
+                  "frequency": "Twice daily",
+                  "duration": "7-10 days",
+                  "sig": "Take 1 tablet (600 mg) by mouth twice daily for 7-10 days. May take with or without food. Avoid tyramine-rich foods (aged cheese, cured meats, fermented soy) due to MAO inhibition.",
+                  "icon": "\ud83d\udc8a"
+                },
+                {
+                  "name": "Paracetamol",
+                  "brand": "Panadol",
+                  "dose": "500 mg",
+                  "route": "Oral",
+                  "frequency": "Every 6 hours as needed",
+                  "duration": "As needed for pain",
+                  "sig": "Take 1 tablet (500 mg) by mouth every 6 hours as needed for pain. Maximum 4 g in 24 hours.",
+                  "icon": "\ud83d\udc8a"
+                }
+              ],
+              "highlights": [
+                {
+                  "severity": "critical",
+                  "label": "I&D is PRIMARY",
+                  "text": "Incision and drainage remains the definitive treatment. Antibiotics are adjunctive. Do NOT prescribe antibiotics alone for a drainable abscess."
+                },
+                {
+                  "severity": "critical",
+                  "label": "Bone Marrow Suppression",
+                  "text": "Linezolid can cause thrombocytopenia, anemia, and neutropenia, especially with treatment >14 days. Monitor CBC weekly if course extended. Avoid in patients with pre-existing myelosuppression."
+                },
+                {
+                  "severity": "critical",
+                  "label": "Serotonin Syndrome",
+                  "text": "Linezolid is a weak MAO inhibitor. Avoid or use with extreme caution in patients on SSRIs, SNRIs, TCAs, tramadol, or other serotonergic drugs. Risk of serotonin syndrome (agitation, hyperthermia, clonus, tachycardia)."
+                },
+                {
+                  "severity": "warning",
+                  "label": "Resistance in Kabul",
+                  "text": "Linezolid resistance reported in Kabul at 15.4% among S. aureus isolates. Still reliable but culture and sensitivity recommended when possible."
+                },
+                {
+                  "severity": "warning",
+                  "label": "Cost & Access",
+                  "text": "Linezolid is significantly more expensive than clindamycin. Reserve for when clindamycin is unavailable, contraindicated, or has failed."
+                },
+                {
+                  "severity": "info",
+                  "label": "Advantage",
+                  "text": "100% oral bioavailability \u2014 equivalent to IV. Excellent tissue penetration. No dose adjustment needed for renal impairment."
+                }
+              ],
+              "followUp": "48-72 hours (wound check). CBC at baseline and weekly if course >14 days. Reassess at 7-10 days."
+            },
+            {
+              "id": "reg_3",
+              "name": "I&D + Vancomycin IV (Severe/Systemic)",
+              "type": "Intensified",
+              "description": "For severe purulent infection with systemic signs (fever, hypotension, rapidly spreading cellulitis, systemic toxicity). Requires hospitalization and IV therapy.",
+              "duration": "7-14 days (IV, then oral step-down)",
+              "medications": [
+                {
+                  "name": "Vancomycin",
+                  "brand": "Vancocin",
+                  "dose": "15-20 mg/kg",
+                  "route": "Intravenous",
+                  "frequency": "Every 8-12 hours",
+                  "duration": "7-14 days",
+                  "sig": "Administer 15-20 mg/kg IV every 8-12 hours. Monitor serum trough levels (target 15-20 mcg/mL for severe infections). Adjust dose based on renal function and levels. Requires hospital admission.",
+                  "icon": "\ud83d\udc89"
+                },
+                {
+                  "name": "Paracetamol",
+                  "brand": "Panadol",
+                  "dose": "500 mg",
+                  "route": "Oral",
+                  "frequency": "Every 6 hours as needed",
+                  "duration": "As needed for pain/fever",
+                  "sig": "Take 1 tablet (500 mg) by mouth every 6 hours as needed for pain or fever.",
+                  "icon": "\ud83d\udc8a"
+                }
+              ],
+              "highlights": [
+                {
+                  "severity": "critical",
+                  "label": "I&D is PRIMARY",
+                  "text": "Even in severe infection, INCISION AND DRAINAGE of any drainable collection is mandatory. Antibiotics cannot penetrate undrained pus."
+                },
+                {
+                  "severity": "critical",
+                  "label": "Nephrotoxicity",
+                  "text": "Vancomycin can cause acute kidney injury, especially when combined with piperacillin-tazobactam or aminoglycosides. Monitor serum creatinine daily. Maintain adequate hydration."
+                },
+                {
+                  "severity": "critical",
+                  "label": "Infusion Reactions",
+                  "text": "Rapid infusion can cause 'vancomycin flushing syndrome' (red man syndrome) \u2014 flushing, rash, hypotension. Infuse over at least 60 minutes. Premedicate with antihistamine if prior reaction."
+                },
+                {
+                  "severity": "critical",
+                  "label": "Ototoxicity",
+                  "text": "Vancomycin can cause hearing loss, especially with elevated trough levels or concurrent ototoxic drugs. Monitor for tinnitus, hearing loss. Consider audiometry if prolonged use."
+                },
+                {
+                  "severity": "warning",
+                  "label": "Local Resistance",
+                  "text": "36.7% non-susceptibility to vancomycin reported in Kabul S. aureus isolates. Consider adding second agent (e.g., piperacillin-tazobactam for gram-negatives) if polymicrobial suspected. Culture and sensitivity essential."
+                },
+                {
+                  "severity": "warning",
+                  "label": "Hospitalization Required",
+                  "text": "REFER/HOSPITALIZE if: fever >38.5\u00b0C, hypotension, rapidly progressive cellulitis, systemic toxicity, immunocompromised, or failure of oral therapy after 48-72 hours."
+                }
+              ],
+              "followUp": "Daily while inpatient (clinical review, renal function, vancomycin trough). Transition to oral clindamycin or linezolid once afebrile and clinically improving for 24-48 hours. Complete total 7-14 day course."
+            }
+          ],
+          "createdAt": 1788511000000,
+          "updatedAt": 1788511000000
+        }
+      ],
+      "id": "rx_1790576329_d12fe5be"
     }
   ]
 }
